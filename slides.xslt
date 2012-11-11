@@ -24,8 +24,9 @@
             <head>
                 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
                 <title><xsl:apply-templates select="slides:title//text()" /></title>
+                <style type="text/css"><xsl:copy-of select="document('slides.css.xml')/css/node()"/></style>
                 <script type="text/ecmascript">LAST_SLIDE = <xsl:value-of select="count(slides:slide)" /></script>
-                <script type="text/ecmascript" src="slides.js" />
+                <script type="text/ecmascript"><xsl:copy-of select="document('slides.js.xml')/js/node()"/></script>
             </head>
             <body>
                 <xsl:apply-templates select="slides:slide" />

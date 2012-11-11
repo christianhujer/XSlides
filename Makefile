@@ -1,7 +1,12 @@
 ## XSlides Makefile.
 
+_path:=$(dir $(lastword $(MAKEFILE_LIST)))
+
 ## Creates all files.
 all: 2html $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML)
+
+debug:
+	echo $(_path)
 
 ## Creates all files necessary for viewing the XML files.
 xmlview: $(ALL_CSS_XML)
@@ -17,10 +22,11 @@ xmlview: $(ALL_CSS_XML)
 clean:
 	rm -f $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML) $(ALL_CSS_XML)
 
-%.xhtml: &.xml slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
-	xsltproc slides.xslt $< | sed 's/&gt;/>/g' >$@
+#%.xhtml: %.xml $(_path)slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
+%.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml
+	xsltproc --stringparam path $(_path) $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
 
-%.html: &.xhtml
+%.html: %.xhtml
 	cp $^ $@
 
 %.b64: %
@@ -33,5 +39,10 @@ clean:
 	echo -n "<css>" >$@
 	cat $^ >>$@
 	echo "</css>" >>$@
+
+%.js.xml: %.js
+	echo -n "<js><![CDATA[" >$@
+	cat $^ >>$@
+	echo "]]></js>" >>$@
 
 images: $(ALL_IMAGES_B64)

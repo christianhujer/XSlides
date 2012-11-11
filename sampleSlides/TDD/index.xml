@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:slide>
+        <slides:title>TDD - Test Driven Development</slides:title>
+        <ul>
+            <li>Cool</li>
+            <li>Fast</li>
+            <li>Reliable</li>
+            <li>Agile</li>
+        </ul>
+    </slides:slide>
+</slides:slides>
