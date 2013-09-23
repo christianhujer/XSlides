@@ -1,7 +1,56 @@
+html {
+    font-size:250%;
+}
 body {
-    color: white;
-    background-color: black;
-    font-family: 'Sans-Serif';
+    color:white;
+    background-color:black;
+    font-family:'Sans-Serif';
+}
+h1 {
+    text-align:center;
 }
 .slide {
+    display:none;
+}
+#slide_1 {
+    display:block;
+}
+#commandline {
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    width:auto;
+    background-color:#000000;
+    display:none;
+    z-index:2;
+}
+#command {
+    border:none;
+    background-color:#000000;
+    color:#ffffff;
+    left:0px;
+    width:auto;
+    right:0px;
+}
+div#screenWhite {
+    background-color:#ffffff;
+    color:#ffffff;
+}
+div#screenBlack {
+    background-color:#000000;
+    color:#000000;
+}
+div#screenWhite, div#screenBlack {
+    position:absolute;
+    z-index:5;
+    margin:0px;
+    padding:0px;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    width:auto;
+    height:auto;
+    display:none;
 }
