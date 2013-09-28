@@ -27,16 +27,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><xsl:apply-templates select="slides:title//text()" /></title>
         <style type="text/css"><xsl:copy-of select="document('slides.css.xml')/css/node()"/></style>
-        <script type="text/ecmascript">LAST_SLIDE = <xsl:value-of select="count(slides:slide)" /></script>
+        <script type="text/ecmascript">const LAST_SLIDE = <xsl:value-of select="count(slides:slide)" />;</script>
         <script type="text/ecmascript"><xsl:copy-of select="document('slides.js.xml')/js/node()"/></script>
     </head>
     <body onload="javascript:begin();" onmouseover="javascript:enableNavigator();">
         <div class="slide" id="slide_help">
-            <div class="headerregion">
-                <div class="header">
-                    <h1>Help</h1>
-                </div>
-            </div>
+            <h1>Help</h1>
             <div class="bodyregion">
                 <div class="full">
                     <p>
@@ -51,7 +47,7 @@
                     <h3>Normale KeyStrokes</h3>
                     <table class="lnice">
                         <tr><th>Function</th><th>Keys</th></tr>
-                        <tr><td>Help</td><td>F1</td></tr>
+                        <tr><td>Help</td><td>F1, ?</td></tr>
                         <tr><td>Next Slide</td><td>Page Down, Cursor Down, Cursor Right, j, l, n, Return, Enter, Space, Mouse Button 1 (Left Mouse Button)</td></tr>
                         <tr><td>Previous Slide</td><td>Page Up, Cursor Left, Cursor Up, h, k, p, Backspace</td></tr>
                         <tr><td>First Slide</td><td>Pos1, g</td></tr>
@@ -95,7 +91,7 @@
         <div class="footerregion">
             <div class="footer">
                 <span style="font-size:smaller;">
-                    <span id="currentSlide">1</span>/<xsl:value-of select="count(html:slide)" />
+                    <span id="currentSlide">1</span>/<xsl:value-of select="count(slides:slide)" />
                     <br />
                     <xsl:text>Made with XSlides. XSlides is © 2011 Christian Hujer.</xsl:text>
                 </span>

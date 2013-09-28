@@ -1,8 +1,8 @@
-NORMAL = 1;
-BLANK = 2;
-BLACK = 3;
-WHITE = 4;
-HELP = 5;
+const NORMAL = 1;
+const BLANK = 2;
+const BLACK = 3;
+const WHITE = 4;
+const HELP = 5;
 currentSlide = 1;
 blank = NORMAL;
 commandlineEnabled = false;
@@ -34,23 +34,19 @@ function mousewheel(e) {
  */
 function divwheel(e) {
     if (!e) { e = window.event; }
-    if (0 > e.wheelDelta) {
-        if (e.currentTarget.scrollHeight > e.currentTarget.scrollTop + e.currentTarget.clientHeight) {
+    if (0 > e.wheelDelta)
+        if (e.currentTarget.scrollHeight > e.currentTarget.scrollTop + e.currentTarget.clientHeight)
             nowheel = true;
-        }
-    }
-    if (e.wheelDelta > 0) {
-        if (e.currentTarget.scrollTop > 0) {
+    if (e.wheelDelta > 0)
+        if (e.currentTarget.scrollTop > 0)
             nowheel = true;
-        }
-    }
 }
 
 /** Event handler for mouse down event.
  * @param e Event object.
  */
 function mousedown(e) {
-    if (!e) { e = window.event; }
+    if (!e) e = window.event;
     /*window.alert(e.button);*/
     return false;
 }
@@ -59,7 +55,7 @@ function mousedown(e) {
  * @param e Event object.
  */
 function click(e) {
-    if (!e) { e = window.event; }
+    if (!e) e = window.event;
     /* Note: On IE, e.button is always 0 here - looks like a bug. */
     switch (e.button) {
     /*LMB*/case 0: nextSlide(); return false;
@@ -72,9 +68,7 @@ function click(e) {
  * @param e Event object.
  */
 function keydown(e) {
-    if (!e) {
-        e = window.event;
-    }
+    if (!e) e = window.event;
     var keyCode = e.keyCode;
     if (commandlineEnabled) {
         switch (keyCode) {
@@ -154,6 +148,7 @@ function keypress(e) {
         case 46: if (!commandlineEnabled) toggleBlank(BLANK); return; /* PowerPoint: . */
         case 98: if (!commandlineEnabled) toggleBlank(BLACK); return; /* PowerPoint: b */
         case 119: if (!commandlineEnabled) toggleBlank(WHITE); return; /* PowerPoint: w */
+        case 63: help(); return; /* ? */
         /*default: window.alert(keyCode);*/
         }
     }
