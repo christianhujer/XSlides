@@ -2,3 +2,7 @@ Create DTD.
 Describe CSS interface.
 Add a few default designs.
 Add a few examples.
+Escape should exit help.
+Explicit slide goto commands should exit help.
+Pressing F1 again should exit help.
+Horizontal scroll wheel should also change slides.

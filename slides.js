@@ -6,6 +6,10 @@ const HELP = 5;
 currentSlide = 0;
 blank = NORMAL;
 commandlineEnabled = false;
+
+/** Set to true if the mouse wheel is used on an overflown div.
+ * That way on an overflown div the mouse wheels first scroll the div before swapping the slides.
+ */
 nowheel = false;
 
 /** Event handler for mouse wheel.
@@ -17,10 +21,12 @@ function mousewheel(e) {
         nowheel = false;
         return;
     }
-    if (e.wheelDeltaY) {
+    if (e.wheelDeltaX || e.wheelDeltaY) {
         /* Chrome supports two wheels, nice. */
         if (e.wheelDeltaY > 0) { previousSlide(); }
         if (0 > e.wheelDeltaY) { nextSlide(); }
+        if (e.wheelDeltaX > 0) { previousSlide(); }
+        if (0 > e.wheelDeltaX) { nextSlide(); }
         return;
     }
     /* Opera and Internet Explorer support one wheel. */
