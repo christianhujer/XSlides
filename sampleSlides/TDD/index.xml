@@ -1,12 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>TDD - Test Driven Development</slides:title>
     <slides:slide>
-        <slides:title>TDD - Test Driven Development</slides:title>
+        <h1><a href="http://agilemanifesto.org/">Manifesto for Agile Software Development</a></h1>
+        <blockquote>
+            <p>
+                We are uncovering better ways of developing
+                <br />
+                software by doing it and helping others do it.
+                <br />
+                Through this work we have come to value:
+            </p>
+            <ul>
+                <li><strong>Individuals and interactions</strong> over processes and tools</li>
+                <li><strong>Working software</strong> over comprehensive documentation</li>
+                <li><strong>Customer collaboration</strong> over contract negotiation</li>
+                <li><strong>Responding to change</strong> over following a plan</li>
+            </ul>
+            <p>That is, while there is value in the items on the right, we value the items on the left more.</p>
+        </blockquote>
+        <p><cite>Kent Beck, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Andrew Hunt, Ron Jeffries, Robert C. Martin, Ken Schwaber, Jeff Sutherland, Dave Thomas</cite> and many others</p>
+    </slides:slide>
+    <slides:slide>
+        <h1><a href="http://manifesto.softwarecraftsmanship.org/">Manifesto for Software Craftsmanship</a></h1>
+        <blockquote>
+            <p>Raising the Bar</p>
+            <p>As aspiring Software Craftsmen we are raising the bar of professional software development by practicing it and helping others learn the craft. Through this work we have come to value:</p>
+            <ul>
+                <li>Not only working software, but also <strong>well-crafted software</strong></li>
+                <li>Not only responding to change, but also <strong>steadily adding value</strong></li>
+                <li>Not only individuals and interactions, but also <strong>a community of professionals</strong></li>
+                <li>Not only customer collaboration, but also <strong>productive partnerships</strong></li>
+            </ul>
+            <p>That is, in pursuit of the items on the left we have found the items on the right to be indispensable.</p>
+        </blockquote>
+        <p><cite>Robert C. Martin, Ron Jeffries, Michael Feathers</cite> and many others</p>
+    </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>Kent Beck</h1>
+        <blockquote>
+            <p>
+                I'm not a great programmer.
+                <br />
+                I'm just a good programmer with great habits.
+            </p>
+            <p>
+                Any fool can write code that a computer can understand.
+                <br />
+                Good programmers write code that humans can understand.
+            </p>
+            <p>
+                Do the simplest thing that could possibly work.
+            </p>
+        </blockquote>
+        <div>
+            <img src="gfx/KentBeck.jpg" alt="" />
+            <br />
+            Kent Beck
+            <ul>
+                <li>SUnit / xUnit</li>
+                <li>JUnit (with Erich Gamma)</li>
+                <li>Test-First Programming</li>
+                <li>Extreme Programming</li>
+                <li>Test-Driven Development</li>
+            </ul>
+        </div>
+    </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>Uncle Bob</h1>
+        <blockquote>
+            <p>
+                The jury is in.
+                The controversy is over.
+                The debate has ended.
+                The conclusion is:
+                <em>TDD works.</em>
+                Sorry.
+            </p>
+        </blockquote>
+        <p>
+            <img src="gfx/UncleBob.jpg" alt="" />
+            <br />
+            <cite>Robert <q>Uncle Bob</q> Cecil Martin</cite>
+        </p>
+    </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>Michael Feathers</h1>
+        <blockquote>
+            <p><dfn>Unit Tests are tests that run <strong>fast</strong>.</dfn></p>
+            <p><dfn>Legacy code is <code>code without Unit Tests</code>.</dfn></p>
+        </blockquote>
+        <p>
+            <img src="gfx/MichaelFeathers.jpg" alt="" />
+            <br />
+            <cite>Michael Feathers, Working Effectively with Legacy Code</cite>
+        </p>
+    </slides:slide>
+    <slides:slide>
+        <h1>The Three Laws of TDD</h1>
+        <blockquote>
+            <ul>
+                <li>You can't write any production code until you have first written a failing unit test.</li>
+                <li>You can't write more of a unit test than is sufficient to fail, and not compiling is failing.</li>
+                <li>You can't write more production code than is sufficient to pass the currently failing unit test.</li>
+            </ul>
+        </blockquote>
+        <p><cite>Robert <q>Uncle Bob</q> Cecil Martin</cite> in <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">97 Things Every Programmer Should Know</a></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Why go for TDD?</h1>
+        <dl>
+            <dt>Less Debugging Time</dt>
+            <dd>The system worked three minutes ago. No need to debug, you know what you've changed, so you know where the error is.</dd>
+            <dt>Courage</dt>
+            <dd>If it's tested, you're not afraid to change it. This way, unit tests lead to cleaner code!</dd>
+            <dt>Documentation</dt>
+            <dd>Unit tests are gratis documentation</dd>
+            <dt>Design</dt>
+            <dd>Following TDD, modules will be <em>testable by definition</em>. Another word for testable is <em>decoupled</em>.</dd>
+            <dt>Professionalism</dt>
+            <dd>Given that these benefits are real, it would be <em>unprofessional</em> not to adopt the practice that yields them.</dd>
+        </dl>
+        <p>Better development speed, better designs, less bugs, better maintainability, more fun!</p>
+        <p><cite>Robert <q>Uncle Bob</q> Cecil Martin</cite> in <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">97 Things Every Programmer Should Know</a></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>The 4 A's Principle - Given When Then</h1>
         <ul>
-            <li>Cool</li>
-            <li>Fast</li>
-            <li>Reliable</li>
-            <li>Agile</li>
+            <li>Arrange - Given (Arrangement)</li>
+            <li>Act - When (Action)</li>
+            <li>Assert - Then (Assert expectation)</li>
+            <li>Annihilate - (Cleanup)</li>
         </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>The <span style="color:#f66;">F</span><span style="color:#ff6;">I</span><span style="color:#6f6;">R</span><span style="color:#6ff;">S</span><span style="color:#66f;">T</span> Principle</h1>
+        <p>Unit Tests should be</p>
+        <dl>
+            <dt><span style="color:#f66;">F</span>ast</dt>
+            <dd>run quickly because we want to run them very very very often</dd>
+            <dt><span style="color:#ff6;">I</span>ndependent</dt>
+            <dd>no test depends on other tests, each test can be executed individually</dd>
+            <dt><span style="color:#6f6;">R</span>epeatable</dt>
+            <dd>run many times, always get same result</dd>
+            <dt><span style="color:#6ff;">S</span>elf-checking</dt>
+            <dd>tests detect if failed or passed, no human analysis required</dd>
+            <dt><span style="color:#66f;">T</span>imely</dt>
+            <dd>written about same time as code under test (with TDD, written first!)</dd>
+        </dl>
     </slides:slide>
 </slides:slides>
