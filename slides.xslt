@@ -87,11 +87,18 @@
                 </div>
             </div>
         </div>
+        <div class="slide" id="slide_0">
+            <div class="bodyregion">
+                <div class="full">
+                    <h1><xsl:apply-templates select="slides:title/node()" /></h1>
+                </div>
+            </div>
+        </div>
         <xsl:apply-templates select="slides:slide" />
         <div class="footerregion">
             <div class="footer">
                 <span style="font-size:smaller;">
-                    <span id="currentSlide">1</span>/<xsl:value-of select="count(slides:slide)" />
+                    <span id="currentSlide">0</span>/<xsl:value-of select="count(slides:slide)" />
                     <br />
                     <xsl:text>Made with XSlides. XSlides is © 2011 Christian Hujer.</xsl:text>
                 </span>

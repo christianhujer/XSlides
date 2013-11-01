@@ -3,7 +3,7 @@ const BLANK = 2;
 const BLACK = 3;
 const WHITE = 4;
 const HELP = 5;
-currentSlide = 1;
+currentSlide = 0;
 blank = NORMAL;
 commandlineEnabled = false;
 nowheel = false;
@@ -179,8 +179,8 @@ function activateSlide(newSlide) {
     if (newSlide > LAST_SLIDE) {
         newSlide = LAST_SLIDE;
     }
-    if (1 > newSlide) {
-        newSlide = 1;
+    if (0 > newSlide) {
+        newSlide = 0;
     }
     document.getElementById('slide_' + currentSlide).style.display = 'none';
     document.getElementById('slide_' + newSlide).style.display = 'block';
@@ -195,7 +195,7 @@ function activateSlide(newSlide) {
 
 /** Activates the first slide. */
 function firstSlide() {
-    activateSlide(1);
+    activateSlide(0);
 }
 
 /** Activates the last slide. */
