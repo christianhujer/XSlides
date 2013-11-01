@@ -30,7 +30,7 @@
         <script type="text/ecmascript">const LAST_SLIDE = <xsl:value-of select="count(slides:slide)" />;</script>
         <script type="text/ecmascript"><xsl:copy-of select="document('slides.js.xml')/js/node()"/></script>
     </head>
-    <body onload="javascript:begin();" onmouseover="javascript:enableNavigator();">
+    <body onload="begin()" onmouseover="javascript:enableNavigator();">
         <div class="slide" id="slide_help">
             <h1>Help</h1>
             <div class="bodyregion">
@@ -119,7 +119,22 @@
         <div class="slide" id="slide_{position()}">
             <xsl:apply-templates select="html:h1" mode="title" />
             <div class="bodyregion">
-                <xsl:apply-templates />
+                <xsl:choose>
+                    <xsl:when test="@class='twocolumn'">
+                        <xsl:if test="count(*) != 3">
+                            <xsl:message terminate="yes">Expecting 3 child elements for a slide of class twocolumn</xsl:message>
+                        </xsl:if>
+                        <div class="twocolumn_column1">
+                            <xsl:apply-templates select="*[2]" />
+                        </div>
+                        <div class="twocolumn_column2">
+                            <xsl:apply-templates select="*[3]" />
+                        </div>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:apply-templates />
+                    </xsl:otherwise>
+                </xsl:choose>
             </div>
         </div>
     </xsl:template>

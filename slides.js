@@ -248,13 +248,15 @@ function help() {
 
 /** Start handler. */
 function begin() {
-    logoSrc = document.getElementById('logo').src;
-    activateSlide(1);
+    if (document.getElementById('logo')) {
+        logoSrc = document.getElementById('logo').src;
+    }
     divs = document.getElementsByTagName('div');
     for (i = 0; divs.length > i; i++) {
         el = divs.item(i);
         el.onmousewheel = divwheel;
     }
+    activateSlide(0);
 }
 function enableNavigator() {
     /* TODO:2011-07-02:hujerc:3:Implement enable navigator. */
