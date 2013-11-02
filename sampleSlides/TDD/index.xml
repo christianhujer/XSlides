@@ -128,7 +128,7 @@
             </ul>
         </div>
     </slides:slide>
-    <slides:slide>
+    <slides:slide class="twocolumn">
         <h1>Ward Cunningham</h1>
         <blockquote>
             <p>Collective code ownership is good.</p>
@@ -143,6 +143,22 @@
                 <li>Wiki</li>
                 <li>WikiWikiWeb (first wiki)</li>
                 <li>Extreme Programming</li>
+            </ul>
+        </div>
+    </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>Erich Gamma</h1>
+        <blockquote>
+            <p>The best designers will use many design patterns that dovetail and intertwine to produce a greater whole.</p>
+            <p>Encapsulate the concept that varies.</p>
+        </blockquote>
+        <div>
+            <img src="gfx/ErichGamma.jpg" alt="" />
+            <br />
+            <cite>Erich Gamma</cite>
+            <ul>
+                <li>Design Patterns</li>
+                <li>JUnit (with Kent Beck)</li>
             </ul>
         </div>
     </slides:slide>
@@ -214,31 +230,31 @@
         <h1>The <span style="color:#f66;">F</span><span style="color:#ff6;">I</span><span style="color:#6f6;">R</span><span style="color:#6ff;">S</span><span style="color:#66f;">T</span> Principle</h1>
         <p>Unit Tests should be</p>
         <dl>
-            <dt><span style="color:#f66;">F</span>ast</dt>
-            <dd>run quickly because we want to run them very very very often</dd>
+            <dt><span style="color:#f66;">F</span>ast,</dt>
+            <dd>because we want to run them very very very often,</dd>
             <dt><span style="color:#ff6;">I</span>ndependent</dt>
-            <dd>no test depends on other tests, each test can be executed individually</dd>
+            <dd>so that each test can be executed individually,</dd>
             <dt><span style="color:#6f6;">R</span>epeatable</dt>
-            <dd>run many times, always get same result</dd>
-            <dt><span style="color:#6ff;">S</span>elf-checking</dt>
-            <dd>tests detect if failed or passed, no human analysis required</dd>
-            <dt><span style="color:#66f;">T</span>imely</dt>
-            <dd>written about same time as code under test (with TDD, written first!)</dd>
+            <dd>so that we always get same result,</dd>
+            <dt><span style="color:#6ff;">S</span>elf-checking,</dt>
+            <dd>no human analysis required to determine pass or fail,</dd>
+            <dt><span style="color:#66f;">T</span>imely,</dt>
+            <dd>written about same time as code under test (with TDD, written first).</dd>
         </dl>
     </slides:slide>
     <slides:slide>
         <h1>The <span style="color:#f66;">S</span><span style="color:#ff6;">O</span><span style="color:#6f6;">L</span><span style="color:#6ff;">I</span><span style="color:#66f;">D</span> Principles</h1>
         <p>Components should follow the</p>
         <dl>
-            <dt>SRP - <span style="color:#f66;">S</span>ingle Responsibility Principle</dt>
+            <dt><span style="color:#f66;">S</span>RP - Single Responsibility Principle</dt>
             <dd>Each component should have a single, well-defined responsibility.</dd>
-            <dt>OCP - <span style="color:#ff6;">O</span>pen Closed Principle</dt>
+            <dt><span style="color:#ff6;">O</span>CP - Open Closed Principle</dt>
             <dd>Each component should be open for for extension but closed for modification.</dd>
-            <dt>LSP - <span style="color:#6f6;">L</span>iskov Substitution Principle</dt>
+            <dt><span style="color:#6f6;">L</span>SP - Liskov Substitution Principle</dt>
             <dd>Subclasses must obey the contract of their superclasses and interfaces.</dd>
-            <dt>ISP - <span style="color:#6ff;">I</span>nterface Segregation Principle</dt>
+            <dt><span style="color:#6ff;">I</span>SP - Interface Segregation Principle</dt>
             <dd>Interfaces for different use cases should be segregated into separate interfaces.</dd>
-            <dt>DIP - <span style="color:#66f;">D</span>ependency Inversion Principle</dt>
+            <dt><span style="color:#66f;">D</span>IP - Dependency Inversion Principle</dt>
             <dd>Key dependencies should be inverted so that the source code dependencies oppose the flow of control.</dd>
         </dl>
     </slides:slide>
