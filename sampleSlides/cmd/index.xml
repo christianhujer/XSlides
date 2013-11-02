@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>cmd.exe - Windows Batches</slides:title>
+    <slides:slide>
+        <h1>Agenda</h1>
+        <ul>
+            <li>Simple Command Invocation</li>
+            <li>Front Slash vs. Back Slash</li>
+            <li>Redirection and Piping</li>
+            <li>Shared Locks vs. Exclusive Locks</li>
+            <li>Flaws</li>
+            <li>Alternatives</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Simple Command Invocation</h1>
+        <ul>
+            <li>
+        </ul>
+    </slides:slide>
+</slides:slides>

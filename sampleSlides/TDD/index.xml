@@ -3,7 +3,7 @@
     <slides:title>TDD - Test Driven Development</slides:title>
     <slides:slide>
         <h1><a href="http://agilemanifesto.org/">Manifesto for Agile Software Development</a></h1>
-        <blockquote cite="http://agilemanifesto.org/">
+        <blockquote cite="http://agilemanifesto.org/" style="text-align:center;">
             <p>
                 We are uncovering better ways of developing
                 <br />
@@ -11,12 +11,15 @@
                 <br />
                 Through this work we have come to value:
             </p>
-            <ul>
-                <li><strong>Individuals and interactions</strong> over processes and tools</li>
-                <li><strong>Working software</strong> over comprehensive documentation</li>
-                <li><strong>Customer collaboration</strong> over contract negotiation</li>
-                <li><strong>Responding to change</strong> over following a plan</li>
-            </ul>
+            <p>
+                <strong>Individuals and interactions</strong> over processes and tools
+                <br />
+                <strong>Working software</strong> over comprehensive documentation
+                <br />
+                <strong>Customer collaboration</strong> over contract negotiation
+                <br />
+                <strong>Responding to change</strong> over following a plan
+            </p>
             <p>That is, while there is value in the items on the right, we value the items on the left more.</p>
         </blockquote>
         <p><cite>Kent Beck, Alistair Cockburn, Ward Cunningham, Martin Fowler, James Grenning, Andrew Hunt, Ron Jeffries, Robert C. Martin, Ken Schwaber, Jeff Sutherland, Dave Thomas</cite> and many others</p>
@@ -98,8 +101,8 @@
     <slides:slide class="twocolumn">
         <h1>Michael Feathers</h1>
         <blockquote cite="urn:isbn:0131177052">
-            <p><dfn>Unit Tests are tests that run <strong>fast</strong>.</dfn></p>
-            <p><dfn>Legacy code is <code>code without Unit Tests</code>.</dfn></p>
+            <p>Unit Tests are tests that run <em>fast</em>.</p>
+            <p>Legacy code is <em>code without Unit Tests</em>.</p>
         </blockquote>
         <div>
             <img src="gfx/MichaelFeathers.jpg" alt="" />
@@ -107,6 +110,7 @@
             <cite>Michael Feathers</cite>
             <ul>
                 <li>Working Effectively with Legacy Code</li>
+                <li>SOLID Principles</li>
             </ul>
         </div>
     </slides:slide>
@@ -139,6 +143,17 @@
         <p><cite>Robert <q>Uncle Bob</q> Cecil Martin</cite> in <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">97 Things Every Programmer Should Know</a></p>
     </slides:slide>
     <slides:slide>
+        <h1>The <span style="color:#f66;">Red</span>-<span style="color:#6f6;">Green</span>-<span style="color:#66f;">Refactor</span>-Cycle</h1>
+        <dl>
+            <dt><span style="color:#f66;">Red</span></dt>
+            <dd>Write as much of a unit test as is sufficient to fail (and not compiling is failing).</dd>
+            <dt><span style="color:#6f6;">Green</span></dt>
+            <dd>Write as much of production code as is sufficient to pass the currently failing unit test.</dd>
+            <dt><span style="color:#66f;">Refactor</span></dt>
+            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID etc. etc.).</dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
         <h1>The 4 A's Principle - Given When Then</h1>
         <ul>
             <li>Arrange - Given (Arrangement)</li>
@@ -162,5 +177,25 @@
             <dt><span style="color:#66f;">T</span>imely</dt>
             <dd>written about same time as code under test (with TDD, written first!)</dd>
         </dl>
+    </slides:slide>
+    <slides:slide>
+        <h1>The <span style="color:#f66;">S</span><span style="color:#ff6;">O</span><span style="color:#6f6;">L</span><span style="color:#6ff;">I</span><span style="color:#66f;">D</span> Principles</h1>
+        <p>Components should follow the</p>
+        <dl>
+            <dt>SRP - <span style="color:#f66;">S</span>ingle Responsibility Principle</dt>
+            <dd>Each component should have a single, well-defined responsibility.</dd>
+            <dt>OCP - <span style="color:#ff6;">O</span>pen Closed Principle</dt>
+            <dd>Each component should be open for for extension but closed for modification.</dd>
+            <dt>LSP - <span style="color:#6f6;">L</span>iskov Substitution Principle</dt>
+            <dd>Subclasses must obey the contract of their superclasses and interfaces.</dd>
+            <dt>ISP - <span style="color:#6ff;">I</span>nterface Segregation Principle</dt>
+            <dd>Interfaces for different use cases should be segregated into separate interfaces.</dd>
+            <dt>DIP - <span style="color:#66f;">D</span>ependency Inversion Principle</dt>
+            <dd>Key dependencies should be inverted so that the source code dependencies oppose the flow of control.</dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
+        <h1>GRASP</h1>
+        <p>General Responsibility Assignment Software Patterns</p>
     </slides:slide>
 </slides:slides>
