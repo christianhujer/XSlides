@@ -99,6 +99,54 @@
         </div>
     </slides:slide>
     <slides:slide class="twocolumn">
+        <h1>Martin Fowler</h1>
+        <blockquote cite="http://www.softwarequotes.com/printableshowquotes.aspx?id=573">
+            <p>
+                Don't worry about design, if you listen to your code a good design will appear...
+                Listen to the technical people.
+                If they are complaining about the difficulty of making changes,
+                then take such complaints seriously and give them time to fix things.
+            </p>
+            <p>
+                People also underestimate the time they spend debugging.
+                They underestimate how much time they can spend chasing a long bug.
+                With testing, I know straight away when I added a bug.
+                That lets me fix the bug immediately, before it can crawl off and hide.
+                There are few things more frustrating or time wasting than debugging.
+                Wouldn't it be a hell of a lot quicker if we just didn't create the bugs in the first place?
+            </p>
+            <p>
+                Comprehensiveness is the enemy of comprehensibility.
+            </p>
+        </blockquote>
+        <div>
+            <img src="gfx/MartinFowler.jpg" alt="" />
+            <br />
+            <cite>Martin Fowler</cite>
+            <ul>
+                <li>Refactoring</li>
+            </ul>
+        </div>
+    </slides:slide>
+    <slides:slide>
+        <h1>Ward Cunningham</h1>
+        <blockquote>
+            <p>Collective code ownership is good.</p>
+            <p>Over and over, people try to design systems that make tomorrow's work easy. But when tomorrow comes it turns out they didn't quite understand tomorrow's work, and they actually made it harder.</p>
+            <p>When a manager asks for hard data, that's usually just his way of saying no.</p>
+        </blockquote>
+        <div>
+            <img src="gfx/WardCunningham.jpg" alt="" />
+            <br />
+            <cite>Ward Cunningham</cite>
+            <ul>
+                <li>Wiki</li>
+                <li>WikiWikiWeb (first wiki)</li>
+                <li>Extreme Programming</li>
+            </ul>
+        </div>
+    </slides:slide>
+    <slides:slide class="twocolumn">
         <h1>Michael Feathers</h1>
         <blockquote cite="urn:isbn:0131177052">
             <p>Unit Tests are tests that run <em>fast</em>.</p>
