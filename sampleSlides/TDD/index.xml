@@ -3,7 +3,7 @@
     <slides:title>TDD - Test Driven Development</slides:title>
     <slides:slide>
         <h1><a href="http://agilemanifesto.org/">Manifesto for Agile Software Development</a></h1>
-        <blockquote>
+        <blockquote cite="http://agilemanifesto.org/">
             <p>
                 We are uncovering better ways of developing
                 <br />
@@ -23,7 +23,7 @@
     </slides:slide>
     <slides:slide>
         <h1><a href="http://manifesto.softwarecraftsmanship.org/">Manifesto for Software Craftsmanship</a></h1>
-        <blockquote>
+        <blockquote cite="http://manifesto.softwarecraftsmanship.org/">
             <p>Raising the Bar</p>
             <p>As aspiring Software Craftsmen we are raising the bar of professional software development by practicing it and helping others learn the craft. Through this work we have come to value:</p>
             <ul>
@@ -38,25 +38,31 @@
     </slides:slide>
     <slides:slide class="twocolumn">
         <h1>Kent Beck</h1>
-        <blockquote>
-            <p>
-                I'm not a great programmer.
-                <br />
-                I'm just a good programmer with great habits.
-            </p>
-            <p>
-                Any fool can write code that a computer can understand.
-                <br />
-                Good programmers write code that humans can understand.
-            </p>
-            <p>
-                Do the simplest thing that could possibly work.
-            </p>
-        </blockquote>
+        <div>
+            <blockquote>
+                <p>
+                    I'm not a great programmer.
+                    <br />
+                    I'm just a good programmer with great habits.
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    Any fool can write code that a computer can understand.
+                    <br />
+                    Good programmers write code that humans can understand.
+                </p>
+            </blockquote>
+            <blockquote>
+                <p>
+                    Do the simplest thing that could possibly work.
+                </p>
+            </blockquote>
+        </div>
         <div>
             <img src="gfx/KentBeck.jpg" alt="" />
             <br />
-            Kent Beck
+            <cite>Kent Beck</cite>
             <ul>
                 <li>SUnit / xUnit</li>
                 <li>JUnit (with Erich Gamma)</li>
@@ -68,37 +74,45 @@
     </slides:slide>
     <slides:slide class="twocolumn">
         <h1>Uncle Bob</h1>
-        <blockquote>
+        <blockquote cite="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">
             <p>
-                The jury is in.
-                The controversy is over.
-                The debate has ended.
-                The conclusion is:
-                <em>TDD works.</em>
+                The jury is in.<br />
+                The controversy is over.<br />
+                The debate has ended.<br />
+                The conclusion is:<br />
+                <em>TDD works.</em><br />
                 Sorry.
             </p>
         </blockquote>
-        <p>
+        <div>
             <img src="gfx/UncleBob.jpg" alt="" />
             <br />
             <cite>Robert <q>Uncle Bob</q> Cecil Martin</cite>
-        </p>
+            <ul>
+                <li>SOLID Principles</li>
+                <li>Clean Code</li>
+                <li>Software Craftsmanship</li>
+            </ul>
+        </div>
     </slides:slide>
     <slides:slide class="twocolumn">
         <h1>Michael Feathers</h1>
-        <blockquote>
+        <blockquote cite="urn:isbn:0131177052">
             <p><dfn>Unit Tests are tests that run <strong>fast</strong>.</dfn></p>
             <p><dfn>Legacy code is <code>code without Unit Tests</code>.</dfn></p>
         </blockquote>
-        <p>
+        <div>
             <img src="gfx/MichaelFeathers.jpg" alt="" />
             <br />
-            <cite>Michael Feathers, Working Effectively with Legacy Code</cite>
-        </p>
+            <cite>Michael Feathers</cite>
+            <ul>
+                <li>Working Effectively with Legacy Code</li>
+            </ul>
+        </div>
     </slides:slide>
     <slides:slide>
         <h1>The Three Laws of TDD</h1>
-        <blockquote>
+        <blockquote cite="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">
             <ul>
                 <li>You can't write any production code until you have first written a failing unit test.</li>
                 <li>You can't write more of a unit test than is sufficient to fail, and not compiling is failing.</li>
