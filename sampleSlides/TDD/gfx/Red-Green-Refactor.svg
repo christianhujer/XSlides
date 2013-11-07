@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+    <defs>
+        <circle id="rgfCircle" r="140" style="stroke-width: 10; fill-opacity: 20%;"/>
+    </defs>
+    <g transform="translate(500 500)" style="font-size: 60; text-anchor: middle;">
+        <circle r="350" style="stroke-width: 50; stroke: #fff; stroke-opacity: 25%; fill-opacity: 0%;" />
+        <g>
+            <polygon transform="translate(0 -350)" points="-30 60 30 0 -30 -60" style="fill: #fff; fill-opacity: 25%;" />
+            <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+        </g>
+        <g transform="rotate(360) translate(0 -350) rotate(-360)" style="fill: #f66; stroke: #f66;">
+            <use xlink:href="#rgfCircle" />
+            <text y="15">Red</text>
+        </g>
+        <g transform="rotate(120) translate(0 -350) rotate(-120)" style="fill: #6f6; stroke: #6f6;">
+            <use xlink:href="#rgfCircle" />
+            <text y="15">Green</text>
+        </g>
+        <g transform="rotate(240) translate(0 -350) rotate(-240)" style="fill: #66f; stroke: #66f;">
+            <use xlink:href="#rgfCircle" />
+            <text y="15">Refactor</text>
+        </g>
+    </g>
+</svg>

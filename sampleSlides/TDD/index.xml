@@ -107,14 +107,14 @@
                 If they are complaining about the difficulty of making changes,
                 then take such complaints seriously and give them time to fix things.
             </p>
-            <p>
+            <!--p>
                 People also underestimate the time they spend debugging.
                 They underestimate how much time they can spend chasing a long bug.
                 With testing, I know straight away when I added a bug.
                 That lets me fix the bug immediately, before it can crawl off and hide.
                 There are few things more frustrating or time wasting than debugging.
                 Wouldn't it be a hell of a lot quicker if we just didn't create the bugs in the first place?
-            </p>
+            </p-->
             <p>
                 Comprehensiveness is the enemy of comprehensibility.
             </p>
@@ -206,7 +206,7 @@
         <p>Better development speed, better designs, less bugs, better maintainability, more fun!</p>
         <p><cite>Robert <q>Uncle Bob</q> Cecil Martin</cite> in <a href="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">97 Things Every Programmer Should Know</a></p>
     </slides:slide>
-    <slides:slide>
+    <slides:slide class="twocolumn">
         <h1>The <span style="color:#f66;">Red</span>-<span style="color:#6f6;">Green</span>-<span style="color:#66f;">Refactor</span>-Cycle</h1>
         <dl>
             <dt><span style="color:#f66;">Red</span></dt>
@@ -216,6 +216,7 @@
             <dt><span style="color:#66f;">Refactor</span></dt>
             <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID etc. etc.).</dd>
         </dl>
+        <p><img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" /></p>
     </slides:slide>
     <slides:slide>
         <h1>The 4 A's Principle - Given When Then</h1>
@@ -244,18 +245,18 @@
     </slides:slide>
     <slides:slide>
         <h1>The <span style="color:#f66;">S</span><span style="color:#ff6;">O</span><span style="color:#6f6;">L</span><span style="color:#6ff;">I</span><span style="color:#66f;">D</span> Principles</h1>
-        <p>Components should follow the</p>
+        <p>Components and software entities in general (classes, modules, functions etc.) should follow the</p>
         <dl>
             <dt><span style="color:#f66;">S</span>RP - Single Responsibility Principle</dt>
-            <dd>Each component should have a single, well-defined responsibility.</dd>
+            <dd>There should never be more than one reason for a software entity to change.</dd>
             <dt><span style="color:#ff6;">O</span>CP - Open Closed Principle</dt>
-            <dd>Each component should be open for for extension but closed for modification.</dd>
+            <dd>Software entities should be open for extension, but closed for modification. (Bertrand Meyer)</dd>
             <dt><span style="color:#6f6;">L</span>SP - Liskov Substitution Principle</dt>
-            <dd>Subclasses must obey the contract of their superclasses and interfaces.</dd>
+            <dd>Subclasses must obey the contract of their superclasses and interfaces. (Barbara Liskov)</dd>
             <dt><span style="color:#6ff;">I</span>SP - Interface Segregation Principle</dt>
             <dd>Interfaces for different use cases should be segregated into separate interfaces.</dd>
             <dt><span style="color:#66f;">D</span>IP - Dependency Inversion Principle</dt>
-            <dd>Key dependencies should be inverted so that the source code dependencies oppose the flow of control.</dd>
+            <dd>Software entities should depend on abstractions, not on concrete details.</dd>
         </dl>
     </slides:slide>
     <slides:slide>
