@@ -7,7 +7,7 @@
     <g transform="translate(500 500)" style="font-size: 60; text-anchor: middle;">
         <circle r="350" style="stroke-width: 50; stroke: #fff; stroke-opacity: 25%; fill-opacity: 0%;" />
         <g>
-            <polygon transform="translate(0 -350)" points="-30 60 30 0 -30 -60" style="fill: #fff; fill-opacity: 25%;" />
+            <polygon transform="translate(0 -350) scale(50)" points="-1 2 1 0 -1 -2" style="fill: #fff; fill-opacity: 25%;" />
             <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
         </g>
         <g transform="rotate(360) translate(0 -350) rotate(-360)" style="fill: #f66; stroke: #f66;">
