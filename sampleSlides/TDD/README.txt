@@ -35,7 +35,7 @@ JeanetteWing.jpg
     Image-URL: http://farm3.staticflickr.com/2729/4052660923_76f5093c44_o.jpg
 
 JohnMcCarthy.jpg
-    Copyright (c) Athanasios Kasampalis
+    Copyright: (c) Athanasios Kasampalis
     License: Creative Commons License
     Site-URL: http://www.flickr.com/photos/12693492@N04/1338577487/sizes/o/
     Image-URL: http://farm2.staticflickr.com/1300/1338577487_13cd82c180_o.jpg
