@@ -121,3 +121,13 @@ div#screenWhite, div#screenBlack {
     height: auto;
     display: none;
 }
+
+div:first-child,p:first-child,*:first-child {
+    margin-top: 0px;
+}
+dt {
+    margin-top: 1ex;
+}
+*,div,p {
+    margin-bottom: 0px;
+}
