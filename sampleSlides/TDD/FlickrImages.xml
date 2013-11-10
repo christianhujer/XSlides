@@ -1,0 +1,86 @@
+<flickrImages>
+    <flickrImage
+        basename="BarbaraLiskov"
+        copyright="Anya Helene Bagge"
+        license="Creative Commons"
+        siteUrl="http://www.flickr.com/photos/anyahelene/5041351059/sizes/o/"
+        imageUrl="http://farm5.staticflickr.com/4131/5041351059_15ae7603a7_o.jpg"
+    />
+    <flickrImage
+        basename="BertrandMeyer"
+        copyright="Innovalia Association"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/innovalia/5160656353/sizes/o/"
+        imageUrl="http://farm5.staticflickr.com/4132/5160656353_bdb85c5f49_o.jpg"
+    />
+    <flickrImage
+        basename="EdsgerDijkstra"
+        copyright="complejidadciclomatica"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/complejidad_ciclomatica/76644728/sizes/o/"
+        imageUrl="http://farm1.staticflickr.com/40/76644728_ba42b9b20f_o.jpg"
+    />
+    <flickrImage
+        basename="ErichGamma"
+        copyright="Stephan Janssen"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/98726399@N00/1761121773/sizes/o/"
+        imageUrl="http://farm3.staticflickr.com/2198/1761121773_502f5fb47e_o.jpg"
+    />
+    <flickrImage
+        basename="GradyBooch"
+        copyright="makeplex"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/makeplex/4531235260/sizes/o/"
+        imageUrl="http://farm5.staticflickr.com/4065/4531235260_c72cc6777e_o.jpg"
+    />
+    <flickrImage
+        basename="JeanetteWing"
+        copyright="Ronald Woan"
+        license="Creative Commons"
+        siteUrl="http://www.flickr.com/photos/rwoan/4052660923/sizes/o/"
+        imageUrl="http://farm3.staticflickr.com/2729/4052660923_76f5093c44_o.jpg"
+    />
+    <flickrImage
+        basename="JohnMcCarthy"
+        copyright="Athanasios Kasampalis"
+        license="Creative Commons License"
+        siteUrl="http://www.flickr.com/photos/12693492@N04/1338577487/sizes/o/"
+        imageUrl="http://farm2.staticflickr.com/1300/1338577487_13cd82c180_o.jpg"
+    />
+    <flickrImage
+        basename="KentBeck"
+        copyright="GOTOconference"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/26420411@N02/3062930943/sizes/o/"
+        imageUrl="http://farm4.staticflickr.com/3292/3062930943_bc9b505385_o.jpg"
+    />
+    <flickrImage
+        basename="MartinFowler"
+        copyright="ThoughtWorks Inc."
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/thoughtworks/6346491765/sizes/o/"
+        imageUrl="http://farm7.staticflickr.com/6038/6346491765_68a8ebc5e2_o.jpg"
+    />
+    <flickrImage
+        basename="MichaelFeathers"
+        copyright="fraserspeirs"
+        license="Creative Commons License"
+        siteUrl="http://www.flickr.com/photos/fraserspeirs/3394786679/sizes/o/"
+        imageUrl="http://farm4.staticflickr.com/3464/3394786679_a36b0079c8_o.jpg"
+    />
+    <flickrImage
+        basename="UncleBob"
+        copyright="skillsmatter"
+        license="All rights reserved (fair usage for academic and educational purposes)"
+        siteUrl="http://www.flickr.com/photos/skillsmatter/9244541389/sizes/o/"
+        imageUrl="http://farm8.staticflickr.com/7346/9244541389_8827c0891b_o.jpg"
+    />
+    <flickrImage
+        basename="WardCunningham"
+        copyright="munnecket"
+        license="Creative Commons License"
+        siteUrl="http://www.flickr.com/photos/munnecket/6281749146/sizes/o/"
+        imageUrl="http://farm7.staticflickr.com/6046/6281749146_8bf8b84679_o.jpg"
+    />
+</flickrImages>
