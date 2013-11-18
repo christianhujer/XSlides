@@ -2,20 +2,20 @@
 
 _path:=$(dir $(lastword $(MAKEFILE_LIST)))
 
+ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc $(_path)ListListings.xslt $(slides))))
+
+.PHONY: all
 ## Creates all files.
 all: 2html $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML)
-
-debug:
-	echo $(_path)
 
 ## Creates all files necessary for viewing the XML files.
 xmlview: $(ALL_CSS_XML)
 
 %.xml.listing: %.xml
-	ex -c 'let g:html_use_xhtml=1' -c 'normal zR' -c 'runtime! syntax/2html.vim | 2d | sav $@' -c 'q!' -c 'q' $^
+	ex -c 'let g:html_use_xhtml=1' -c 'normal zR' -c 'runtime! syntax/2html.vim | 2d | sav $@' -c 'q!' -c 'q!' $^
 
 %.listing: %
-	ex -c 'let g:html_use_xhtml=1' -c 'normal zR' -c 'set shiftwidth=2' -c 'normal 1GVG=' -c 'runtime! syntax/2html.vim | 2d | w' -c 'q' -c 'q' $^
+	ex -c 'let g:html_use_xhtml=1' -c 'normal zR' -c 'set shiftwidth=2' -c 'normal 1GVG=' -c 'runtime! syntax/2html.vim | 2d | sav $@' -c 'q!' -c 'q!' $^
 
 2html: $(ALL_SLIDES_HTML)
 
@@ -23,8 +23,8 @@ clean:
 	rm -f $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML) $(ALL_CSS_XML)
 
 #%.xhtml: %.xml $(_path)slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
-%.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml
-	xsltproc --stringparam path $(_path) $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
+%.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml $(ALL_SOURCES_HTML)
+	xsltproc --path $(_path):. $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
 
 %.html: %.xhtml
 	cp $^ $@

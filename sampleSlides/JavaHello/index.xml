@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>Java Hello World</slides:title>
+    <slides:slide>
+        <h1>Java Hello World</h1>
+        <p>
+            Example for XSlides how to deal with source code.
+        </p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Old Java Hello World</h1>
+        <slides:listing src="src/Hello1.java" />
+    </slides:slide>
+    <slides:slide>
+        <h1>New Java Hello World</h1>
+        <slides:listing src="src/Hello2.java" />
+    </slides:slide>
+</slides:slides>

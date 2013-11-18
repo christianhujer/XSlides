@@ -146,7 +146,7 @@
     <xsl:template match="html:h1" />
 
     <xsl:template match="slides:listing">
-        <xsl:apply-templates select="document(concat(@src, '.listing'))/html:body/html:pre" />
+        <xsl:apply-templates select="document(concat(@src, '.listing'), .)/html:html/html:body/html:pre" />
     </xsl:template>
 
     <xsl:template match="html:img[contains(@src, '.svg')]">
