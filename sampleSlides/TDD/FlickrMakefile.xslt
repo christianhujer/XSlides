@@ -37,6 +37,7 @@
         <xsl:text>&#xA;</xsl:text>
 
         <xsl:text>gfx/flickr/%.jpg: gfx/flickr/%_o.jpg&#xA;</xsl:text>
+        <xsl:text>&#x9;&lt;mkdir -p $(dir $@)&#xA;</xsl:text>
         <xsl:text>&#x9;&lt;$^ anytopnm | pnmscale -xysize 400 300 | pnmtojpeg &gt;$@&#xA;</xsl:text>
         <xsl:text>&#xA;</xsl:text>
 
