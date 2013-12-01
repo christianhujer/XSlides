@@ -4,6 +4,8 @@ _path:=$(dir $(lastword $(MAKEFILE_LIST)))
 
 ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc $(_path)ListListings.xslt $(slides))))
 
+.DELETE_ON_ERROR:
+
 .PHONY: all
 ## Creates all files.
 all: 2html $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML)
