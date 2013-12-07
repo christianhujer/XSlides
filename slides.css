@@ -62,10 +62,10 @@ height:100%;
     display: block;
 }
 code {
-    font-family: Lucida Console;
+    font-family: 'Lucida Console', monospace;
 }
 .full pre {
-    font-family: Lucida Console;
+    font-family: 'Lucida Console', monospace;
     margin: 0px;
     padding: 0px;
 }
