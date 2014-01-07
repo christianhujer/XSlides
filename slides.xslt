@@ -119,6 +119,7 @@
         <div class="slide" id="slide_{position()}">
             <xsl:apply-templates select="html:h1" mode="title" />
             <div class="bodyregion">
+                <xsl:apply-templates select="@style" />
                 <xsl:choose>
                     <xsl:when test="@class='twocolumn'">
                         <xsl:if test="count(*) != 3">
