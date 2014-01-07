@@ -131,3 +131,13 @@ dt {
 *,div,p {
     margin-bottom: 0px;
 }
+
+table {
+    width:75%;
+    margin-left:12.5%;
+    margin-right:12.5%;
+}
+th, td {
+    border: #fff solid 2px;
+    padding: 1ex;
+}
