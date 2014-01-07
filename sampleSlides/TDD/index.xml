@@ -326,13 +326,46 @@
         <img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" />
     </slides:slide>
     <slides:slide>
+        <h1>The Single Assert Rule</h1>
+        <p>
+            Each test case should have only one logical assert.
+        </p>
+    </slides:slide>
+    <slides:slide>
         <h1>The 4 A's Principle - Given When Then</h1>
-        <ul>
-            <li>Arrange - Given (Arrangement)</li>
-            <li>Act - When (Action)</li>
-            <li>Assert - Then (Assert expectation)</li>
-            <li>Annihilate - (Cleanup)</li>
-        </ul>
+        <p>
+            Each test case is made up of four steps.
+        </p>
+        <table style="width:75%; margin-left:12.5%; margin-right:12.5%;">
+            <col align="left" style="background-color: rgba(255, 255, 102, 0.2);"/>
+            <col align="left" style="background-color: rgba(102, 255, 255, 0.2);"/>
+            <col align="left" style="background-color: rgba(255, 102, 255, 0.2);"/>
+            <tr>
+                <th style="border: #ff6 solid 2px;">4 A's</th>
+                <th style="border: #6ff solid 2px;">Behavior</th>
+                <th style="border: #f6f solid 2px;">Classic</th>
+            </tr>
+            <tr>
+                <td style="border: #ff6 solid 2px;">Arrange</td>
+                <td style="border: #6ff solid 2px;">Given (Arrangement)</td>
+                <td style="border: #f6f solid 2px;"><code>setUp()</code></td>
+            </tr>
+            <tr>
+                <td style="border: #ff6 solid 2px;">Act</td>
+                <td style="border: #6ff solid 2px;">When (Action)</td>
+                <td style="border: #f6f solid 2px;">(Exercise)</td>
+            </tr>
+            <tr>
+                <td style="border: #ff6 solid 2px;">Assert</td>
+                <td style="border: #6ff solid 2px;">Then (Action)</td>
+                <td style="border: #f6f solid 2px;"><code>assert</code> (Verification)</td>
+            </tr>
+            <tr>
+                <td style="border: #ff6 solid 2px;">Annihilate</td>
+                <td style="border: #6ff solid 2px;">(Cleanup)</td>
+                <td style="border: #f6f solid 2px;"><code>tearDown()</code></td>
+            </tr>
+        </table>
     </slides:slide>
     <slides:slide>
         <h1>The <span style="color:#f66;">F</span><span style="color:#ff6;">I</span><span style="color:#6f6;">R</span><span style="color:#6ff;">S</span><span style="color:#66f;">T</span> Principle</h1>
