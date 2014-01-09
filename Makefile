@@ -1,8 +1,10 @@
 ## XSlides Makefile.
 
 _path:=$(dir $(lastword $(MAKEFILE_LIST)))
+slides?=index.xml
 
 ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc $(_path)ListListings.xslt $(slides))))
+ALL_IMAGES_B64:=$(addsuffix .b64,$(shell xsltproc $(_path)ListImages.xslt $(slides)))
 
 .DELETE_ON_ERROR:
 
@@ -25,8 +27,8 @@ clean:
 	rm -f $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_SLIDES_XHTML) $(ALL_SLIDES_HTML) $(ALL_CSS_XML)
 
 #%.xhtml: %.xml $(_path)slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
-%.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml $(ALL_SOURCES_HTML)
-	xsltproc --path $(_path):. $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
+%.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64)
+	xsltproc --stringparam imgmode base64 --path $(_path):. $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
 
 %.html: %.xhtml
 	cp $^ $@
@@ -47,4 +49,5 @@ clean:
 	cat $^ >>$@
 	echo "]]></js>" >>$@
 
+.PHONY: images
 images: $(ALL_IMAGES_B64)
