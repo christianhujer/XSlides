@@ -44,7 +44,7 @@
                         <li>Key Strokes applicable from PowerPoint and from VI Improved work as expected.</li>
                         <li>Your Logitech Cordless Presenter and similar tools work, too.</li>
                     </ul>
-                    <h3>Normale KeyStrokes</h3>
+                    <h3>Normal Key Strokes</h3>
                     <table class="lnice">
                         <tr><th>Function</th><th>Keys</th></tr>
                         <tr><td>Help</td><td>F1, ?</td></tr>
@@ -78,12 +78,28 @@
                         <li>In Firefox, the wheel doesn't work at all.</li>
                     </ul>
                     <h2>Tested Versions</h2>
-                    <ul>
-                        <li>Google Chrome 12.0.742.100</li>
-                        <li>Microsoft Internet Explorer 8.0.6001.18702</li>
-                        <li>Mozilla Firefox 4.0</li>
-                        <li>Opera 11.10 Build 2092</li>
-                    </ul>
+                    <dl>
+                        <!-- TODO check processing instructions -->
+                        <!-- TODO test directory structure -->
+                        <!-- TODO check mouse wheel with overflow -->
+                        <dt>Google Chrome</dt>
+                        <dd>Tested versions: 12.0.742.100, 31.0.1650.57 and various versions in between</dd>
+                        <dd>Works perfect for the generated output, including animated SVG. Directly processing XML requires all stuff to be in the same directory.</dd>
+                        <dt>Konqueror</dt>
+                        <dd>Tested version: 4.11.2</dd>
+                        <dd>Works perfect for the generated output, including animated SVG and direct processing of XML.</dd>
+                        <dt>Microsoft Internet Explorer</dt>
+                        <dd>Tested versions: 8.0.6001.18702 and some newer versions. All versions work but with lots of flaws. Internet Explorer simply is shit and I cannot recommend using it.</dt>
+                        <dt>Mozilla Firefox</dt>
+                        <dd>Tested versions: 4.0, 25.0 and various versions in between.</dt>
+                        <dd>Works well for generated output, SVG has limitations. Directly processing XML requires all stuff to be in the same directory.</dd>
+                        <dt>Seamonkey</dt>
+                        <dd>Tested version: 2.23</dt>
+                        <dd>SVG has limitations and most keys do not work. Directly processing XML requires all stuff to be in the same directory.</dd>
+                        <dt>Opera</dt>
+                        <dd>Tested version: 12.15 </dd>
+                        <dd>Works well for generated output, SVG has limitations. Directly processing XML requires all stuff to be in the same directory.</dd>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -100,7 +116,7 @@
                 <span style="font-size:smaller;">
                     <span id="currentSlide">0</span>/<xsl:value-of select="count(slides:slide)" />
                     <br />
-                    <xsl:text>Made with XSlides. XSlides is © 2011 Christian Hujer.</xsl:text>
+                    <xsl:text>Made with XSlides. XSlides is © 2011 - 2014 Christian Hujer.</xsl:text>
                 </span>
             </div>
         </div>
