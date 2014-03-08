@@ -2,6 +2,7 @@
 
 _path:=$(dir $(lastword $(MAKEFILE_LIST)))
 slides?=index.xml
+SHELL:=bash
 
 ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc $(_path)ListListings.xslt $(slides))))
 ALL_IMAGES_B64:=$(addsuffix .b64,$(shell xsltproc $(_path)ListImages.xslt $(slides)))
