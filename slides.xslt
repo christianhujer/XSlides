@@ -89,12 +89,12 @@
                         <dd>Tested version: 4.11.2</dd>
                         <dd>Works perfect for the generated output, including animated SVG and direct processing of XML.</dd>
                         <dt>Microsoft Internet Explorer</dt>
-                        <dd>Tested versions: 8.0.6001.18702 and some newer versions. All versions work but with lots of flaws. Internet Explorer simply is shit and I cannot recommend using it.</dt>
+                        <dd>Tested versions: 8.0.6001.18702 and some newer versions. All versions work but with lots of flaws. Internet Explorer simply is shit and I cannot recommend using it.</dd>
                         <dt>Mozilla Firefox</dt>
-                        <dd>Tested versions: 4.0, 25.0 and various versions in between.</dt>
+                        <dd>Tested versions: 4.0, 25.0 and various versions in between.</dd>
                         <dd>Works well for generated output, SVG has limitations. Directly processing XML requires all stuff to be in the same directory.</dd>
                         <dt>Seamonkey</dt>
-                        <dd>Tested version: 2.23</dt>
+                        <dd>Tested version: 2.23</dd>
                         <dd>SVG has limitations and most keys do not work. Directly processing XML requires all stuff to be in the same directory.</dd>
                         <dt>Opera</dt>
                         <dd>Tested version: 12.15 </dd>
