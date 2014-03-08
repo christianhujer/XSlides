@@ -285,6 +285,21 @@
             </ul>
         </div>
     </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>Agile: <span style="color:#ff6;">Scrum</span>, <span style="color:#6ff;">XP</span>, <span style="color:#f6f;">Clean Code</span></h1>
+        <div>
+            <h4>Three Building Bricks</h4>
+            <dl>
+                <dt><span style="color:#ff6;">Scrum</span></dt>
+                <dd>Agility between the Team and the Organization</dd>
+                <dt><span style="color:#6ff;">XP</span></dt>
+                <dd>Agility between Individuals in the Team</dd>
+                <dt><span style="color:#f6f;">Clean Code</span></dt>
+                <dd>Agility between the Code and the Individuals</dd>
+            </dl>
+        </div>
+        <img src="gfx/Agile.svg" alt="Scrum, XP, Clean Code" />
+    </slides:slide>
     <slides:slide>
         <h1>The Three Laws of TDD</h1>
         <blockquote cite="http://programmer.97things.oreilly.com/wiki/index.php/The_Three_Laws_of_Test-Driven_Development">
