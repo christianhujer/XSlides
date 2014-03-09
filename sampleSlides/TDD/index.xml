@@ -352,33 +352,73 @@
             Each test case is made up of four steps.
         </p>
         <table style="width:75%; margin-left:12.5%; margin-right:12.5%;">
-            <col align="left" style="background-color: rgba(255, 255, 102, 0.2);"/>
-            <col align="left" style="background-color: rgba(102, 255, 255, 0.2);"/>
-            <col align="left" style="background-color: rgba(255, 102, 255, 0.2);"/>
+            <col align="left" style="background-color: hsla(0, 100%, 75%, 0.2);"/>
+            <col align="left" style="background-color: hsla(90, 100%, 75%, 0.2);"/>
+            <col align="left" style="background-color: hsla(180, 100%, 75%, 0.2);"/>
+            <col align="left" style="background-color: hsla(270, 100%, 75%, 0.2);"/>
             <tr>
-                <th style="border: #ff6 solid 2px;">4 A's</th>
-                <th style="border: #6ff solid 2px;">Behavior</th>
-                <th style="border: #f6f solid 2px;">Classic</th>
+                <th style="border: hsla(0, 100%, 75%, 1) solid 2px;">4 A's</th>
+                <th style="border: hsla(90, 100%, 75%, 1) solid 2px;">Behavior</th>
+                <th style="border: hsla(180, 100%, 75%, 1) solid 2px;">Classic</th>
+                <th style="border: hsla(270, 100%, 75%, 1) solid 2px;">xUnit 4+</th>
             </tr>
             <tr>
-                <td style="border: #ff6 solid 2px;">Arrange</td>
-                <td style="border: #6ff solid 2px;">Given (Arrangement)</td>
-                <td style="border: #f6f solid 2px;"><code>setUp()</code></td>
+                <td style="border: hsla(0, 100%, 75%, 1) solid 2px;">Arrange</td>
+                <td style="border: hsla(90, 100%, 75%, 1) solid 2px;">Given (Arrangement)</td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>setUp()</code></td>
+                <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@BeforeClass</code>, <code>@Before</code></td>
             </tr>
             <tr>
-                <td style="border: #ff6 solid 2px;">Act</td>
-                <td style="border: #6ff solid 2px;">When (Action)</td>
-                <td style="border: #f6f solid 2px;">(Exercise)</td>
+                <td style="border: hsla(0, 100%, 75%, 1) solid 2px;">Act</td>
+                <td style="border: hsla(90, 100%, 75%, 1) solid 2px;">When (Action)</td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;">(Exercise)</td>
+                <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@Test</code></td>
             </tr>
             <tr>
-                <td style="border: #ff6 solid 2px;">Assert</td>
-                <td style="border: #6ff solid 2px;">Then (Action)</td>
-                <td style="border: #f6f solid 2px;"><code>assert</code> (Verification)</td>
+                <td style="border: hsla(0, 100%, 75%, 1) solid 2px;">Assert</td>
+                <td style="border: hsla(90, 100%, 75%, 1) solid 2px;">Then (Verification)</td>
+                <td style="border: hsla(225, 100%, 75%, 1) solid 2px;" colspan="2"><code>assert</code></td>
             </tr>
             <tr>
-                <td style="border: #ff6 solid 2px;">Annihilate</td>
-                <td style="border: #6ff solid 2px;">(Cleanup)</td>
-                <td style="border: #f6f solid 2px;"><code>tearDown()</code></td>
+                <td style="border: hsla(0, 100%, 75%, 1) solid 2px;">Annihilate</td>
+                <td style="border: hsla(90, 100%, 75%, 1) solid 2px;">(Cleanup)</td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>tearDown()</code></td>
+                <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@After</code>, <code>@AfterClass</code></td>
+            </tr>
+        </table>
+    </slides:slide>
+    <slides:slide>
+        <h1>Comparison JUnit - AceUnit</h1>
+        <table style="width:75%; margin-left:12.5%; margin-right:12.5%;">
+            <col align="left" style="background-color: hsla(0, 100%, 75%, 0.2);"/>
+            <col align="left" style="background-color: hsla(180, 100%, 75%, 0.2);"/>
+            <tr>
+                <th style="border: hsla(0, 100%, 75%, 1) solid 2px;">JUnit</th>
+                <th style="border: hsla(180, 100%, 75%, 1) solid 2px;">AceUnit</th>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@BeforeClass</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_BeforeClass</code></td>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@Before</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_Before</code></td>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@Test</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_Test</code></td>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@Ignore</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_Ignore</code></td>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@After</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_After</code></td>
+            </tr>
+            <tr>
+                <td style="border: hsla(0, 70%, 75%, 1) solid 2px;"><code>@AfterClass</code></td>
+                <td style="border: hsla(180, 100%, 75%, 1) solid 2px;"><code>A_AfterClass</code></td>
             </tr>
         </table>
     </slides:slide>
