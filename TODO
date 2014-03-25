@@ -6,3 +6,12 @@ Escape should exit help.
 Explicit slide goto commands should exit help.
 Pressing F1 again should exit help.
 Horizontal scroll wheel should also change slides.
+
+Change XSlides to use pure HTML + SVG.
+The slides can be detected by locating the h1 elements.
+The slide class could be taken from the class attribute of the h1 element.
+
+Allow resizing of visible area to compensate bogus projector configurations during presentation.
+The interface should be similar to overscan configurations.
+
+The flickr interface should become part of the standard XSlides.
