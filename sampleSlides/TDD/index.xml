@@ -456,10 +456,50 @@
     </slides:slide>
     <slides:slide>
         <h1>Programming Paradigms</h1>
+        <p>The Three Major Programming Paradigms are:</p>
         <ul>
             <li>Functional Programming</li>
             <li>Structured Programming</li>
             <li>Object Oriented Programming</li>
+        </ul>
+        <p><a href="http://blog.8thlight.com/uncle-bob/2012/12/19/Three-Paradigms.html">Three Paradigms</a>, <cite>Robert C. Martin</cite></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>What is a Programming Paradigm?</h1>
+        <p>Multiple possible definition</p>
+        <ul>
+            <li><q>[...] a fundamental style of computer programming, a way of building the structure and elements of computer programs</q> <cite>Wikipedia</cite></li>
+            <li><q>[...] exemplar / pattern / template [...] zeitgeist / worldview [...]. A programming paradigm provides for the programmer the means and structure for the execution of a program</q> <cite>Ward Cunningham</cite></li>
+            <li>A Programming Paradigm deliberately limits and restricts how to write source code. <cite>Robert C. Martin</cite></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Structured Programming</h1>
+        <ul>
+            <li>Restrict the direct transfer of control</li>
+            <li>Only sequence, selection, iteration</li>
+            <li>No <code>goto</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Object Oriented Programming</h1>
+        <ul>
+            <li>Restrict the indirect transfer of control</li>
+            <li>Provide a V table for polymorphism</li>
+            <li>Manipulate pointers to functions without manipulating pointers to functions</li>
+            <li>Dependency inversion through Polymorphism</li>
+        </ul>
+        <p>
+            What about inheritance, encapsulation, data hiding?
+            You usually find this in OO context, but the core is polymorphism.
+        </p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Functional Programming</h1>
+        <ul>
+            <li>Restrict side effects</li>
+            <li>Functions shall be pure functions</li>
+            <li>No assigment statements</li>
         </ul>
     </slides:slide>
     <slides:slide>
