@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>Git</slides:title>
+    <slides:slide class="twocolumn">
+        <h1>Linus Torvalds</h1>
+        <blockquote cite="http://www.softwarequotes.com/printableshowquotes.aspx?id=573">
+            <p>
+                I'm an egotistical bastard, and I name all my projects after myself.
+                First <q>Linux</q>, now <q>git</q>.
+            </p>
+            <p>
+                If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program.
+            </p>
+            <p>
+                [...] most of the good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.
+            </p>
+            <p>
+                Given enough eyeballs, all bugs are shallow.
+            </p>
+        </blockquote>
+        <div>
+            <img src="gfx/flickr/LinusTorvalds.jpg" alt="" />
+            <br />
+            <cite>Linus Torvalds</cite>
+            <ul>
+                <li>Linux</li>
+                <li>Git</li>
+            </ul>
+        </div>
+    </slides:slide>
+    <slides:slide>
+        <h1>Setting Up a Repository</h1>
+        <ul>
+            <li>Git is distributed - everybody works with his/her own repository.</li>
+            <li>Initialize empty repository (new project): <code>git init</code></li>
+            <li>Clone existing repository (join projects): <code>git clone</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Initialize empty repository</h1>
+        <ul>
+            <li>Create a repository with working tree</li>
+            <li><code>git init <var>repoName</var></code></li>
+            <li>Example: <code>git init HelloApp</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Initialize bare repository</h1>
+        <ul>
+            <li>Create a repository without working tree</li>
+            <li><code>git init --bare <var>repoName</var>.git</code></li>
+            <li>Example: <code>git init --bare HelloApp.git</code></li>
+        </ul>
+    </slides:slide>
+</slides:slides>
