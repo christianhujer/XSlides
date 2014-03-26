@@ -4,8 +4,8 @@ _path:=$(dir $(lastword $(MAKEFILE_LIST)))
 slides?=index.xml
 SHELL:=bash
 
-ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc $(_path)ListListings.xslt $(slides))))
-ALL_IMAGES_B64:=$(addsuffix .b64,$(shell xsltproc $(_path)ListImages.xslt $(slides)))
+ALL_SOURCES_HTML:=$(addsuffix .listing,$(foreach slides,$(patsubst %.xhtml,%.xml,$(ALL_SLIDES_XHTML)),$(shell xsltproc --xinclude --xincludestyle $(_path)ListListings.xslt $(slides))))
+ALL_IMAGES_B64:=$(addsuffix .b64,$(shell xsltproc --xinclude --xincludestyle $(_path)ListImages.xslt $(slides)))
 
 .DELETE_ON_ERROR:
 
@@ -29,7 +29,7 @@ clean:
 
 #%.xhtml: %.xml $(_path)slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
 %.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64)
-	xsltproc --stringparam imgmode base64 --path $(_path):. $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
+	xsltproc --xinclude --xincludestyle --stringparam imgmode base64 --path $(_path):. $(_path)slides.xslt $< | sed 's/&gt;/>/g' >$@
 
 %.html: %.xhtml
 	cp $^ $@
