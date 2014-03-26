@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <!-- Upgrades older versions of XSlides to the latest version. -->
 <xsl:transform
     version="1.0"
@@ -6,10 +6,11 @@
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:slides="http://www.riedquat.de/2011/Slides"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    exclude-result-prefixes="html"
 >
 
     <xsl:template match="slides:listing">
-        <a href="{@src}" rel="Listing" />
+        <a rel="Listing" href="{@src}" />
     </xsl:template>
 
     <xsl:template match="@*|node()">
