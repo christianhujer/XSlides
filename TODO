@@ -15,3 +15,8 @@ Allow resizing of visible area to compensate bogus projector configurations duri
 The interface should be similar to overscan configurations.
 
 The flickr interface should become part of the standard XSlides.
+Open: How to deal with the necessary meta information?
+Does flickr have an API through which it Could be retrieved from flickr?
+
+There should be inline syntax highlighting.
+This should work for pre and code tags.
