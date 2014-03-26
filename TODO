@@ -1,4 +1,4 @@
-Create DTD.
+Create DTD (obsolete - use plain XHTML instead).
 Describe CSS interface.
 Add a few default designs.
 Add a few examples.
@@ -16,7 +16,8 @@ The interface should be similar to overscan configurations.
 
 The flickr interface should become part of the standard XSlides.
 Open: How to deal with the necessary meta information?
-Does flickr have an API through which it Could be retrieved from flickr?
+Does flickr have an API through which it could be retrieved from flickr?
 
 There should be inline syntax highlighting.
 This should work for pre and code tags.
+Open: How to detect the language? Class attribute?
