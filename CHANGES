@@ -1,0 +1,3 @@
+2014-03-26
+    slides:listing is deprecated now.
+    Use html:a[@rel='Listing'] instead, i.e. <a href="src/hello.c" rel="Listing" />.
