@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:transform
     version="1.0"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns="http://www.w3.org/1999/xhtml"
     xmlns:slides="http://www.riedquat.de/2011/Slides"
     xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 >
 
     <xsl:param name="imgmode" />
@@ -163,7 +163,12 @@
     <xsl:template match="html:h1" />
 
     <xsl:template match="slides:listing">
+        <xsl:message terminate="no">Use of deprecated <xsl:value-of select="name()" />&#xA;</xsl:message>
         <xsl:apply-templates select="document(concat(@src, '.listing'), .)/html:html/html:body/html:pre" />
+    </xsl:template>
+
+    <xsl:template match="html:a[@rel='Listing']">
+        <xsl:apply-templates select="document(concat(@href, '.listing'), .)/html:html/html:body/html:pre" />
     </xsl:template>
 
     <xsl:template match="html:img[contains(@src, '.svg')]">

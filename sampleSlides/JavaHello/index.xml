@@ -13,6 +13,6 @@
     </slides:slide>
     <slides:slide>
         <h1>New Java Hello World</h1>
-        <slides:listing src="src/Hello2.java" />
+        <a rel="Listing" href="src/Hello2.java" />
     </slides:slide>
 </slides:slides>
