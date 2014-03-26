@@ -21,3 +21,5 @@ Does flickr have an API through which it could be retrieved from flickr?
 There should be inline syntax highlighting.
 This should work for pre and code tags.
 Open: How to detect the language? Class attribute?
+
+Loaded entities should become part of a dependency makefile.
