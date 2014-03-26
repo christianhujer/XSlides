@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Overscan</title>
+        <style type="text/css">
+html {
+    margin: 0px;
+    padding: 0px;
+    background-color: #f00;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #000;
+    color: #fff;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: fixed;
+}
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Overscan demo</h1>
+            <a href="#" onclick="javascript:overscanConfig.overscan++">increase</a>
+            <a href="#" onclick="javascript:overscanConfig.overscan--">decrease</a>
+            <a href="#" onclick="javascript:overscanConfig.visible = true">enable</a>
+            <a href="#" onclick="javascript:overscanConfig.visible = false">disable</a>
+            <a href="#" onclick="javascript:overscanConfig.visible = !overscanConfig.visible">toggle</a>
+        </div>
+        <script src="overscan.js"></script>
+    </body>
+</html>

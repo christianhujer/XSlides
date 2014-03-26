@@ -1,0 +1,11 @@
+This directory contains a prototype for an overscan feature.
+
+Sometimes the setup for a presentation is not perfect.
+The projector might display only parts of the screen properly.
+There might be some regions at the border of the screen which are not properly visible.
+
+The purpose of the overscan feature is to compensate that.
+For this, the overscan feature defines:
+- screen, which is the entire region visible in the browser.
+- viewport, which is the used region and can be the same or smaller than the screen.
+- overscan, which is the unused region at the border of the screen.
