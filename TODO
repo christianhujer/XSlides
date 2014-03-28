@@ -30,3 +30,10 @@ Take a look at
 - Slidy2 from Dave Ragget http://www.w3.org/Talks/Tools/Slidy2/
 - S5 from Eric Meyer http://meyerweb.com/eric/tools/s5/
 - http://en.wikipedia.org/wiki/Web-based_slideshow
+
+Modularize
+For example, the syntax highlighting could be modularized.
+List of possible modules (solution candidate):
+- Source Inclusion (xsl:import)
+- Syntax Highlighting (xsl:import)
+- CSS and JavaScript (xi:include)
