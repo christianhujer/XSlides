@@ -347,6 +347,15 @@
         </p>
     </slides:slide>
     <slides:slide>
+        <h1>The Rule of Idempotence</h1>
+        <p>
+            Each test case should be idempotent, that is:
+            <br />
+            The test result of any test case, including this test case itself, should not change independently of whether this test case is run zero, one or many times.
+        </p>
+        <p>
+    </slides:slide>
+    <slides:slide>
         <h1>The 4 A's Principle - Given When Then</h1>
         <p>
             Each test case is made up of four steps.
@@ -429,7 +438,11 @@
             <dt><span style="color:#f66;">F</span>ast,</dt>
             <dd>because we want to run them very very very often,</dd>
             <dt><span style="color:#ff6;">I</span>ndependent</dt>
-            <dd>so that each test can be executed individually,</dd>
+            <dd>
+                so that each test can be executed individually
+                <br />
+                (more formally: <span style="color:#ff6;">I</span>dempotent),
+            </dd>
             <dt><span style="color:#6f6;">R</span>epeatable</dt>
             <dd>so that we always get same result,</dd>
             <dt><span style="color:#6ff;">S</span>elf-checking,</dt>
