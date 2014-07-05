@@ -353,7 +353,6 @@
             <br />
             The test result of any test case, including this test case itself, should not change independently of whether this test case is run zero, one or many times.
         </p>
-        <p>
     </slides:slide>
     <slides:slide>
         <h1>The 4 A's Principle - Given When Then</h1>
