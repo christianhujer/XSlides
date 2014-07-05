@@ -9,3 +9,19 @@ For this, the overscan feature defines:
 - screen, which is the entire region visible in the browser.
 - viewport, which is the used region and can be the same or smaller than the screen.
 - overscan, which is the unused region at the border of the screen.
+
+This version of the overscan feature has been tested…
+
+…successfully with:
+- Firefox 15
+- rekonq 0.7.0
+- Opera 12.16
+
+…partially successful with:
+- Chrome 21 (saving overscan in cookie doesn't work)
+- Chromium 18 (saving overscan in cookie doens't work)
+
+…unsuccessful with:
+- Konqueror 4.6.5
+
+The tests are good enough to consider overscan in a future version of XSlides.
