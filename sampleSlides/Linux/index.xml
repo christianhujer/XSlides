@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>Linux Basics</slides:title>
+    <slides:slide>
+        <h1>UNIX Shell Architecture</h1>
+        <p><img src="gfx/UnixShellArchitecture.svg" alt="UNIX Shell Architecture"/></p>
+    </slides:slide>
+</slides:slides>
