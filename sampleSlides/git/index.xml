@@ -32,8 +32,11 @@
         <h1>Setting Up a Repository</h1>
         <ul>
             <li>Git is distributed - everybody works with his/her own repository.</li>
-            <li>Initialize empty repository (new project): <code>git init</code></li>
+            <li>4 ways how to setup a repository</li>
+            <li>Initialize new empty repository (new project): <code>git init</code></li>
+            <li>Initialize new repository based on existing sources: <code>git init</code></li>
             <li>Clone existing repository (join projects): <code>git clone</code></li>
+            <li>Copy existing repository (not recommended): manual copy (i.e. <code>cp</code>, <code>rsync</code>)</li>
         </ul>
     </slides:slide>
     <slides:slide>
