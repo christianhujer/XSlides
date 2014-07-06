@@ -60,7 +60,7 @@
             </p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/KentBeck.jpg" alt="" />
+            <img src="gfx/flickr/KentBeck.jpg" alt="Kent Beck" />
             <br />
             <cite>Kent Beck</cite>
             <ul>
@@ -85,7 +85,7 @@
             </p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/UncleBob.jpg" alt="" />
+            <img src="gfx/flickr/UncleBob.jpg" alt="Robert &quot;Uncle Bob&quot; C. Martin" />
             <br />
             <cite>Robert <q>Uncle Bob</q> Cecil Martin</cite>
             <ul>
@@ -117,7 +117,7 @@
             </p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/MartinFowler.jpg" alt="" />
+            <img src="gfx/flickr/MartinFowler.jpg" alt="Martin Fowler" />
             <br />
             <cite>Martin Fowler</cite>
             <ul>
@@ -133,7 +133,7 @@
             <p>When a manager asks for hard data, that's usually just his way of saying no.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/WardCunningham.jpg" alt="" />
+            <img src="gfx/flickr/WardCunningham.jpg" alt="Ward Cunningham" />
             <br />
             <cite>Ward Cunningham</cite>
             <ul>
@@ -150,7 +150,7 @@
             <p>Encapsulate the concept that varies.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/ErichGamma.jpg" alt="" />
+            <img src="gfx/flickr/ErichGamma.jpg" alt="Erich Gamma" />
             <br />
             <cite>Erich Gamma</cite>
             <ul>
@@ -166,7 +166,7 @@
             <p>Legacy code is <em>code without Unit Tests</em>.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/MichaelFeathers.jpg" alt="" />
+            <img src="gfx/flickr/MichaelFeathers.jpg" alt="Michael Feathers" />
             <br />
             <cite>Michael Feathers</cite>
             <ul>
@@ -182,7 +182,7 @@
             <p>Program designers have a tendency to think of the users as idiots who need to be controlled. They should rather think of their program as a servant, whose master, the user, should be able to control it.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/JohnMcCarthy.jpg" alt="" />
+            <img src="gfx/flickr/JohnMcCarthy.jpg" alt="John McCarthy" />
             <br />
             <cite>John McCarthy</cite>
             <ul>
@@ -200,7 +200,7 @@
             <p>Program testing can be used to show the presence of bugs, but never to show their absence!</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/EdsgerDijkstra.jpg" alt="" />
+            <img src="gfx/flickr/EdsgerDijkstra.jpg" alt="Edsger Dijkstra" />
             <br />
             <cite>Edsger Dijkstra</cite>
             <ul>
@@ -220,7 +220,7 @@
             <p>If something you conceive is considered common sense 30 years later, you really had a brilliant idea.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/BarbaraLiskov.jpg" alt="" />
+            <img src="gfx/flickr/BarbaraLiskov.jpg" alt="Barbara Liskov" />
             <br />
             <cite>Barbara Liskov</cite>
             <ul>
@@ -238,7 +238,7 @@
             <p>Always do your best at whatever you choose to do.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/JeannetteWing.jpg" alt="" />
+            <img src="gfx/flickr/JeannetteWing.jpg" alt="Jeannette Wing" />
             <br />
             <cite>Jeannette Wing</cite>
             <ul>
@@ -256,7 +256,7 @@
             <p>You can either have software quality or you can have pointer arithmetic; You cannot have both at the same time.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/BertrandMeyer.jpg" alt="" />
+            <img src="gfx/flickr/BertrandMeyer.jpg" alt="Bertrand Meyer" />
             <br />
             <cite>Bertrand Meyer</cite>
             <ul>
@@ -275,7 +275,7 @@
             <p>[...] I have seen the future, and it is object-oriented.</p>
         </blockquote>
         <div>
-            <img src="gfx/flickr/GradyBooch.jpg" alt="" />
+            <img src="gfx/flickr/GradyBooch.jpg" alt="Grady Booch" />
             <br />
             <cite>Grady Booch</cite>
             <ul>
