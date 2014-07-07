@@ -5,4 +5,12 @@
         <h1>UNIX Shell Architecture</h1>
         <p><img src="gfx/UnixShellArchitecture.svg" alt="UNIX Shell Architecture"/></p>
     </slides:slide>
+    <slides:slide>
+        <h1>Directory Navigation Commands</h1>
+        <ul>
+            <li><code>pwd</code></li>
+            <li><code>cd</code></li>
+            <li><code>ls</code></li>
+        </ul>
+    </slides:slide>
 </slides:slides>
