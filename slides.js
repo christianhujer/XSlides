@@ -146,6 +146,7 @@ function keypress(e) {
         case 110: nextSlide(); return; /* PowerPoint: n */
         case 112: previousSlide(); return; /* PowerPoint: p */
         case 32: nextSlide(); return; /* PowerPoint: <SP> */
+        case 49: firstSlide(); return; /* vi: 1 */
         case 13: nextSlide(); return; /* PowerPoint: <CR> */
         case 10: nextSlide(); return; /* PowerPoint: <LF> */
         case 71: lastSlide(); return; /* vi: G */
@@ -155,7 +156,7 @@ function keypress(e) {
         case 98: if (!commandlineEnabled) toggleBlank(BLACK); return; /* PowerPoint: b */
         case 119: if (!commandlineEnabled) toggleBlank(WHITE); return; /* PowerPoint: w */
         case 63: help(); return; /* ? */
-        /*default: window.alert(keyCode);*/
+        default: window.alert(keyCode);
         }
     }
 }
