@@ -6,11 +6,42 @@
         <p><img src="gfx/UnixShellArchitecture.svg" alt="UNIX Shell Architecture"/></p>
     </slides:slide>
     <slides:slide>
+        <h1>Command Groups</h1>
+        <ul>
+            <li>Directory Navigation Commands</li>
+            <li>File Inspection Commands</li>
+            <li>File and Directory Administration Commands</li>
+            <li>Text File Analysis Commands</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
         <h1>Directory Navigation Commands</h1>
         <ul>
             <li><code>pwd</code></li>
             <li><code>cd</code></li>
             <li><code>ls</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>File Inspection Commands</h1>
+        <ul>
+            <li><code>ls</code></li>
+            <li><code>stat</code></li>
+            <li><code>test</code></li>
+            <li><code>file</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>File and Directory Administration Commands</h1>
+        <ul>
+            <li><code>touch</code></li>
+            <li><code>mkdir</code></li>
+            <li><code>rmdir</code></li>
+            <li><code>rm</code></li>
+            <li><code>cp</code></li>
+            <li><code>mv</code></li>
+            <li><code>dd</code></li>
+            <li><code>rsync</code></li>
         </ul>
     </slides:slide>
 </slides:slides>
