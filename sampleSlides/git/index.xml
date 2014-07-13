@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../slides.xslt" type="application/xslt+xml" ?>
+<?xml-stylesheet href="../../slides.xslt" type="text/xsl" ?>
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
     <slides:title>Git</slides:title>
     <slides:slide class="twocolumn">

@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../slides.xslt" type="application/xslt+xml" ?>
+<?xml-stylesheet href="../../slides.xslt" type="text/xsl" ?>
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
     <slides:title>Linux Basics</slides:title>
     <slides:slide>
@@ -176,4 +178,16 @@
             <li><a href="http://www.linfo.org/operating_systems_list.html">The Most Popular Operating Systems</a> (Linux Foundation)</li>
         </ul>
     </slides:slide>
+    <!--
+      * How to get help
+      * UNIX / POSIX File System Structure
+      * What is UNIX, Linux, POSIX, BSD, GNU, Hurd
+      * What is a Linux Distribution
+      * What are the most popular Linux distributions and what are their attributes
+      * What are Cygwin and MinGW
+      * User and Group Access: login, su, sudo, group, who, who am i, whoami, finger, passwd, chmod, chgrp, persmissions etc.
+      * Access Control Lists, setfacl, getfacl
+      * User and Group Administration: /etc/passwd, /etc/shadow, /etc/group, /etc/gshadow, useradd, groupadd, adduser, addgroup
+      * File System Administration: mklink, mkfifo, makedev, mount, umount, mkfs
+    -->
 </slides:slides>
