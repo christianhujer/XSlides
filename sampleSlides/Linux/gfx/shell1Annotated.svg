@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1073" height="412">
+
+    <defs>
+        <marker id="RedTriangle"
+          viewBox="0 0 10 10" refX="8" refY="5" 
+          markerUnits="strokeWidth"
+          markerWidth="8" markerHeight="6"
+          orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="fill: #f00;"/>
+        </marker>
+        <marker id="BlueTriangle"
+          viewBox="0 0 10 10" refX="8" refY="5" 
+          markerUnits="strokeWidth"
+          markerWidth="8" markerHeight="6"
+          orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" style="fill: #aaf;"/>
+        </marker>
+
+
+    </defs>
+    <g transform="translate(200 0)">
+        <image xlink:href="gfx/shell1.png" width="673" height="412" />
+
+        <rect x="5" y="48" width="150" height="20" style="stroke-width: 1; stroke: #f00; fill: #f00; fill-opacity: 0.25" />
+        <text x="-70" y="28" style="fill: #f00; text-anchor: middle;">Prompt</text>
+        <line x1="-70" y1="28" x2="5" y2="58" style="stroke: #f00; stroke-width: 2;" marker-end="url(#RedTriangle)"/>
+
+        <!--rect x="157" y="48" width="16" height="20" style="stroke-width: 1; stroke: #aaf; fill: #aaf; fill-opacity: 0.25" /-->
+        <text x="200" y="120" style="fill: #aaf; text-anchor: middle;">Cursor</text>
+        <line x1="200" y1="100" x2="165" y2="68" style="stroke: #aaf; stroke-width: 2;" marker-end="url(#BlueTriangle)"/>
+    </g>
+
+</svg>

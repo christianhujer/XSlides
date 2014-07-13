@@ -2,8 +2,78 @@
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
     <slides:title>Linux Basics</slides:title>
     <slides:slide>
+        <h1>Contents</h1>
+        <ul>
+            <li>Fields of Application</li>
+            <li>History of UNIX and Linux</li>
+            <li>Relationship between UNIX and Linux</li>
+            <li>Overview of Shell Commands</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Flavors of UNIX</h1>
+        <ul>
+            <li>Commercial Derivates: Oracle Solaris, IBM AIX, HP/UX etc.</li>
+            <li>BSD Variants: NetBSD, FreeBSD, OpenBSD etc.</li>
+            <li>Apple: Darwin, MacOS X, iOS</li>
+            <li>Linux / Linux-based: Red Hat Linux, Ubuntu, Fedora, OpenSuSE, Mandrake etc.</li>
+            <li>Android</li>
+            <li>Specialized embedded Linux for various purposes</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Fields of Application for UNIX / Linux</h1>
+        <dl>
+            <dt>Main frames / super computers</dt>
+            <dd>
+                Of the top 500 fastest computers in the world, 485 systems run Linux, 12 run UNIX.
+                (Source: <a href="http://www.top500.org/statistics/list/">Top500.org</a> June 2014 Statistics)
+            </dd>
+            <dt>Server Systems</dt>
+            <dd>
+                Between 62% and 82% of all server systems are Linux, BSD or other UNIX-line.
+                (Source: <a href="http://en.wikipedia.org/wiki/Usage_share_of_operating_systems">Wikipedia</a>)
+            </dd>
+            <dt>PC / Desktop Systems</dt>
+            <dd>
+                9% of all desktop computers run Linux, Mac OS X or another form of UNIX.
+                (Source: <a href="http://en.wikipedia.org/wiki/Usage_share_of_operating_systems">Wikipedia</a>)
+            </dd>
+            <dt>Tablet Computers</dt>
+            <dd>
+                92% of all tablet computers run iOS, Android or another form of UNIX.
+                (Source: <a href="http://en.wikipedia.org/wiki/Usage_share_of_operating_systems">Wikipedia</a>)
+            </dd>
+            <dt>Smart Phones</dt>
+            <dd>
+                According to ABI research, Android has an overall market share of 81.5%, iOS of 14%, giving UNIX a total market share on Smart Phones of 96%.
+                (Source: <a href="http://techcrunch.com/2014/05/06/android-still-growing-market-share-by-winning-first-time-smartphone-users/">TechCrunch, Natasha Lomas</a>)
+            </dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
         <h1>UNIX Shell Architecture</h1>
         <p><img src="gfx/UnixShellArchitecture.svg" alt="UNIX Shell Architecture"/></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Elements of a shell</h1>
+        <ul>
+            <li>Terminal Window (i.e. xterm, konsole)</li>
+            <li>Shell (i.e. bash shell)</li>
+            <li>Command Line</li>
+            <li>File System, Files, Directories</li>
+            <li>Binaries, Processes</li>
+            <li>Special Files</li>
+            <li>File Attributes</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Terminal Window</h1>
+        <p style="text-align:center;"><img src="gfx/shell1.png" /></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Terminal Window</h1>
+        <p style="text-align:center;"><img src="gfx/shell1Annotated.svg" /></p>
     </slides:slide>
     <slides:slide>
         <h1>Command Groups</h1>
@@ -22,6 +92,45 @@
             <li><code>ls</code></li>
         </ul>
     </slides:slide>
+    <slides:slide>
+        <h1>The <code>pwd</code> command</h1>
+        <ul>
+            <li>Print Working Directory</li>
+            <li>Tells you what is the current working directory</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>The <code>ls</code> command</h1>
+        <ul>
+            <li>Lists the contents of a directory</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>The <code>cd</code> command</h1>
+        <ul>
+            <li>Change Directory</li>
+            <li>Two forms: without argument, with argument</li>
+            <li>Without argument: changes to user's home directory</li>
+            <li>With argument: changes to the mentioned directory</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>How to specify paths</h1>
+        <ul>
+            <li>Relative paths (not starting with '/')</li>
+            <li>Absolute paths (starting with '/')</li>
+        </ul>
+        <ul>
+            <li>Relative paths are resolved relative to the current working directory.</li>
+            <li>Absolute paths are resolved relative to the global file system root.</li>
+        </ul>
+        <ul>
+            <li>'/' separates directories from their contents.</li>
+            <li>'.' explicitely means the current directory.</li>
+            <li>'..' means the parent directory.</li>
+        </ul>
+    </slides:slide>
+    <!-- help -->
     <slides:slide>
         <h1>File Inspection Commands</h1>
         <ul>
@@ -42,6 +151,29 @@
             <li><code>mv</code></li>
             <li><code>dd</code></li>
             <li><code>rsync</code></li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Characters for special file types</h1>
+        <table class="nice">
+            <tr><th colspan="3">char</th><th rowspan="2">Meaning</th></tr>
+            <tr><th>ls</th><th>find</th><th>test -</th></tr>
+            <tr><td>-</td><td colspan="2">f</td><td>Regular File</td></tr>
+            <tr><td colspan="3">d</td><td>Directory</td></tr>
+            <tr><td colspan="2">l</td><td>h or L</td><td>Symbolic Link</td></tr>
+            <tr><td colspan="3">p</td><td>Named Pipe</td></tr>
+            <tr><td colspan="3">b</td><td>Block Device</td></tr>
+            <tr><td colspan="3">c</td><td>Character Device</td></tr>
+            <tr><td colspan="2">s</td><td>S</td><td>Socket</td></tr>
+        </table>
+        <p>
+            The characters are
+        </p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Further Information</h1>
+        <ul>
+            <li><a href="http://www.linfo.org/operating_systems_list.html">The Most Popular Operating Systems</a> (Linux Foundation)</li>
         </ul>
     </slides:slide>
 </slides:slides>
