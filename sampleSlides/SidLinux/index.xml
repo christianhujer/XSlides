@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>Learn Linux with Sid</slides:title>
+    <slides:slide>
+        <h1>Learn Linux with Sid</h1>
+        <p>
+            Hi and Welcome!
+        </p>
+    </slides:slide>
+</slides:slides>
