@@ -9,7 +9,7 @@
         method="text"
     />
 
-    <xsl:template match="html:img">
+    <xsl:template match="html:img[not(contains(@src, ':'))]">
         <xsl:value-of select="@src" />
         <xsl:text>&#xA;</xsl:text>
     </xsl:template>
