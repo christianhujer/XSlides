@@ -4,6 +4,10 @@
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
     <slides:title>Linux Basics</slides:title>
     <slides:slide>
+        <h1>Linux Basics</h1>
+        <p style="text-align: center;"><img src="gfx/Tux.svg" /></p>
+    </slides:slide>
+    <slides:slide>
         <h1>Contents</h1>
         <ul>
             <li>Fields of Application</li>
@@ -23,13 +27,39 @@
             <li>Specialized embedded Linux for various purposes</li>
         </ul>
     </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>The Tianhe-2 super computer</h1>
+        <ul>
+            <li>English name: MilkyWay-2</li>
+            <li>Fastest computer in the world as of today (07/2014) since its installment in June 2013</li>
+            <li>CPU cores: 3,120,000</li>
+            <li>Memory (RAM): ~1 PB (1,024,000 GiB)</li>
+            <li>OS: Kylin <strong>Linux</strong></li>
+            <li>Sources: <a href="http://en.wikipedia.org/wiki/Tianhe-2">Wikipedia</a>, <a href="http://www.top500.org/system/177999">TOP500.org</a></li>
+        </ul>
+        <div>
+            <img src="http://www.top500.org/static/media/uploads/blog/tianhe-2-jack-dongarra-pdf.jpg" />
+        </div>
+    </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>The Raspberry Pi</h1>
+        <ul>
+            <li>Credit-card-sized single-board computer</li>
+            <li>Developed in UK</li>
+            <li>SD card for mass storage</li>
+            <li>ARM1176JZF-S (ARMv6k) 700 MHz</li>
+        </ul>
+        <div>
+            TODO:Insert Image of Raspberry PI
+        </div>
+    </slides:slide>
     <slides:slide>
         <h1>Fields of Application for UNIX / Linux</h1>
         <dl>
             <dt>Main frames / super computers</dt>
             <dd>
                 Of the top 500 fastest computers in the world, 485 systems run Linux, 12 run UNIX.
-                (Source: <a href="http://www.top500.org/statistics/list/">Top500.org</a> June 2014 Statistics)
+                (Source: <a href="http://www.top500.org/statistics/list/">TOP500.org</a> June 2014 Statistics)
             </dd>
             <dt>Server Systems</dt>
             <dd>
@@ -51,6 +81,17 @@
                 According to ABI research, Android has an overall market share of 81.5%, iOS of 14%, giving UNIX a total market share on Smart Phones of 96%.
                 (Source: <a href="http://techcrunch.com/2014/05/06/android-still-growing-market-share-by-winning-first-time-smartphone-users/">TechCrunch, Natasha Lomas</a>)
             </dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
+        <h1>Advantages of Linux</h1>
+        <dl>
+            <dt>Highly scalable</dt>
+            <dd>Runs from one to millions of CPU cores in a systemon everything from small embedded devices up to the fastest super computers in the world.</dd>
+            <dt>Very portable</dt>
+            <dd>Runs on may systems ranging from small embedded devices up to the fastest super computers in the world.</dd>
+            <dt>Free</dt>
+            <dd>...</dd>
         </dl>
     </slides:slide>
     <slides:slide>
@@ -92,6 +133,8 @@
             <li><code>pwd</code></li>
             <li><code>cd</code></li>
             <li><code>ls</code></li>
+            <li><code>pushd</code></li>
+            <li><code>popd</code></li>
         </ul>
     </slides:slide>
     <slides:slide>
@@ -173,9 +216,12 @@
         </p>
     </slides:slide>
     <slides:slide>
-        <h1>Further Information</h1>
+        <h1>Further Information, References</h1>
         <ul>
             <li><a href="http://www.linfo.org/operating_systems_list.html">The Most Popular Operating Systems</a> (Linux Foundation)</li>
+            <li><a href="http://www.top500.org/">TOP500 Supercomputer Site</a></li>
+            <li><a href="http://www.top500.org/contact/top500-logo-usage/">TOP500 Logo Usage</a></li>
+            <li><a href="http://commons.wikimedia.org/wiki/File:Tux.svg">WikiMedia Commons File:Tux.svg</a> (<a href="http://www.isc.tamu.edu/~lewing/">Larry Ewing</a>, <a href="http://www.home.unix-ag.org/simon/">Simon Budig</a>, <a href="anja@gerwinski.de">Anja Gerwinski</a>)</li>
         </ul>
     </slides:slide>
     <!--
