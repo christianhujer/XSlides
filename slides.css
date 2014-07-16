@@ -141,3 +141,9 @@ th, td {
     border: #fff solid 2px;
     padding: 1ex;
 }
+a {
+    color: #aaaaff;
+}
+a:visited {
+    color: #ddaaff;
+}
