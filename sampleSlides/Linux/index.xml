@@ -50,7 +50,7 @@
             <li>ARM1176JZF-S (ARMv6k) 700 MHz</li>
         </ul>
         <div>
-            TODO:Insert Image of Raspberry PI
+            <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/RaspberryPi.jpg/640px-RaspberryPi.jpg" />
         </div>
     </slides:slide>
     <slides:slide>
@@ -81,6 +81,10 @@
                 According to ABI research, Android has an overall market share of 81.5%, iOS of 14%, giving UNIX a total market share on Smart Phones of 96%.
                 (Source: <a href="http://techcrunch.com/2014/05/06/android-still-growing-market-share-by-winning-first-time-smartphone-users/">TechCrunch, Natasha Lomas</a>)
             </dd>
+            <dt>Embedded Systems</dt>
+            <dd>
+                Linux is a very popular (probably the most popular) operating system to run on single-board computers and embedded systems in general.
+            </dd>
         </dl>
     </slides:slide>
     <slides:slide>
@@ -90,8 +94,22 @@
             <dd>Runs from one to millions of CPU cores in a systemon everything from small embedded devices up to the fastest super computers in the world.</dd>
             <dt>Very portable</dt>
             <dd>Runs on may systems ranging from small embedded devices up to the fastest super computers in the world.</dd>
-            <dt>Free</dt>
-            <dd>...</dd>
+            <dt>Free (as in <q>free speech</q>, not as in <q>free beer</q>)</dt>
+            <dd>
+                The source code of Linux is freely available and everyone has the right to modify it as well as use other's modifications.
+                This is ensured by the GPL License.
+            </dd>
+            <dt>Significantly less vulnerable to malware…</dt>
+            <dd>…as compared to Microsoft Windows. This is especially important for servers which are connected to the internet 24/7.</dd>
+            <dt>Better uptime</dt>
+            <dd>
+                Linux has a significantly better uptime (i.e. longer time between reboots) than Windows.
+                This is important for achieving high availability.
+                Imagine you are Amazon or Flipkart, and your servers are down for just a few minutes.
+                Imagine the loss of profit - and the loss of reputation!
+                <a href="http://blog.monitor.us/2007/04/linux-versus-windows-os-impact-on-uptime-and-speed/">Linux versus Windows: OS impact on uptime and speed</a>.
+                Other OS with high uptime are i.e. OpenBSD and NetBSD.
+            </dd>
         </dl>
     </slides:slide>
     <slides:slide>
@@ -117,6 +135,24 @@
     <slides:slide>
         <h1>Terminal Window</h1>
         <p style="text-align:center;"><img src="gfx/shell1Annotated.svg" /></p>
+    </slides:slide>
+    <slides:slide>
+        <h1>Getting Help</h1>
+        <ul>
+            <li>Built-in help: <code>-h</code>, <code>-help</code>, <code>-?</code>, <code>--help</code></li>
+            <li><code>man</code> command, man pages</li>
+            <li><code>info</code> command, info pages</li>
+            <li><a href="http://www.tldp.org/">The Linux Documentation Project</a></li>
+            <li><a href="http://www.google.com/">Google</a></li>
+            <li>
+                <a href="http://stackexchange.com/">Stack Exchange</a>:
+                <ul>
+                    <li><a href="http://unix.stackexchange.com/">Unix &amp; Linux Stack Exchange</a></li>
+                    <li><a href="http://superuser.com/">Super User</a></li>
+                    <li><a href="http://stackoverflow.com/">Stack Overflow</a></li>
+                </ul>
+            </li>
+        </ul>
     </slides:slide>
     <slides:slide>
         <h1>Command Groups</h1>
@@ -211,9 +247,6 @@
             <tr><td colspan="3">c</td><td>Character Device</td></tr>
             <tr><td colspan="2">s</td><td>S</td><td>Socket</td></tr>
         </table>
-        <p>
-            The characters are
-        </p>
     </slides:slide>
     <slides:slide>
         <h1>Further Information, References</h1>
@@ -221,10 +254,12 @@
             <li><a href="http://www.linfo.org/operating_systems_list.html">The Most Popular Operating Systems</a> (Linux Foundation)</li>
             <li><a href="http://www.top500.org/">TOP500 Supercomputer Site</a></li>
             <li><a href="http://www.top500.org/contact/top500-logo-usage/">TOP500 Logo Usage</a></li>
-            <li><a href="http://commons.wikimedia.org/wiki/File:Tux.svg">WikiMedia Commons File:Tux.svg</a> (<a href="http://www.isc.tamu.edu/~lewing/">Larry Ewing</a>, <a href="http://www.home.unix-ag.org/simon/">Simon Budig</a>, <a href="anja@gerwinski.de">Anja Gerwinski</a>)</li>
+            <li><a href="http://commons.wikimedia.org/wiki/File:Tux.svg">WikiMedia Commons File:Tux.svg</a> (<a href="http://www.isc.tamu.edu/~lewing/">Larry Ewing</a>, <a href="http://www.home.unix-ag.org/simon/">Simon Budig</a>, <a href="mailto:anja@gerwinski.de">Anja Gerwinski</a>)</li>
+            <li><a href="http://commons.wikimedia.org/wiki/File:RaspberryPi.jpg">WikiMedia Commons File:RaspberryPi.jpg</a> (Jwrodgers)</li>
         </ul>
     </slides:slide>
     <!--
+      * Licenses
       * How to get help
       * UNIX / POSIX File System Structure
       * What is UNIX, Linux, POSIX, BSD, GNU, Hurd
