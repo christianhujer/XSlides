@@ -108,7 +108,7 @@
     <xsl:template match="html:img/@src">
         <xsl:attribute name="src">
             <xsl:choose>
-                <xsl:when test="$imgmode='base64' and document(concat(., '.b64'), .)/base64">
+                <xsl:when test="$imgmode='base64' and not(contains(., ':')) and document(concat(., '.b64'), .)/base64">
                     <xsl:text>data:image/png;base64,</xsl:text>
                     <xsl:value-of select="document(concat(., '.b64'), .)/base64" />
                 </xsl:when>
