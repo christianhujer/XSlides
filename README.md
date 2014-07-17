@@ -16,3 +16,8 @@ So I decided to create something that fits my requirements better.
 If you are into XML-based presentation systems, also checkout Slidy2 aka HTML Slidy from Dave Ragget.
 Slidy2 is based on (X)HTML and JavaScript.
 http://www.w3.org/Talks/Tools/Slidy2/Overview.html
+
+Note on specific Browsers
+
+Google Chrome
+To view the XML files locally, start chrome with option --allow-file-access-from-files and --disable-web-security
