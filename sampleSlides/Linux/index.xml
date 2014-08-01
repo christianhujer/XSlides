@@ -87,11 +87,24 @@
             </dd>
         </dl>
     </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1>LiMux</h1>
+        <ul>
+            <li>Munich (Germany) city administration migrated from Windows to Linux</li>
+            <li>Increased security</li>
+            <li>More freedom in software decisions</li>
+            <li>Saved EUR 11.7M (Rs 96cr)</li>
+        </ul>
+        <div style="background-color: red;">
+            <img src="gfx/LiMux_logo.svg" alt="LiMux - Die IT-Evolution" width="496" height="176"/>
+            TODO:2014-07-18:cher:3:Image of Munich Rathaus.
+        </div>
+    </slides:slide>
     <slides:slide>
         <h1>Advantages of Linux</h1>
         <dl>
             <dt>Highly scalable</dt>
-            <dd>Runs from one to millions of CPU cores in a systemon everything from small embedded devices up to the fastest super computers in the world.</dd>
+            <dd>Runs from one to millions of CPU cores in a system on everything from small embedded devices up to the fastest super computers in the world.</dd>
             <dt>Very portable</dt>
             <dd>Runs on may systems ranging from small embedded devices up to the fastest super computers in the world.</dd>
             <dt>Free (as in <q>free speech</q>, not as in <q>free beer</q>)</dt>
@@ -154,6 +167,8 @@
             </li>
         </ul>
     </slides:slide>
+    <!-- how to use man, apropos, info -->
+    <!-- how to access man pages via search engines -->
     <slides:slide>
         <h1>Command Groups</h1>
         <ul>
@@ -211,7 +226,6 @@
             <li>'..' means the parent directory.</li>
         </ul>
     </slides:slide>
-    <!-- help -->
     <slides:slide>
         <h1>File Inspection Commands</h1>
         <ul>
@@ -262,6 +276,7 @@
       * Licenses
       * How to get help
       * UNIX / POSIX File System Structure
+      * List of Operating Systems
       * What is UNIX, Linux, POSIX, BSD, GNU, Hurd
       * What is a Linux Distribution
       * What are the most popular Linux distributions and what are their attributes
