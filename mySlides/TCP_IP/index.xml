@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="../../slides.xslt" type="application/xslt+xml" ?>
+<?xml-stylesheet href="../../slides.xslt" type="text/xsl" ?>
+<slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
+    <slides:title>TCP/IP</slides:title>
+    <slides:slide>
+        <h1>TCP/IP</h1>
+        <ul>
+            <li>The OSI 7-layer model</li>
+            <li>The DoD 4-layer model</li>
+            <li>Components and Protocols of the various layers</li>
+            <li>Network Topologies</li>
+            <li>Repeater, Hub, Switch, Router etc.</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>Network Topologies</h1>
+        <ul>
+            <li>Loopback</li>
+            <li>Point-to-point</li>
+            <li>Bus</li>
+            <li>Ring</li>
+            <li>Star</li>
+            <li>Tree</li>
+            <li>Mesh (partial, full)</li>
+            <li>Hybrids (Star Ring, Star Bus, Grid, Torus, Snowflake / Star of Stars, Hypercube)</li>
+        </ul>
+    </slides:slide>
+</slides:slides>
