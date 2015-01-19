@@ -26,4 +26,133 @@
             <li>Hybrids (Star Ring, Star Bus, Grid, Torus, Snowflake / Star of Stars, Hypercube)</li>
         </ul>
     </slides:slide>
+    <slides:slide>
+        <h1>Bus Topology</h1>
+        <img src="gfx/topology_bus.svg" />
+    </slides:slide>
+    <slides:slide>
+        <h1>Star Topology (1)</h1>
+        <img src="gfx/topology_star1.svg" />
+    </slides:slide>
+    <slides:slide>
+        <h1>Star Topology (2)</h1>
+        <img src="gfx/topology_star2.svg" />
+    </slides:slide>
+    <slides:slide>
+        <h1>The OSI 7-Layer / DoD 4-Layer Model</h1>
+        <table>
+            <tr>
+                <th>OSI Layer</th>
+                <th>Components</th>
+                <th>Protocols</th>
+                <th>DoD Layer</th>
+            </tr>
+            <tr>
+                <td>7 Application</td>
+                <td rowspan="3">Server (Software)</td>
+                <td><small>FTP, HTTP, DHCP, BOOTP, telnet, SMTP, POP3, IMAP4, HTTPS, NTP, NNTP, ssh, X11</small></td>
+                <td rowspan="3">4 Application</td>
+            </tr>
+            <tr>
+                <td>6 Presentation</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5 Session</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4 Transport</td>
+                <td>TCP/IP-Stack, Firewall, Proxy</td>
+                <td>TCP, UDP</td>
+                <td>3 Transport</td>
+            </tr>
+            <tr>
+                <td>3 Network</td>
+                <td>TCP/IP-Stack, Layer-3 Switch, Firewall, Router</td>
+                <td>IP, ICMP, IGMP</td>
+                <td>2 Network</td>
+            </tr>
+            <tr>
+                <td>2 Data Link</td>
+                <td>Switch, Bridge, NIC</td>
+                <td>Ethernet, PPP, SLIP, PPPoE, ARP, RARP</td>
+                <td rowspan="2">1 Hardware</td>
+            </tr>
+            <tr>
+                <td>1 Physical</td>
+                <td>Cat6-Cable, NIC, Hub, Repeater</td>
+                <td>Ethernet, RJ45</td>
+            </tr>
+        </table>
+    </slides:slide>
+    <slides:slide>
+        <h1>MAC Address</h1>
+        <ul>
+            <li>6- or 8-Byte MAC Address</li>
+            <li>MAC: Media Access Control</li>
+            <li>EUI: Extended Unique Identifier</li>
+            <li>Other names: Ethernet Address, Hardware Address, Physical Address</li>
+            <li>
+                Standards:
+                <ul>
+                    <li>MAC-48</li>
+                    <li>EUI-48</li>
+                    <li>EUI-64</li>
+                </ul>
+            </li>
+            <li>
+                MAC-48 / EUI-48 used in:
+                <ul>
+                    <li>Ethernet</li>
+                    <li>IEEE 802.11 wireless networks</li>
+                    <li>Bluetooth</li>
+                    <li>IEEE 802.5 token ring</li>
+                    <li>Fiber Distributed Data Interface (FDDI)</li>
+                    <li>Asynchronous Transfer Mode (ATM) as part of its NSAP address</li>
+                    <li>Fibre Channel</li>
+                </ul>
+            </li>
+            <li>
+                EUI-64 is used in:
+                <ul>
+                    <li>FireWire</li>
+                    <li>IPv6</li>
+                    <li>ZigBee / 802.15.4 / 6LoWPAN</li>
+                </ul>
+            </li>
+            <li>
+                Common Notations:
+                <ul>
+                    <li><code>01:23:45:67:89:ab</code></li>
+                    <li><code>01-23-45-67-89-ab</code></li>
+                    <li><code>0123.4567.89ab</code></li>
+                </ul>
+            </li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>POP3</h1>
+        <ul>
+            <li>Post Office Protocol Version 3</li>
+            <li>Used for remote access to E-Mail</li>
+            <li>Mail must be downloaded before reading</li>
+            <li>Very simple, no folders</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>IMAP4</h1>
+        <ul>
+            <li>Internet Mail Access Protocol Version 4</li>
+            <li>Used for remote access to E-Mail</li>
+            <li>Mail can be read "online"</li>
+            <li>Folders possible</li>
+        </ul>
+    </slides:slide>
+    <slides:slide>
+        <h1>HTTP</h1>
+        <ul>
+            <li>Developed by Tim Berners Lee</li>
+        </ul>
+    </slides:slide>
 </slides:slides>
