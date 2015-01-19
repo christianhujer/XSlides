@@ -399,6 +399,9 @@
                 <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@After</code>, <code>@AfterClass</code></td>
             </tr>
         </table>
+        <p>
+            Naming the 4 A's with <em>Given</em>, <em>When</em>, <em>Then</em> is called BDD - Behavior Driven Development.
+        </p>
     </slides:slide>
     <slides:slide>
         <h1>Comparison JUnit - AceUnit</h1>
@@ -469,6 +472,27 @@
             <dd>No client should depend on methods it does not use.<!--br /><cite>Robert C. Martin</cite--></dd>
             <dt><span style="color:#66f;">D</span>IP - Dependency Inversion Principle</dt>
             <dd>Software entities should depend on abstractions, not on concrete details.<!--br /><cite>Robert C. Martin</cite--></dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
+        <h1>The Package Principles</h1>
+        <h2>Package Architecture Principles</h2>
+        <dl>
+            <dt>REP - Release Reuse Equivalency Principle</dt>
+            <dd>The granule of release should be the granule of reuse.</dd>
+            <dt>CCP - Common Closure Principle</dt>
+            <dd>Classes that change together belong together.</dd>
+            <dt>CRP - Common Reuse Principle</dt>
+            <dd>Classes that aren't reused together should not be grouped together.</dd>
+        </dl>
+        <h2>Package Coupling Principles</h2>
+        <dl>
+            <dt>ADP - Acyclic Dependencies Principle</dt>
+            <dd>The dependencies shold form an acyclic directed graph.</dd>
+            <dt>SDP - Stable Dependencies Principle</dt>
+            <dd>Less stable packages should depend on more stable packages, not the other way round.</dd>
+            <dt>SAP - Stable Abstractions Principle</dt>
+            <dd>Stable packages should be abstract packages.</dd>
         </dl>
     </slides:slide>
     <slides:slide>
