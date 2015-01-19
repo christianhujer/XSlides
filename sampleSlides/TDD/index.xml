@@ -338,7 +338,7 @@
             <dt><span style="color:#6f6;">Green</span></dt>
             <dd>Write as much of production code as is sufficient to pass the currently failing unit test.</dd>
             <dt><span style="color:#66f;">Refactor</span></dt>
-            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID etc. etc.).</dd>
+            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID, Package Principles etc. etc.).</dd>
         </dl>
         <img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" />
     </slides:slide>
