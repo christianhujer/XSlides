@@ -343,17 +343,20 @@
         <img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" />
     </slides:slide>
     <slides:slide>
-        <h1>The Single Assert Rule</h1>
+        <h1>Rules for Test Cases</h1>
+        <h2>The Single Assert Rule</h2>
         <p>
             Each test case should have only one logical assert.
         </p>
-    </slides:slide>
-    <slides:slide>
-        <h1>The Rule of Idempotence</h1>
+        <h2>The Rule of Idempotence</h2>
         <p>
             Each test case should be idempotent, that is:
             <br />
             The test result of any test case, including this test case itself, should not change independently of whether this test case is run zero, one or many times.
+        </p>
+        <h2>Verification without Side-effects</h2>
+        <p>
+            The verification (assert / then) should not have side-effects.
         </p>
     </slides:slide>
     <slides:slide>
