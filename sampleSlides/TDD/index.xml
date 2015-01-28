@@ -357,7 +357,7 @@
         </p>
     </slides:slide>
     <slides:slide>
-        <h1>The 4 A's Principle - Given When Then</h1>
+        <h1>The 4 A's Principle - Given When Then (GWT)</h1>
         <p>
             Each test case is made up of four steps.
         </p>
@@ -396,6 +396,7 @@
                 <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@After</code>, <code>@AfterClass</code></td>
             </tr>
         </table>
+        <p>Arrange Act Assert Annihilate by Robert C. Martin as an extension of Arrange Act Assert by William C. Wake. Given When Then by Dan North and Chris Matts.</p>
     </slides:slide>
     <slides:slide>
         <h1>Comparison JUnit - AceUnit</h1>
