@@ -29,7 +29,7 @@ clean:
 
 #%.xhtml: %.xml $(_path)slides.xslt $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64) $(ALL_CSS_XML)
 %.xhtml: %.xml $(_path)slides.xslt $(_path)slides.js.xml $(_path)slides.css.xml $(ALL_SOURCES_HTML) $(ALL_IMAGES_B64)
-	xsltproc --xinclude --xincludestyle --stringparam imgmode base64 --path $(_path):. $(_path)slides.xslt -o $@ $<
+	xsltproc --xinclude --xincludestyle --stringparam imgmode base64 --path $(_path):. -o $@ $(_path)slides.xslt $<
 
 %.html: %.xhtml
 	cp $^ $@

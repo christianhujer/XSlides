@@ -1,2 +1,2 @@
-ALL_SLIDES_XHTML:=index.xhtml day1.xhtml
+ALL_SLIDES_XHTML:=index.xhtml
 include ../../Makefile
