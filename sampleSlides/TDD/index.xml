@@ -521,4 +521,16 @@
         <h1>GRASP</h1>
         <p>General Responsibility Assignment Software Patterns</p>
     </slides:slide>
+    <slides:slide>
+        <h1>The Ontology of Test Doubles</h1>
+        <pre>abstract class TestDouble {}
+class Dummy extends TestDouble {}
+class Stub extends Dummy {}
+class Spy extends Stub {}
+class Mock extends Spy {}
+
+class Fake extends TestDouble {}
+
+class Impersonator extends TestDouble {}</pre>
+    </slides:slide>
 </slides:slides>
