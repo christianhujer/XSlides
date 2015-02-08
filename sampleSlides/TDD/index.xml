@@ -533,4 +533,16 @@
         <h1>GRASP</h1>
         <p>General Responsibility Assignment Software Patterns</p>
     </slides:slide>
+    <slides:slide>
+        <h1>Prefer Easy Things</h1>
+        <h2>The Zen of Python</h2>
+        <ul>
+            <li>Simple is better than complex.</li>
+            <li>Flat is better than nested.</li>
+            <li>Readability counts.</li>
+            <li>If the implementation is hard to explain, it's a bad idea.</li>
+            <li>If the implementation is easy to explain, it may be a good idea.</li>
+        </ul>
+        <p><cite>Tim Peters</cite> (Python Guru, Timsort is named after him)</p>
+    </slides:slide>
 </slides:slides>
