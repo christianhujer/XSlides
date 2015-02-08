@@ -457,16 +457,29 @@
         <p>Software entities (components, classes, modules, functions etc.) should follow the</p>
         <dl>
             <dt><span style="color:#f66;">S</span>RP - Single Responsibility Principle</dt>
-            <dd>There should never be more than one reason for a software entity to change.<!--br /><cite>Robert C. Martin, Tom DeMarco</cite--></dd>
+            <dd>There should never be more than one reason for a software entity to change.<!--br /><cite>Robert C. Martin</cite>, <cite>Tom DeMarco</cite--></dd>
             <dt><span style="color:#ff6;">O</span>CP - Open Closed Principle</dt>
             <dd>Software entities should be open for extension, but closed for modification.<!--br /><cite>Bertrand Meyer</cite--></dd>
             <dt><span style="color:#6f6;">L</span>SP - Liskov Substitution Principle</dt>
-            <dd>Subtypes must obey the contract of their supertypes.<!--br /><cite>Barbara Liskov, Jeannette Wing</cite--></dd>
+            <dd>Subtypes must obey the contract of their supertypes.<!--br /><cite>Barbara Liskov</cite>, <cite>Jeannette Wing</cite--></dd>
             <dt><span style="color:#6ff;">I</span>SP - Interface Segregation Principle</dt>
             <dd>No client should depend on methods it does not use.<!--br /><cite>Robert C. Martin</cite--></dd>
             <dt><span style="color:#66f;">D</span>IP - Dependency Inversion Principle</dt>
             <dd>Software entities should depend on abstractions, not on concrete details.<!--br /><cite>Robert C. Martin</cite--></dd>
         </dl>
+    </slides:slide>
+    <slides:slide>
+        <h1>The <span style="color:#6f6;">L</span>SP - Liskov Substitution Principle</h1>
+        <ul>
+            <li>Subtypes must obey the contract of their supertypes.</li>
+            <li>A subtype method can weaken the precondition.</li>
+            <li>A subtype method can strengthen the postcondition.</li>
+            <li>Signature Rule: The subtype objects must have all the methods of the supertype, and the signatures of the subtype methods must be compatible with the signatures of the corresponding supertype methods.</li>
+            <li>Methods Rule: Calls of these subtype methods must "behave like" calls to the corresponding supertype methods.</li>
+            <li>Properties Rule: The subtype must preserve all properties that can be proved about the supertype objects.</li>
+            <li>The class invariant of a subclass must be equal to or stronger than that of its superclass.</li>
+        </ul>
+        <p><cite>Barbara Liskov</cite>, <cite>Jeannette Wing</cite>, <cite>Meillir-Jones</cite></p>
     </slides:slide>
     <slides:slide>
         <h1>Programming Paradigms</h1>
