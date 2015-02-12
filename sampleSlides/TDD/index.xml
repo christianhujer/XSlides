@@ -262,7 +262,7 @@
             <br />
             <cite>Bertrand Meyer</cite>
             <ul>
-                <li>OSP - Open Closed Principle</li>
+                <li>OCP - Open Closed Principle</li>
                 <li>Design By Contract</li>
                 <li>Eiffel</li>
             </ul>
