@@ -1,14 +1,5 @@
-body, .XSlidesToc {
-    background-color: #000;
-    color: #ccc;
-    font-family: Sans-Serif;
-}
+@import 'alien.css';
 
-.XSlidesToc {
-    border-color: #1e5;
-}
-h1 {
-    color: #1e5;
+a, h1 {
     background-image: url('TV.gif');
-    border-bottom: #1e5 1px solid;
 }

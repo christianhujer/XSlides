@@ -1,12 +1,14 @@
-body, .XSlidesToc {
+html {
     background-image: url('data: image/gif;base64,R0lGODdhHAAQAKEEAAwMDCMjIzo6OlBQUCwAAAAAHAAQAEACQIyBaZvt5+KCbYYopxh8CLts3TdhD4VpJnmZCgiHa+nGtvuileySOKJysFo4G+wHMIIEuKFpGXH+lBYklVYMFAAAOw==');
+}
+body {
     color: #fff;
     font-family: "Lucida Sans Unicode", "Lucida Sans", "Helvetica", "Arial", Sans-Serif;
 }
 
 .XSlidesToc {
-    background-color: #000;
-    border-color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: rgba(255, 255, 255, 0.5) 2px solid !important;
 }
 
 h1 {

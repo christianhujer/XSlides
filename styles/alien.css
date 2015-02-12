@@ -4,8 +4,12 @@ body, .XSlidesToc {
     font-family: Sans-Serif;
 }
 
+a {
+    color: #1e5;
+}
+
 .XSlidesToc {
-    border-color: #1e5;
+    border: 4px dashed #1e5;
 }
 h1 {
     color: #1e5;

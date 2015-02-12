@@ -18,7 +18,6 @@ div.XSlidesToc {
     top: 1em;
     visibility: hidden;
     padding: 1ex;
-    border: 1px solid;
 }
 div.XSlidesToc a {
     display: block;

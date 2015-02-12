@@ -33,6 +33,8 @@ Users will no longer have to run make in order to create the viewable version of
   Press 'C' key for displaying a table of contents outline generated from the h1 elements
 
 ## Planned
+- Sticky table of contents (checkbox)
+- Cursor navigation through table of contents
 - Mouse click
 - Mouse wheel
 - Swipe right, swipe left (tablet / mobile / touch screen)
