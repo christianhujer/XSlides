@@ -8,6 +8,7 @@ Users will no longer have to run make in order to create the viewable version of
 
 ## Implemented
 - Pluggable layouts
+  Currently provides three layouts: alien, comic and original.
 - Input document is simple HTML
 - Navigation between slides works with presenters
 - Navigation between slides works with cursor keys
@@ -19,9 +20,18 @@ Users will no longer have to run make in order to create the viewable version of
   - If the current slide has elements with ids, the id of the first such element is shown in the URL
 - Changing the hash in the URL jumps to the corresponding slide
 - Slides can be linked to each other using the hashes
+- Works nicely with other JavaScripts.
+  Tested with google-code-prettify.
+- `include` feature to include source code / document fragments
+  use a `src` attribute on a `pre` element
+- Utilizes google-code-prettify if available.
+  Calls prettyPrint() if defined.
+  If you want to prettify, use https://google-code-prettify.googlecode.com/svn/loader/prettify.js (not run_prettify.js)
+  Manually include the skin like this: https://google-code-prettify.googlecode.com/svn/loader/skins/desert.css
+  Or make the skin part of your style.
 
 ## Planned
-- Mouse klick
+- Mouse click
 - Mouse wheel
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Font size control
@@ -32,7 +42,7 @@ Users will no longer have to run make in order to create the viewable version of
 - White slide
 - Per-slide styles
 - Outline
-- FOP Stylesheet
+- FOP Stylesheet to create PDF
 - Footer
   - Support for copyright meta
 - Slide-types:
@@ -51,6 +61,10 @@ Users will no longer have to run make in order to create the viewable version of
 - ':' key for a vi-style command line
 - Good support for HTML5 videos
 - Good support for SVG
+- Source-compabitility with Slidy2 - a simple replacement of XSlides with Slidy2 and vice versa should allow swapping between the two of them.
+
+## Known Bugs / Issues
+- google-code-prettify doesn't work well with the XML version.
 
 # Links
 - http://www.w3.org/Talks/Tools/Slidy2/ Slidy / Slidy2 by Dave Raggett

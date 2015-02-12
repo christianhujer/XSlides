@@ -19,6 +19,12 @@ var Util = {
                 return kv[1];
         }
     },
+    load : function(uri) {
+        var req = new XMLHttpRequest();
+        req.open('GET', uri, false);
+        req.send();
+        return req.responseText;
+    },
 };
 
 var XSlides = {
@@ -146,7 +152,6 @@ var XSlides = {
 
     /* event handlers */
     keydown : function(e) {
-        console.log(this);
         if (!e) e = window.event;
         var keyCode = e.keyCode;
         switch (keyCode) {
@@ -185,12 +190,28 @@ var XSlides = {
         this.displaySlideFromHash();
     },
 
+    replaceContent : function(element, uri) {
+        element.appendChild(document.createTextNode(Util.load(uri)));
+    },
+
+    loadSources : function() {
+        var preElements = document.getElementsByTagName('pre');
+        for (var i = 0; i < preElements.length; i++) {
+            var preElement = preElements[i];
+            var src = preElement.getAttribute('src');
+            if (src)
+                this.replaceContent(preElement, src);
+        }
+    },
     load : function() {
 
+        XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
         XSlides.installEventHandlers();
         XSlides.displaySlideFromHash();
+        if (prettyPrint)
+            prettyPrint();
     },
 };
 
