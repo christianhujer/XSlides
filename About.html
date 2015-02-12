@@ -7,8 +7,10 @@
 <link rel="Stylesheet" href="https://google-code-prettify.googlecode.com/svn/loader/skins/desert.css" />
 <script type="text/javascript" src="XSlides.js"></script>
 <style type="text/css">
+pre { background: rgba(0, 0, 0, 0) !important; }
 li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: decimal !important }
-li.L1, li.L3, li.L5, li.L7, li.L9 { background: #000 !important; }
+li.L0, li.L2, li.L4, li.L6, li.L8 { background: rgba(0, 0, 0, 0.1) !important; }
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !important; }
 </style>
 </head>
 <body>
@@ -105,7 +107,35 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: #000 !important; }
     <li>Creating notes</li>
 </ul>
 
-<h1>Some listing in C</h1>
+<h1>Listings / Source Code</h1>
+<p>There are two relevant features:</p>
+<ul>
+<li>
+    Inclusion of files
+    <br />
+    To include a file, use i.e. <code class="prettyprint">&lt;pre src="hello.c"></code>
+</li>
+<li>
+    Pretty-Printing
+    <br />
+    To pretty-print, declare class <code>prettyprint</code> on the element.
+    If you want line numbers, add <code>linenums</code>.
+</li>
+</ul>
+<p>Example</p>
+<pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums">#include &amp;lt;stdio.h>
+
+int main(void)
+{
+    puts("Hello, world!");
+    return 0;
+}&lt;/pre></pre>
+<p>Example (file)</p>
+<pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums" src="hello.c">&lt;/pre></pre>
+<h1>Listings / Source Code</h1>
+<pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums" src="hello.c">&lt;/pre></pre>
+<p>Then looks like this:</p>
 <pre class="prettyprint linenums" src="hello.c"></pre>
+<p>Ideal if you make presentations about source code!</p>
 </body>
 </html>
