@@ -6,6 +6,11 @@
     <head>
         <title>XSlides 2</title>
         <link rel="Stylesheet" type="text/css" href="styles/comic.css" />
+        <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=desert"></script>
+        <style type="text/css">
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: decimal !important }
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: #000 !important; }
+</style>
     </head>
     <body>
         <h1>XSlides 2</h1>
@@ -30,5 +35,14 @@
             <li>Using XSlides with XSLT</li>
             <li>Using XSlides with JavaScript only</li>
         </ul>
+        <h1>Some Code on this slide.</h1>
+        <!-- TODO google-code-prettify seems broken. It cannot handle this. -->
+        <pre class="linenums"><![CDATA[import static java.lang.System.out;
+
+public class Hello {
+    public static void main(final String... args) {
+        out.format("Hello, world!%n");
+    }
+}]]></pre>
     </body>
 </html>
