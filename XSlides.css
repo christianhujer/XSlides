@@ -3,4 +3,8 @@ div.notes {
 }
 div.slide {
     display: none;
+    padding: 1em;
+}
+div.slide h1 {
+    margin-top: 0px;
 }

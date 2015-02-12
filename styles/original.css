@@ -1,0 +1,11 @@
+body {
+    background-color: #000;
+    background-image: url('data: image/gif;base64,R0lGODdhHAAQAKEEAAwMDCMjIzo6OlBQUCwAAAAAHAAQAEACQIyBaZvt5+KCbYYopxh8CLts3TdhD4VpJnmZCgiHa+nGtvuileySOKJysFo4G+wHMIIEuKFpGXH+lBYklVYMFAAAOw==');
+    color: #fff;
+    font-family: "Lucida Sans Unicode", "Lucida Sans", "Helvetica", "Arial", Sans-Serif;
+    font-size: 200%;
+}
+
+h1 {
+    text-align: center;
+}

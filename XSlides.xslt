@@ -15,14 +15,6 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="html:body">
-        <xsl:copy>
-            <xsl:apply-templates select="@*"/>
-            <xsl:attribute name="onload">XSlides_onload()</xsl:attribute>
-            <xsl:apply-templates select="node()"/>
-        </xsl:copy>
-    </xsl:template>
-
     <xsl:template match="@*|node()">
         <xsl:copy>
             <xsl:apply-templates select="@*|node()"/>

@@ -16,7 +16,7 @@ function XSlides_onload() {
     var slideNumber = 0;
 
     function isSlideStart(element) {
-        return element.tagName == "h1";
+        return element.tagName == "h1" || element.tagName == "H1";
     }
 
     function isSlideEnd(element) {
@@ -78,7 +78,35 @@ function XSlides_onload() {
         document.onkeydown = keydown;
     }
 
+    function addXSlidesStylesheet() {
+        linkStylesheet('XSlides.css');
+
+        var stylename = getSearchParameter('style');
+        if (stylename)
+            linkStylesheet('styles/' + stylename + '.css');
+    }
+
+    function linkStylesheet(href) {
+        var linkEl = document.createElementNS('http://www.w3.org/1999/xhtml', 'link');
+        linkEl.setAttribute('rel', 'Stylesheet');
+        linkEl.setAttribute('type', 'text/css');
+        linkEl.setAttribute('href', href);
+        document.head.appendChild(linkEl);
+    }
+
+    function getSearchParameter(name) {
+        var search = window.location.search.substring(1).split("&");
+        for (var i = 0; i < search.length; i++) {
+            var kv = search[i].split("=");
+            if (kv[0] == name)
+                return kv[1];
+        }
+    }
+
+    addXSlidesStylesheet();
     convertHeadingsIntoSlides();
     installEventHandlers();
     XSlides_displaySlide(1);
 }
+
+window.addEventListener('load', XSlides_onload, false);
