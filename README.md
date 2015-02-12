@@ -34,6 +34,7 @@ Users will no longer have to run make in order to create the viewable version of
 
 ## Planned
 - Sticky table of contents (checkbox)
+- Menu for selecting the style
 - Cursor navigation through table of contents
 - Mouse click
 - Mouse wheel
