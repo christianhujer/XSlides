@@ -112,11 +112,38 @@ Currently available styles:
 <h1>Part II: Authoring XSlides</h1>
 <ul>
     <li>HTML document structure</li>
-    <li>XML document structure</li>
+    <!--li>XML document structure</li-->
     <li>Creating slides</li>
     <li>Simplifying links</li>
     <li>Listings / Source Code</li>
     <li>Creating notes</li>
+</ul>
+
+<h1>HTML document structure</h1>
+<p>Minimalistic XSlides document:</p>
+<pre class="prettyprint linenums" src="Minimal.html"></pre>
+
+<h1>Creating Slides</h1>
+<ul>
+    <li>Use <code>&lt;h1 /></code> element for headline - starts slide</li>
+    <li>Next <code>&lt;h1 /></code> starts next slide</li>
+</ul>
+<pre class="prettyprint linenums">&lt;h1>First slide&lt;/h1>
+&lt;p>Contents of first slide&lt;/p>
+
+&lt;h1>Second slide&lt;/h1>
+&lt;p>Contents of second slide&lt;/p></pre>
+<p>You can use all HTML for slide content.</p>
+
+<h1>Simplify Links</h1>
+<ul>
+<li>Numbers change if you insert or remove slides.<br />Names are more stable than numbers.</li>
+<li>To simplify links, provide named ids instead of numbers</li>
+</ul>
+<pre class="prettyprint">&lt;h1 id="fryingEggs">Frying Eggs&lt;/h1></pre>
+<ul>
+    <li>URL hash (aka fragment identifier) now is <code>#fryingEggs</code> instead of some number.</li>
+    <li>Works for hyperlinks within the slides as well as from outside:<br />jump directly to a specific slide.</li>
 </ul>
 
 <h1>Listings / Source Code</h1>
@@ -163,6 +190,11 @@ For Chrome / Chromium, start with <code>--disable-web-security</code> <strong>at
 <p>Then looks like this:</p>
 <pre class="prettyprint linenums" src="hello.c"></pre>
 <p>Ideal if you make presentations about source code!</p>
+
+<h1>Pretty-Printing + Inclusion</h1>
+<pre class="prettyprint lang-html">&lt;pre class="prettyprint linenums" src="Hello.java">&lt;/pre></pre>
+<p>Then looks like this:</p>
+<pre class="prettyprint linenums" src="Hello.java"></pre>
 
 </body>
 </html>
