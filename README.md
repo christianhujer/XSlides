@@ -63,7 +63,26 @@ Users will no longer have to run make in order to create the viewable version of
 - Good support for SVG
 - Source-compabitility with Slidy2 - a simple replacement of XSlides with Slidy2 and vice versa should allow swapping between the two of them.
 
-## Known Bugs / Issues
+# Supported Browsers
+
+## Tested
+- Google Chrome
+- Chromium
+
+## Support planned
+- Android
+- Chrome for Android
+- Safari
+- Konqueror
+- Rekonq
+- Firefox
+- Seamonkey
+- Opera
+
+## Support not planned
+- Internet Explorer
+
+# Known Bugs / Issues
 - google-code-prettify doesn't work well with the XML version.
 
 # Links
