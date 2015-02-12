@@ -13,6 +13,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Navigation between slides works with presenters
 - Navigation between slides works with cursor keys
 - Navigation between slides works with vi(m) shortcuts and commands
+- Nativation between slides works with mouse wheel
 - Main engine is JavaScript instead of XSLT
 - Linking to individual slides is possible
   - via slide number
@@ -39,7 +40,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Inclusion of slides from other presentations
 - Cursor navigation through table of contents
 - Mouse click
-- Mouse wheel
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Font size control
 - Notes and wrapping document can be created using HTML with special div elements

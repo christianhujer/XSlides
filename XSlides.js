@@ -36,6 +36,7 @@ var Util = {
 
 var XSlides = {
     currentSlide : null,
+    nowheel : false,
     numberOfSlides : 0,
     toc : document.createElementNS('http://www.w3.org/1999/xhtml', 'div'),
 
@@ -63,6 +64,7 @@ var XSlides = {
     installEventHandlers : function() {
         document.addEventListener('keydown', function() { XSlides.keydown() }, false);
         document.addEventListener('keypress', function() { XSlides.keypress() }, false);
+        document.addEventListener('mousewheel', function() { XSlides.mousewheel() }, false);
         window.addEventListener('hashchange', function() { XSlides.hashchange() }, false);
     },
 
@@ -89,6 +91,7 @@ var XSlides = {
         for (var i = 0; i < childNodes.length; ++i)
             divElement.appendChild(childNodes[i]);
         divElement.slideNumber = XSlides.numberOfSlides;
+        divElement.addEventListener('mousewheel', function() { XSlides.divwheel() }, false);
         return divElement;
     },
 
@@ -105,10 +108,8 @@ var XSlides = {
                 slideStartFound = true;
                 var a = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
                 var clone = currentNode.cloneNode(true);
-                console.log(clone);
                 while (clone.childNodes.length > 0)
                     a.appendChild(clone.childNodes[0]);
-                console.log(a);
                 Util.removeIds(a);
                 a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
                 a.addEventListener('click', function() { XSlides.toggleToc() }, false);
@@ -189,12 +190,23 @@ var XSlides = {
     },
 
     toggleToc : function() {
-        console.log(this.toc.style.visibility);
         this.toc.style.visibility = this.toc.style.visibility == 'visible' ? 'hidden' : 'visible';
     },
 
     /* event handlers */
-    hashchange : function() {
+
+    divwheel : function(e) {
+        if (!e) e = window.event;
+        this.nowheel = false;
+        if (0 > e.wheelDelta)
+            if (document.body.scrollHeight > document.body.scrollTop + window.innerHeight)
+                this.nowheel = true;
+        if (e.wheelDelta > 0)
+            if (document.body.scrollTop > 0)
+                this.nowheel = true;
+    },
+
+    hashchange : function(e) {
         this.displaySlideFromHash();
     },
 
@@ -232,6 +244,27 @@ var XSlides = {
         case 71: this.lastSlide(); return; /* vi: G */
         case 103: this.firstSlide(); return; /* vi: g */
         }
+    },
+
+    mousewheel : function(e) {
+        if (!e) e = window.event;
+        if (e.ctrlKey) return;
+        if (this.nowheel) {
+            this.nowheel = false;
+            return;
+        }
+        if (e.wheelDeltaX || e.wheelDeltaY) {
+            /* Chrome supports two wheels, nice. */
+            if (e.wheelDeltaY > 0) this.previousSlide();
+            if (0 > e.wheelDeltaY) this.nextSlide();
+            if (e.wheelDeltaX > 0) this.previousSlide();
+            if (0 > e.wheelDeltaX) this.nextSlide();
+            return;
+        }
+        /* Opera and Internet Explorer support one wheel. */
+        if (e.wheelDelta > 0) this.previousSlide();
+        if (0 > e.wheelDelta) this.nextSlide();
+        /* No wheel support in Firefox. */
     },
 
     load : function() {
