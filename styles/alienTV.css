@@ -1,0 +1,14 @@
+body, .XSlidesToc {
+    background-color: #000;
+    color: #ccc;
+    font-family: Sans-Serif;
+}
+
+.XSlidesToc {
+    border-color: #1e5;
+}
+h1 {
+    color: #1e5;
+    background-image: url('TV.gif');
+    border-bottom: #1e5 1px solid;
+}
