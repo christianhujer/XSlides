@@ -111,6 +111,7 @@ var XSlides = {
                 console.log(a);
                 Util.removeIds(a);
                 a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
+                a.addEventListener('click', function() { XSlides.toggleToc() }, false);
                 this.toc.appendChild(a);
             }
             if (slideStartFound && XSlides.isLastNodeOfSlide(currentNode)) {
