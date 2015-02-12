@@ -13,6 +13,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Navigation between slides works with cursor keys
 - Navigation between slides works with vi(m) shortcuts and commands
 - Main engine is JavaScript instead of XSLT
+- Linking to individual slides is possible
 
 ## Planned
 - Mouse klick
@@ -20,7 +21,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Font size control
 - Notes and wrapping document can be created using HTML with special div elements
-- Slides can be hyperlinked to each other; Linking to individual slides
+- Slides can be hyperlinked to each other
 - Markdown to XSlides converter
 - Black slide
 - Blank slide
