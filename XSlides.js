@@ -1,5 +1,6 @@
 var XSlides_currentSlide = 0;
 var XSlides_numberOfSlides = 0;
+var commandlineEnabled = false;
 
 function XSlides_displaySlide(slideNumber) {
     if (1 > slideNumber)
@@ -64,18 +65,52 @@ function XSlides_onload() {
         XSlides_displaySlide(XSlides_currentSlide + 1);
     }
 
+    function firstSlide() {
+        XSlides_displaySlide(1);
+    }
+
+    function lastSlide() {
+        XSlides_displaySlide(XSlides_numberOfSlides);
+    }
+
     function keydown(e) {
         if (!e) e = window.event;
         var keyCode = e.keyCode;
         switch (keyCode) {
         case 8: previousSlide(); return false; /* Backspace */
-        case 33: previousSlide(); return; /* PgUp */
-        case 34: nextSlide(); return; /* PgDn */
+        case 33: previousSlide(); return; /* PowerPoint: page up */
+        case 34: nextSlide(); return; /* PowerPoint: page down */
+        case 35: lastSlide(); return; /* PowerPoint: end */
+        case 36: firstSlide(); return; /* PowerPoint: pos1 */
+        case 37: if (!commandlineEnabled) previousSlide(); return; /* PowerPoint: left */
+        case 38: if (!commandlineEnabled) previousSlide(); return; /* PowerPoint: up */
+        case 39: if (!commandlineEnabled) nextSlide(); return; /* PowerPoint: right */
+        case 40: if (!commandlineEnabled) nextSlide(); return; /* PowerPoint: down */
+        }
+    }
+
+    function keypress(e) {
+        if (!e) e = window.event;
+        var keyCode = e.keyCode;
+        switch (keyCode) {
+        case 104: previousSlide(); return; /* vi: h */
+        case 106: nextSlide(); return; /* vi: j */
+        case 107: previousSlide(); return; /* vi: k */
+        case 108: nextSlide(); return; /* vi: l */
+        case 110: nextSlide(); return; /* PowerPoint: n */
+        case 112: previousSlide(); return; /* PowerPoint: p */
+        case 32: nextSlide(); return; /* PowerPoint: <SP> */
+        case 49: firstSlide(); return; /* vi: 1 */
+        case 13: nextSlide(); return; /* PowerPoint: <CR> */
+        case 10: nextSlide(); return; /* PowerPoint: <LF> */
+        case 71: lastSlide(); return; /* vi: G */
+        case 103: firstSlide(); return; /* vi: g */
         }
     }
 
     function installEventHandlers() {
         document.onkeydown = keydown;
+        document.onkeypress = keypress;
     }
 
     function addXSlidesStylesheet() {
