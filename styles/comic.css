@@ -1,8 +1,11 @@
-body {
+body, .XSlidesToc {
     background-color: #ffc;
     color: #222;
     font-family: "Comic Sans MS";
-    font-size: 200%;
+}
+
+.XSlidesToc {
+    border-color: #222;
 }
 
 h1 {

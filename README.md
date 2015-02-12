@@ -26,9 +26,11 @@ Users will no longer have to run make in order to create the viewable version of
   use a `src` attribute on a `pre` element
 - Utilizes google-code-prettify if available.
   Calls prettyPrint() if defined.
-  If you want to prettify, use https://google-code-prettify.googlecode.com/svn/loader/prettify.js (not run_prettify.js)
-  Manually include the skin like this: https://google-code-prettify.googlecode.com/svn/loader/skins/desert.css
+  If you want to prettify, use `https://google-code-prettify.googlecode.com/svn/loader/prettify.js` (not `run_prettify.js`)
+  Manually include the skin like this: `https://google-code-prettify.googlecode.com/svn/loader/skins/desert.css`
   Or make the skin part of your style.
+- Outline
+  Press 'C' key for displaying a table of contents outline generated from the h1 elements
 
 ## Planned
 - Mouse click
@@ -41,7 +43,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Blank slide
 - White slide
 - Per-slide styles
-- Outline
 - FOP Stylesheet to create PDF
 - Footer
   - Support for copyright meta
@@ -52,7 +53,6 @@ Users will no longer have to run make in order to create the viewable version of
   - 2 rows
   - 2x2 columns/rows, optionally with joined left or right column, joined top or bottom row
 - 'A' key for toggling between current slide and all slides
-- 'C' key for displaying a table of contents outline generated from the h1 elements
 - 'F' key for toggling the visibility of the footer
 - Presentation timer
 - Incremental display

@@ -1,9 +1,12 @@
-body {
-    background-color: #000;
+body, .XSlidesToc {
     background-image: url('data: image/gif;base64,R0lGODdhHAAQAKEEAAwMDCMjIzo6OlBQUCwAAAAAHAAQAEACQIyBaZvt5+KCbYYopxh8CLts3TdhD4VpJnmZCgiHa+nGtvuileySOKJysFo4G+wHMIIEuKFpGXH+lBYklVYMFAAAOw==');
     color: #fff;
     font-family: "Lucida Sans Unicode", "Lucida Sans", "Helvetica", "Arial", Sans-Serif;
-    font-size: 200%;
+}
+
+.XSlidesToc {
+    background-color: #000;
+    border-color: #fff;
 }
 
 h1 {

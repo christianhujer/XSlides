@@ -1,3 +1,6 @@
+body {
+    font-size: 200%;
+}
 div.notes {
     display: none;
 }
@@ -7,4 +10,16 @@ div.slide {
 }
 div.slide h1 {
     margin-top: 0px;
+}
+div.XSlidesToc {
+    font-size: 75%;
+    left: 1em;
+    position: fixed;
+    top: 1em;
+    visibility: hidden;
+    padding: 1ex;
+    border: 1px solid;
+}
+div.XSlidesToc a {
+    display: block;
 }

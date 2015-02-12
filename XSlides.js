@@ -25,11 +25,19 @@ var Util = {
         req.send();
         return req.responseText;
     },
+    removeIds : function(node) {
+        if (node instanceof Element && node.hasAttribute('id'))
+            node.removeAttribute('id');
+        var nodes = node.childNodes;
+        for (var i = 0; i < nodes.length; i++)
+            this.removeIds(nodes[i]);
+    },
 };
 
 var XSlides = {
     currentSlide : null,
     numberOfSlides : 0,
+    toc : document.createElementNS('http://www.w3.org/1999/xhtml', 'div'),
 
     /* Helper methods */
     isFirstNodeOfSlide : function(node) {
@@ -93,8 +101,18 @@ var XSlides = {
         for (var i = 0; i < nodes.length; i++) {
             var currentNode = nodes.item(i);
             nodesOfCurrentSlide.push(currentNode);
-            if (XSlides.isFirstNodeOfSlide(currentNode))
+            if (XSlides.isFirstNodeOfSlide(currentNode)) {
                 slideStartFound = true;
+                var a = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+                var clone = currentNode.cloneNode(true);
+                console.log(clone);
+                while (clone.childNodes.length > 0)
+                    a.appendChild(clone.childNodes[0]);
+                console.log(a);
+                Util.removeIds(a);
+                a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
+                this.toc.appendChild(a);
+            }
             if (slideStartFound && XSlides.isLastNodeOfSlide(currentNode)) {
                 slides.push(XSlides.createSlideDiv(nodesOfCurrentSlide));
                 nodesOfCurrentSlide = [];
@@ -104,6 +122,10 @@ var XSlides = {
         }
         for (var i = 0; i < slides.length; i++)
             document.body.appendChild(slides[i]);
+    },
+    finalizeToc : function() {
+        this.toc.className = 'XSlidesToc';
+        document.body.appendChild(this.toc);
     },
 
     /* public methods */
@@ -150,6 +172,11 @@ var XSlides = {
         this.displaySlide(this.numberOfSlides);
     },
 
+    toggleToc : function() {
+        console.log(this.toc.style.visibility);
+        this.toc.style.visibility = this.toc.style.visibility == 'visible' ? 'hidden' : 'visible';
+    },
+
     /* event handlers */
     keydown : function(e) {
         if (!e) e = window.event;
@@ -171,6 +198,7 @@ var XSlides = {
         if (!e) e = window.event;
         var keyCode = e.keyCode;
         switch (keyCode) {
+        case 99: this.toggleToc(); return; /* c - table of contents */
         case 104: this.previousSlide(); return; /* vi: h */
         case 106: this.nextSlide(); return; /* vi: j */
         case 107: this.previousSlide(); return; /* vi: k */
@@ -203,8 +231,8 @@ var XSlides = {
                 this.replaceContent(preElement, src);
         }
     },
-    load : function() {
 
+    load : function() {
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
@@ -212,6 +240,7 @@ var XSlides = {
         XSlides.displaySlideFromHash();
         if (prettyPrint)
             prettyPrint();
+        XSlides.finalizeToc();
     },
 };
 
