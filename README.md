@@ -14,6 +14,8 @@ Users will no longer have to run make in order to create the viewable version of
 - Navigation between slides works with vi(m) shortcuts and commands
 - Main engine is JavaScript instead of XSLT
 - Linking to individual slides is possible
+  - via slide number
+  - via id of an element on that slide (preferably the id of the h1)
 
 ## Planned
 - Mouse klick

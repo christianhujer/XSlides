@@ -32,6 +32,7 @@ function XSlides_onload() {
         divElement.setAttribute('id', 'slide' + ++slideNumber);
         for (var i = 0; i < childNodes.length; ++i)
             divElement.appendChild(childNodes[i]);
+        divElement.slideNumber = slideNumber;
         return divElement;
     }
 
@@ -140,17 +141,19 @@ function XSlides_onload() {
     }
 
     function getSlideNumberFromHash(hash) {
-        console.log(hash);
         var match;
         if (match = /^#\((\d+)\)$/.exec(hash))
             return Number(match[1]);
+        var id = hash.substring(1);
+       for (var element = document.getElementById(id); element; element = element.parentNode)
+           if (element.slideNumber)
+               return element.slideNumber;
     }
 
     function displayStartSlide() {
         var hash = window.location.hash;
         var slideNumber;
         if (hash) slideNumber = getSlideNumberFromHash(hash);
-        console.log(slideNumber);
         if (!slideNumber) slideNumber = 1;
         XSlides_displaySlide(slideNumber);
     }
