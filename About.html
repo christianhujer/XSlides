@@ -61,13 +61,18 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !import
     <li>Last slide: <kbd>shift G</kbd></li>
 </ul>
 
+<h1 id="display-toc">Display Table of Contents</h1>
+<p>Press <kbd>C</kbd> to see the <em>Table of Contents</em>.</p>
+<p>Using the <em>Table of Contents</em> you can jump to a specific slide easily.</p>
+
 <h1>Using your presenter</h1>
 <p>Your presenter works out-of-the-box!</p>
 <p>TODO Add image of presenter</p>
 
 <h1>Advanced Features: Choose Style</h1>
 <p>Choose the style by appending <code>?style=<var>stylename</var></code> to the URL</p>
-<p>Currently available styles:</p>
+<div style="-webkit-columns: 2;">
+Currently available styles:
 <ul>
     <li><code>original</code></li>
     <li><code>alien</code></li>
@@ -76,6 +81,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !import
 <p>Example:</p>
 <pre>About.html?style=alien</pre>
 <p>Works offline, too!</p>
+</div>
 
 <h1 id="linking">Advanced Features: Starting with / Linking to a specific slide</h1>
 <p>You can start with / link to a specific slide.</p>
@@ -122,20 +128,32 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !import
     If you want line numbers, add <code>linenums</code>.
 </li>
 </ul>
+<p>The Features can be combined!</p>
+
+<h1>Pretty-Printing</h1>
 <p>Example</p>
 <pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums">#include &amp;lt;stdio.h>
-
-int main(void)
-{
+int main(void) {
     puts("Hello, world!");
     return 0;
 }&lt;/pre></pre>
-<p>Example (file)</p>
-<pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums" src="hello.c">&lt;/pre></pre>
-<h1>Listings / Source Code</h1>
+<p>Looks like this:</p>
+<pre class="prettyprint linenums">#include &lt;stdio.h>
+int main(void) {
+    puts("Hello, world!");
+    return 0;
+}</pre>
+
+<h1>Inclusion</h1>
+<pre class="prettyprint linenums lang-html">&lt;pre src="hello.c">&lt;/pre></pre>
+<p>Then looks like this:</p>
+<pre src="hello.c"></pre>
+
+<h1>Pretty-Printing + Inclusion</h1>
 <pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums" src="hello.c">&lt;/pre></pre>
 <p>Then looks like this:</p>
 <pre class="prettyprint linenums" src="hello.c"></pre>
 <p>Ideal if you make presentations about source code!</p>
+
 </body>
 </html>
