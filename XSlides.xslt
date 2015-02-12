@@ -11,6 +11,7 @@
             <xsl:apply-templates select="@*|node()"/>
             <script type="text/javascript" src="XSlides.js" />
             <link rel="Stylesheet" type="text/css" href="XSlides.css" />
+            <link rel="Stylesheet" type="text/css" href="debugLayout.css" />
         </xsl:copy>
     </xsl:template>
 
