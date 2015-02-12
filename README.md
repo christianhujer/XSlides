@@ -16,6 +16,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Linking to individual slides is possible
   - via slide number
   - via id of an element on that slide (preferably the id of the h1)
+  - If the current slide has elements with ids, the id of the first such element is shown in the URL
 
 ## Planned
 - Mouse klick
