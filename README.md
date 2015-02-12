@@ -17,6 +17,8 @@ Users will no longer have to run make in order to create the viewable version of
   - via slide number
   - via id of an element on that slide (preferably the id of the h1)
   - If the current slide has elements with ids, the id of the first such element is shown in the URL
+- Changing the hash in the URL jumps to the corresponding slide
+- Slides can be linked to each other using the hashes
 
 ## Planned
 - Mouse klick
@@ -24,7 +26,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Font size control
 - Notes and wrapping document can be created using HTML with special div elements
-- Slides can be hyperlinked to each other
 - Markdown to XSlides converter
 - Black slide
 - Blank slide

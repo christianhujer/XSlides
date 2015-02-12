@@ -19,6 +19,8 @@ function XSlides_displaySlide(slideNumber) {
         slideNumber = 1;
     if (slideNumber > XSlides_numberOfSlides)
         slideNumber = XSlides_numberOfSlides;
+    if (slideNumber == XSlides_currentSlide)
+        return;
     if (XSlides_currentSlide != 0)
         document.getElementById('slide' + XSlides_currentSlide).style.display = 'none';
     XSlides_currentSlide = slideNumber;
@@ -126,9 +128,14 @@ function XSlides_onload() {
         }
     }
 
+    function onhashchange() {
+        displaySlideFromHash();
+    }
+
     function installEventHandlers() {
         document.onkeydown = keydown;
         document.onkeypress = keypress;
+        window.onhashchange = onhashchange;
     }
 
     function addXSlidesStylesheet() {
@@ -166,7 +173,7 @@ function XSlides_onload() {
                return element.slideNumber;
     }
 
-    function displayStartSlide() {
+    function displaySlideFromHash() {
         var hash = window.location.hash;
         var slideNumber;
         if (hash) slideNumber = getSlideNumberFromHash(hash);
@@ -177,7 +184,7 @@ function XSlides_onload() {
     addXSlidesStylesheet();
     convertHeadingsIntoSlides();
     installEventHandlers();
-    displayStartSlide();
+    displaySlideFromHash();
 }
 
 window.addEventListener('load', XSlides_onload, false);
