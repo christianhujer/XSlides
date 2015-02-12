@@ -3,10 +3,12 @@ var Util = {
         var nodes = node.childNodes;
         for (var i = 0; i < nodes.length; i++) {
             var node = nodes[i];
-            if (node.id)
-                return node.id;
-            if (node.childNodes)
-                return Util.getFirstDescendantId(node);
+            if (node.id) return node.id;
+            if (node.childNodes) {
+                var id = Util.getFirstDescendantId(node);
+                if (id)
+                    return id;
+            }
         }
     },
     getSearchParameter : function(name) {
