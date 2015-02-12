@@ -8,7 +8,7 @@ Users will no longer have to run make in order to create the viewable version of
 
 ## Implemented
 - Pluggable layouts
-  Currently provides layouts: alien, alienTV, comic and original.
+  Currently provides layouts: alien, alienTV, comic, oldschool and original.
 - Input document is simple HTML
 - Navigation between slides works with presenters
 - Navigation between slides works with cursor keys
@@ -35,6 +35,8 @@ Users will no longer have to run make in order to create the viewable version of
 ## Planned
 - Sticky table of contents (checkbox)
 - Menu for selecting the style
+- Style override for individual slides
+- Inclusion of slides from other presentations
 - Cursor navigation through table of contents
 - Mouse click
 - Mouse wheel

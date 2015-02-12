@@ -74,10 +74,11 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !import
 <div style="-webkit-columns: 2;">
 Currently available styles:
 <ul>
-    <li><code>original</code></li>
     <li><code>alien</code></li>
     <li><code>alienTV</code></li>
     <li><code>comic</code></li>
+    <li><code>oldschool</code></li>
+    <li><code>original</code></li>
 </ul>
 <p>Example:</p>
 <pre>About.html?style=alien</pre>
@@ -149,6 +150,9 @@ int main(void) {
 <pre class="prettyprint linenums lang-html">&lt;pre src="hello.c">&lt;/pre></pre>
 <p>Then looks like this:</p>
 <pre src="hello.c"></pre>
+<p>Limitation: Inclusion is done using <code>XMLHttpRequest</code> and therefore disallowed on local files.
+<br />
+For Chrome / Chromium, start with <code>--disable-web-security</code> <strong>at your own risk!</strong></p>
 
 <h1>Pretty-Printing + Inclusion</h1>
 <pre class="prettyprint linenums lang-html">&lt;pre class="prettyprint linenums" src="hello.c">&lt;/pre></pre>
