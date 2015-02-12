@@ -1,0 +1,7 @@
+div.notes {
+    display: none;
+}
+div.slide {
+    border: 1px solid red;
+    display: none;
+}
