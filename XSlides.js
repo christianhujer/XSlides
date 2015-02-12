@@ -124,9 +124,24 @@ var XSlides = {
         for (var i = 0; i < slides.length; i++)
             document.body.appendChild(slides[i]);
     },
+
     finalizeToc : function() {
         this.toc.className = 'XSlidesToc';
         document.body.appendChild(this.toc);
+    },
+
+    replaceContent : function(element, uri) {
+        element.appendChild(document.createTextNode(Util.load(uri)));
+    },
+
+    loadSources : function() {
+        var preElements = document.getElementsByTagName('pre');
+        for (var i = 0; i < preElements.length; i++) {
+            var preElement = preElements[i];
+            var src = preElement.getAttribute('src');
+            if (src)
+                this.replaceContent(preElement, src);
+        }
     },
 
     /* public methods */
@@ -179,6 +194,10 @@ var XSlides = {
     },
 
     /* event handlers */
+    hashchange : function() {
+        this.displaySlideFromHash();
+    },
+
     keydown : function(e) {
         if (!e) e = window.event;
         var keyCode = e.keyCode;
@@ -212,24 +231,6 @@ var XSlides = {
         case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
         case 71: this.lastSlide(); return; /* vi: G */
         case 103: this.firstSlide(); return; /* vi: g */
-        }
-    },
-
-    hashchange : function() {
-        this.displaySlideFromHash();
-    },
-
-    replaceContent : function(element, uri) {
-        element.appendChild(document.createTextNode(Util.load(uri)));
-    },
-
-    loadSources : function() {
-        var preElements = document.getElementsByTagName('pre');
-        for (var i = 0; i < preElements.length; i++) {
-            var preElement = preElements[i];
-            var src = preElement.getAttribute('src');
-            if (src)
-                this.replaceContent(preElement, src);
         }
     },
 
