@@ -34,6 +34,7 @@ Users will no longer have to run make in order to create the viewable version of
   Press 'C' key for displaying a table of contents outline generated from the h1 elements
 
 ## Planned
+- Automatic choice of font size
 - Sticky table of contents (checkbox)
 - Menu for selecting the style
 - Style override for individual slides

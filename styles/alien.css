@@ -1,7 +1,11 @@
 body, .XSlidesToc {
     background-color: #000;
     color: #ccc;
-    font-family: Sans-Serif;
+    font-family: "DejaVu Sans", Sans-Serif;
+}
+
+pre, code, kbd, samp {
+    font-family: "DejaVu Sans Mono";
 }
 
 a {
