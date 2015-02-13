@@ -45,7 +45,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Font size control
 - Notes and wrapping document can be created using HTML with special div elements
-- Markdown to XSlides converter
+- Markdown to XSlides converter, Markdown interpreter
 - Black slide
 - Blank slide
 - White slide
@@ -59,7 +59,7 @@ Users will no longer have to run make in order to create the viewable version of
   - 2 columns
   - 2 rows
   - 2x2 columns/rows, optionally with joined left or right column, joined top or bottom row
-- 'A' key for toggling between current slide and all slides
+- 'A' key for toggling between current slide and all slides / view as vertical
 - 'F' key for toggling the visibility of the footer
 - Presentation timer
 - Incremental display
@@ -69,6 +69,9 @@ Users will no longer have to run make in order to create the viewable version of
 - Good support for HTML5 videos
 - Good support for SVG
 - Source-compabitility with Slidy2 - a simple replacement of XSlides with Slidy2 and vice versa should allow swapping between the two of them.
+- Auto-hiding navigation bar
+- Fullscreen control
+- Drawing, Highlight
 
 # Supported Browsers
 
