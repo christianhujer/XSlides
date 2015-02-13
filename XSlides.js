@@ -160,6 +160,14 @@ var XSlides = {
         window.addEventListener('load', XSlides.load, false);
     },
 
+    getHashFromCurrentSlide : function(slideElement) {
+        var slideId = Util.getFirstDescendantId(slideElement);
+        if (slideId) return '#' + slideId;
+        if (this.currentSlide == 1) return '#first()';
+        if (this.currentSlide == this.numberOfSlides) return '#last()';
+        return '#(' + this.currentSlide + ')';
+    },
+
     displaySlide : function(slideNumber) {
         if (1 > slideNumber) slideNumber = 1;
         if (slideNumber > this.numberOfSlides) slideNumber = this.numberOfSlides;
@@ -169,10 +177,7 @@ var XSlides = {
         this.currentSlide = slideNumber;
         var currentSlide = document.getElementById('slide' + this.currentSlide);
         currentSlide.style.display = 'block';
-        var slideId = Util.getFirstDescendantId(currentSlide);
-        if (!slideId)
-            slideId = '(' + this.currentSlide + ')';
-        window.location.hash = '#' + slideId;
+        window.location.hash = this.getHashFromCurrentSlide(currentSlide);
     },
 
     displaySlideFromHash : function() {
