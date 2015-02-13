@@ -32,9 +32,9 @@ Users will no longer have to run make in order to create the viewable version of
   Or make the skin part of your style.
 - Outline
   Press 'C' key for displaying a table of contents outline generated from the h1 elements
+- Special hashes `#next()`, `#prev()`, `#previous()`, `#first()`, `#last()`, `#+(n)`, `#-(n)`
 
 ## Planned
-- Special hashes `#next()`, `#previous()`, `#first()`, `#last()`, `#+(n)`, `#-(n)`
 - Automatic choice of font size
 - Sticky table of contents (checkbox)
 - Menu for selecting the style

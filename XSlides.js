@@ -52,8 +52,18 @@ var XSlides = {
 
     getSlideNumberFromHash : function(hash) {
         var match;
-        if (match = /^#\((\d+)\)$/.exec(hash))
-            return Number(match[1]);
+        if (match = /^#([+-]?)\((\d+)\)$/.exec(hash)) {
+            var slideDelta = Number(match[2]);
+            switch (match[1]) {
+            case '+': return this.currentSlide + slideDelta;
+            case '-': return this.currentSlide - slideDelta;
+            default: return slideDelta;
+            }
+        }
+        if (hash == '#next()') return this.currentSlide + 1;
+        if (hash == '#prev()' || hash == '#previous()') return this.currentSlide - 1;
+        if (hash == '#first()') return 1;
+        if (hash == '#last()') return this.numberOfSlides;
         var id = hash.substring(1);
         for (var element = document.getElementById(id); element; element = element.parentNode)
             if (element.slideNumber)
