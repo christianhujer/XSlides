@@ -288,7 +288,7 @@ var XSlides = {
         XSlides.convertHeadingsIntoSlides();
         XSlides.installEventHandlers();
         XSlides.displaySlideFromHash();
-        if (prettyPrint)
+        if (typeof(prettyPrint) == 'function')
             prettyPrint();
         XSlides.finalizeToc();
     },
