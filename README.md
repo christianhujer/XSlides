@@ -75,10 +75,10 @@ Users will no longer have to run make in order to create the viewable version of
 # Supported Browsers
 
 ## Tested
-- Chromium
+- Chromium (note: `<pre src=""/>` only works when starting with `--disable-web-security`)
 - Epiphany (note: `<pre src=""/>` doesn't work in Midori when using `file:` URI scheme)
 - Firefox
-- Google Chrome
+- Google Chrome (note: `<pre src=""/>` only works when starting with `--disable-web-security`)
 - Konqueror
 - Midori (note: `<pre src=""/>` doesn't work in Midori when using `file:` URI scheme)
 - QupZilla
