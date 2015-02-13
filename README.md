@@ -73,16 +73,19 @@ Users will no longer have to run make in order to create the viewable version of
 # Supported Browsers
 
 ## Tested
-- Google Chrome
 - Chromium
+- Epiphany (note: `<pre src=""/>` doesn't work in Midori when using `file:` URI scheme)
 - Firefox
+- Google Chrome
+- Konqueror
+- Midori (note: `<pre src=""/>` doesn't work in Midori when using `file:` URI scheme)
+- QupZilla
+- Rekonq
 
 ## Support planned
 - Android
 - Chrome for Android
 - Safari
-- Konqueror
-- Rekonq
 - Seamonkey
 - Opera
 
