@@ -75,6 +75,7 @@ Users will no longer have to run make in order to create the viewable version of
 ## Tested
 - Google Chrome
 - Chromium
+- Firefox
 
 ## Support planned
 - Android
@@ -82,7 +83,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Safari
 - Konqueror
 - Rekonq
-- Firefox
 - Seamonkey
 - Opera
 

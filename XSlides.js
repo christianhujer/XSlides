@@ -72,10 +72,10 @@ var XSlides = {
 
     /* private methods */
     installEventHandlers : function() {
-        document.addEventListener('keydown', function() { XSlides.keydown() }, false);
-        document.addEventListener('keypress', function() { XSlides.keypress() }, false);
-        document.addEventListener('mousewheel', function() { XSlides.mousewheel() }, false);
-        window.addEventListener('hashchange', function() { XSlides.hashchange() }, false);
+        document.addEventListener('keydown', function(e) { XSlides.keydown(e) }, false);
+        document.addEventListener('keypress', function(e) { XSlides.keypress(e) }, false);
+        document.addEventListener('mousewheel', function(e) { XSlides.mousewheel(e) }, false);
+        window.addEventListener('hashchange', function(e) { XSlides.hashchange(e) }, false);
     },
 
     addXSlidesStylesheet : function() {
@@ -101,7 +101,7 @@ var XSlides = {
         for (var i = 0; i < childNodes.length; ++i)
             divElement.appendChild(childNodes[i]);
         divElement.slideNumber = XSlides.numberOfSlides;
-        divElement.addEventListener('mousewheel', function() { XSlides.divwheel() }, false);
+        divElement.addEventListener('mousewheel', function(e) { XSlides.divwheel(e) }, false);
         return divElement;
     },
 
@@ -211,7 +211,7 @@ var XSlides = {
     /* event handlers */
 
     divwheel : function(e) {
-        if (!e) e = window.event;
+        if (!e) { e = window.event; }
         this.nowheel = false;
         if (0 > e.wheelDelta)
             if (document.body.scrollHeight > document.body.scrollTop + window.innerHeight)
@@ -226,7 +226,7 @@ var XSlides = {
     },
 
     keydown : function(e) {
-        if (!e) e = window.event;
+        if (!e) { e = window.event; }
         var keyCode = e.keyCode;
         switch (keyCode) {
         case 8: this.previousSlide(); return false; /* Backspace */
@@ -242,7 +242,7 @@ var XSlides = {
     },
 
     keypress : function(e) {
-        if (!e) e = window.event;
+        if (!e) { e = window.event; }
         var keyCode = e.keyCode;
         switch (keyCode) {
         case 99: this.toggleToc(); return; /* c - table of contents */
