@@ -38,7 +38,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Automatic choice of font size
 - Sticky table of contents (checkbox)
 - Menu for selecting the style
-- Style override for individual slides
+- Style override for individual slides (stylesheet and inline)
 - Inclusion of slides from other presentations
 - Cursor navigation through table of contents
 - Mouse click
@@ -49,7 +49,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Black slide
 - Blank slide
 - White slide
-- Per-slide styles
 - FOP Stylesheet to create PDF
 - Footer
   - Support for copyright meta
