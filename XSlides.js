@@ -82,6 +82,7 @@ var XSlides = {
         document.addEventListener('keypress', function(e) { XSlides.keypress(e) }, false);
         document.addEventListener('mousewheel', function(e) { XSlides.mousewheel(e) }, false);
         window.addEventListener('hashchange', function(e) { XSlides.hashchange(e) }, false);
+        window.addEventListener('resize', function(e) { XSlides.setFontSizeFromWindowSize(e) }, false);
     },
 
     addXSlidesStylesheet : function() {
@@ -159,6 +160,10 @@ var XSlides = {
             if (src)
                 this.replaceContent(preElement, src);
         }
+    },
+
+    setFontSizeFromWindowSize : function() {
+        document.getElementsByTagName('body')[0].style.fontSize = Math.sqrt(window.innerHeight * window.innerWidth / 640 / 480) * 100 + '%';
     },
 
     /* public methods */
@@ -293,6 +298,7 @@ var XSlides = {
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
         XSlides.installEventHandlers();
+        XSlides.setFontSizeFromWindowSize();
         XSlides.displaySlideFromHash();
         if (typeof(prettyPrint) == 'function')
             prettyPrint();

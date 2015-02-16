@@ -1,5 +1,5 @@
 body {
-    font-size: 250%;
+    font-size: 250%; /* Will be overridden at runtime XSlides.js by XSlides.setFontSizeFromWindowSize(). */
 }
 div.notes {
     display: none;

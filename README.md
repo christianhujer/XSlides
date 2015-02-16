@@ -33,9 +33,10 @@ Users will no longer have to run make in order to create the viewable version of
 - Outline
   Press 'C' key for displaying a table of contents outline generated from the h1 elements
 - Special hashes `#next()`, `#prev()`, `#previous()`, `#first()`, `#last()`, `#+(n)`, `#-(n)`
+- Automatic choice of font size using a smart formula.
+  The formula assumes perfect presentation `font-size` at 640x480 and calculates the necessary that at a resolution of 640x480, the default font size would be perfect for presentation.
 
 ## Planned
-- Automatic choice of font size
 - Sticky table of contents (checkbox)
 - Menu for selecting the style
 - Style override for individual slides (stylesheet and inline)
