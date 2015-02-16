@@ -21,9 +21,15 @@ var Util = {
     },
     load : function(uri) {
         var req = new XMLHttpRequest();
-        req.open('GET', uri, false);
-        req.send();
-        return req.responseText;
+	try {
+	    req.open('GET', uri, false);
+	    req.send();
+            return req.responseText;
+	} catch (err) {
+            var msg = "Error loading " + uri + " using XMLHttpRequest: " + err.message;
+	    console.log(msg);
+	    return msg;
+        }
     },
     removeIds : function(node) {
         if (node instanceof Element && node.hasAttribute('id'))
