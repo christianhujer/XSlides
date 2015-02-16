@@ -1,3 +1,5 @@
+var NS_XHTML = 'http://www.w3.org/1999/xhtml';
+
 var Util = {
     getFirstDescendantId : function(node) {
         var nodes = node.childNodes;
@@ -44,7 +46,7 @@ var XSlides = {
     currentSlide : null,
     nowheel : false,
     numberOfSlides : 0,
-    toc : document.createElementNS('http://www.w3.org/1999/xhtml', 'div'),
+    toc : document.createElementNS(NS_XHTML, 'div'),
 
     /* Helper methods */
     isFirstNodeOfSlide : function(node) {
@@ -94,7 +96,7 @@ var XSlides = {
     },
 
     linkStylesheet : function(href) {
-        var linkEl = document.createElementNS('http://www.w3.org/1999/xhtml', 'link');
+        var linkEl = document.createElementNS(NS_XHTML, 'link');
         linkEl.setAttribute('rel', 'Stylesheet');
         linkEl.setAttribute('type', 'text/css');
         linkEl.setAttribute('href', href);
@@ -102,7 +104,7 @@ var XSlides = {
     },
 
     createSlideDiv : function(childNodes) {
-        var divElement = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+        var divElement = document.createElementNS(NS_XHTML, 'div');
         divElement.setAttribute('class', 'slide');
         divElement.setAttribute('id', 'slide' + ++XSlides.numberOfSlides);
         for (var i = 0; i < childNodes.length; ++i)
@@ -123,13 +125,13 @@ var XSlides = {
             nodesOfCurrentSlide.push(currentNode);
             if (XSlides.isFirstNodeOfSlide(currentNode)) {
                 slideStartFound = true;
-                var a = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+                var a = document.createElementNS(NS_XHTML, 'a');
                 var clone = currentNode.cloneNode(true);
                 while (clone.childNodes.length > 0)
                     a.appendChild(clone.childNodes[0]);
                 Util.removeIds(a);
                 a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
-                a.addEventListener('click', function() { XSlides.toggleToc() }, false);
+                a.addEventListener('click', function() { XSlides.tocLink() }, false);
                 this.toc.appendChild(a);
             }
             if (slideStartFound && XSlides.isLastNodeOfSlide(currentNode)) {
@@ -145,6 +147,15 @@ var XSlides = {
 
     finalizeToc : function() {
         this.toc.className = 'XSlidesToc';
+        var checkbox = document.createElementNS(NS_XHTML, 'input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.setAttribute('id', 'tocStay');
+        this.toc.appendChild(checkbox);
+        var label = document.createElementNS(NS_XHTML, 'label');
+        label.setAttribute('for', 'tocStay');
+        label.setAttribute('title', 'stay on screen');
+        label.appendChild(document.createTextNode('Sticky'));
+        this.toc.appendChild(label);
         document.body.appendChild(this.toc);
     },
 
@@ -217,6 +228,10 @@ var XSlides = {
 
     toggleToc : function() {
         this.toc.style.visibility = this.toc.style.visibility == 'visible' ? 'hidden' : 'visible';
+    },
+
+    tocLink : function() {
+        if (!document.getElementById('tocStay').checked) this.toggleToc();
     },
 
     /* event handlers */

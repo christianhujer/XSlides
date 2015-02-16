@@ -35,9 +35,9 @@ Users will no longer have to run make in order to create the viewable version of
 - Special hashes `#next()`, `#prev()`, `#previous()`, `#first()`, `#last()`, `#+(n)`, `#-(n)`
 - Automatic choice of font size using a smart formula.
   The formula assumes perfect presentation `font-size` at 640x480 and calculates the necessary that at a resolution of 640x480, the default font size would be perfect for presentation.
+- Sticky table of contents (checkbox)
 
 ## Planned
-- Sticky table of contents (checkbox)
 - Menu for selecting the style
 - Style override for individual slides (stylesheet and inline)
 - Inclusion of slides from other presentations
