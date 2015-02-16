@@ -23,14 +23,14 @@ var Util = {
     },
     load : function(uri) {
         var req = new XMLHttpRequest();
-	try {
-	    req.open('GET', uri, false);
-	    req.send();
+        try {
+            req.open('GET', uri, false);
+            req.send();
             return req.responseText;
-	} catch (err) {
-            var msg = "Error loading " + uri + " using XMLHttpRequest: " + err.message;
-	    console.log(msg);
-	    return msg;
+        } catch (err) {
+            var msg = err + '\n' + err.stack;
+            console.log(msg);
+            return msg;
         }
     },
     removeIds : function(node) {
