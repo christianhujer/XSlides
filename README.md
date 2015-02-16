@@ -92,12 +92,12 @@ For Chromium and Google Chrome, the workaround is to start the browser program w
 ## Support planned
 - Android
 - Chrome for Android
-- Safari
 - Seamonkey
 - Opera
 
 ## Support not planned
 - Internet Explorer
+- Safari
 
 # Known Bugs / Issues
 - google-code-prettify doesn't work well with the XML version.
