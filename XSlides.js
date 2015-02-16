@@ -195,7 +195,7 @@ var XSlides = {
         if (slideNumber > this.numberOfSlides) slideNumber = this.numberOfSlides;
         if (slideNumber == this.currentSlide) return;
         if (this.currentSlide)
-            document.getElementById('slide' + this.currentSlide).style.display = 'none';
+            document.getElementById('slide' + this.currentSlide).style.removeProperty('display');
         this.currentSlide = slideNumber;
         var currentSlide = document.getElementById('slide' + this.currentSlide);
         currentSlide.style.display = 'block';
