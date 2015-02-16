@@ -38,6 +38,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Sticky table of contents (checkbox)
 
 ## Planned
+- Configuration dialog
 - Menu for selecting the style
 - Style override for individual slides (stylesheet and inline)
 - Inclusion of slides from other presentations
