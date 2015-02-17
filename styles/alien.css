@@ -1,21 +1,21 @@
-body, .XSlidesToc {
+.alien {
     background-color: #000;
     color: #ccc;
     font-family: "DejaVu Sans", Sans-Serif;
 }
 
-pre, code, kbd, samp {
+.alien pre, .alien code, .alien kbd, .alien samp {
     font-family: "DejaVu Sans Mono";
 }
 
-a {
+.alien a {
     color: #1e5;
 }
 
-.XSlidesToc {
+.alien .XSlidesToc {
     border: 4px dashed #1e5;
 }
-h1 {
+.alien h1 {
     color: #1e5;
     border-bottom: #1e5 1px solid;
 }

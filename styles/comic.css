@@ -1,13 +1,13 @@
-body, .XSlidesToc {
+.comic {
     background-color: #ffc;
     color: #222;
     font-family: "Comic Sans MS";
 }
 
-.XSlidesToc {
+.comic .XSlidesToc {
     border-color: #222;
 }
 
-h1 {
+.comic h1 {
     color: #000;
 }

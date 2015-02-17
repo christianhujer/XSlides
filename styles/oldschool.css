@@ -1,18 +1,18 @@
-body, .XSlidesToc {
+.oldschool {
     background-color: #ffc;
     color: #222;
     font-family: "DejaVu Serif", "Serif";
 }
 
-pre, code, kbd {
+.oldschool pre, .oldschool code, .oldschool kbd {
     font-family: "DejaVu Sans Mono", "Serif";
 }
 
-.XSlidesToc {
+.oldschool .XSlidesToc {
     border-color: #222;
 }
 
-h1 {
+.oldschool h1 {
     color: #000;
     text-align: center;
 }

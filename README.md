@@ -36,11 +36,12 @@ Users will no longer have to run make in order to create the viewable version of
 - Automatic choice of font size using a smart formula.
   The formula assumes perfect presentation `font-size` at 640x480 and calculates the necessary that at a resolution of 640x480, the default font size would be perfect for presentation.
 - Sticky table of contents (checkbox)
+- Style override for individual slides (class)
 
 ## Planned
+- Style override for individual slides (style)
 - Configuration dialog
 - Menu for selecting the style
-- Style override for individual slides (stylesheet and inline)
 - Inclusion of slides from other presentations
 - Cursor navigation through table of contents
 - Mouse click
@@ -103,6 +104,7 @@ For Chromium and Google Chrome, the workaround is to start the browser program w
 
 # Known Bugs / Issues
 - google-code-prettify doesn't work well with the XML version.
+- style parameter currently broken. ?style=alien in the URL is currently ignored.
 
 # Links
 - http://www.w3.org/Talks/Tools/Slidy2/ Slidy / Slidy2 by Dave Raggett

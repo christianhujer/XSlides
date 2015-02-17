@@ -1,4 +1,5 @@
 var NS_XHTML = 'http://www.w3.org/1999/xhtml';
+var availableStyles = [ 'alien', 'alienTV', 'comic', 'oldschool', 'original' ];
 
 var Util = {
     getFirstDescendantId : function(node) {
@@ -92,20 +93,24 @@ var XSlides = {
 
         var stylename = Util.getSearchParameter('style');
         if (stylename)
-            this.linkStylesheet('styles/' + stylename + '.css');
+            this.linkStylesheet('styles/' + stylename + '.css', 'XSlidesStyle');
     },
 
-    linkStylesheet : function(href) {
+    linkStylesheet : function(href, id) {
         var linkEl = document.createElementNS(NS_XHTML, 'link');
+        if (id) linkEl.setAttribute('id', id);
         linkEl.setAttribute('rel', 'Stylesheet');
         linkEl.setAttribute('type', 'text/css');
         linkEl.setAttribute('href', href);
         document.head.appendChild(linkEl);
     },
 
-    createSlideDiv : function(childNodes) {
+    createSlideDiv : function(childNodes, currentClass) {
         var divElement = document.createElementNS(NS_XHTML, 'div');
-        divElement.setAttribute('class', 'slide');
+	if (currentClass)
+            divElement.setAttribute('class', 'slide ' + currentClass);
+	else
+            divElement.setAttribute('class', 'slide');
         divElement.setAttribute('id', 'slide' + ++XSlides.numberOfSlides);
         for (var i = 0; i < childNodes.length; ++i)
             divElement.appendChild(childNodes[i]);
@@ -119,11 +124,14 @@ var XSlides = {
         var slides = [];
         var nodesOfCurrentSlide = [];
         var slideStartFound = false;
+        var currentClass;
+        var defaultClass = document.body.getAttribute('class');
 
         for (var i = 0; i < nodes.length; i++) {
             var currentNode = nodes.item(i);
             nodesOfCurrentSlide.push(currentNode);
             if (XSlides.isFirstNodeOfSlide(currentNode)) {
+                currentClass = currentNode.getAttribute('class');
                 slideStartFound = true;
                 var a = document.createElementNS(NS_XHTML, 'a');
                 var clone = currentNode.cloneNode(true);
@@ -135,7 +143,8 @@ var XSlides = {
                 this.toc.appendChild(a);
             }
             if (slideStartFound && XSlides.isLastNodeOfSlide(currentNode)) {
-                slides.push(XSlides.createSlideDiv(nodesOfCurrentSlide));
+                slides.push(XSlides.createSlideDiv(nodesOfCurrentSlide, currentClass || defaultClass));
+                currentClass = undefined;
                 nodesOfCurrentSlide = [];
                 i = -1;
                 slideStartFound = false;
@@ -143,6 +152,7 @@ var XSlides = {
         }
         for (var i = 0; i < slides.length; i++)
             document.body.appendChild(slides[i]);
+        document.body.removeAttribute('class');
     },
 
     finalizeToc : function() {
