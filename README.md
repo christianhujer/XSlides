@@ -39,6 +39,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Style override for individual slides (class)
 
 ## Planned
+- Auto-align slides based on content. Left-aligned in case the slide contains `ul`, `ol`, `dl` or `pre` elements. Center-aligend otherwise.
 - Style override for individual slides (style)
 - Close button for sticky table of contents
 - Configuration dialog
