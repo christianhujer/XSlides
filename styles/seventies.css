@@ -1,0 +1,18 @@
+.seventies {
+    background-color: #210;
+    color: #bbb;
+    font-family: "DejaVu Sans", Sans-Serif;
+}
+
+.seventies pre, .seventies code, .seventies kbd, .seventies samp {
+    font-family: "DejaVu Sans Mono";
+}
+
+.seventies a {
+    color: #e70;
+}
+
+.seventies h1 {
+    color: #e70;
+    border-bottom: #e70 0.05ex solid;
+}

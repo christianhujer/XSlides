@@ -5,17 +5,16 @@
 <title>XSlides 2</title>
 <script src="https://google-code-prettify.googlecode.com/svn/loader/prettify.js"></script>
 <link rel="Stylesheet" href="https://google-code-prettify.googlecode.com/svn/loader/skins/desert.css" />
-<link rel="Stylesheet" href="styles/alien.css" />
-<link rel="Stylesheet" href="styles/alienTV.css" />
-<link rel="Stylesheet" href="styles/comic.css" />
-<link rel="Stylesheet" href="styles/oldschool.css" />
-<link rel="Stylesheet" href="styles/original.css" />
+<link rel="Stylesheet" href="DefaultStyles.css" />
 <script type="text/javascript" src="XSlides.js"></script>
 <style type="text/css">
 pre { background: rgba(0, 0, 0, 0) !important; }
 li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: decimal !important }
-li.L0, li.L2, li.L4, li.L6, li.L8 { background: rgba(0, 0, 0, 0.1) !important; }
-li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !important; }
+li.L0, li.L2, li.L4, li.L6, li.L8 { background: rgba(64, 64, 64, 0.5) !important; }
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(0, 0, 0, 0.5) !important; }
+pre.linenums {
+    margin-left: 1em;
+}
 </style>
 </head>
 <body class="original">
@@ -71,7 +70,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgba(255, 255, 255, 0.1) !import
     <li>Last slide: <kbd>shift G</kbd></li>
 </ul>
 
-<h1 id="display-toc">Display Table of Contents</h1>
+<h1 id="display-toc" class="seventies">Display Table of Contents</h1>
 <p>Press <kbd>C</kbd> to see the <em>Table of Contents</em>.</p>
 <p>Using the <em>Table of Contents</em> you can jump to a specific slide easily.</p>
 
@@ -126,7 +125,6 @@ Currently available styles:
 </ul>
 
 <h1>HTML document structure</h1>
-<p>Minimalistic XSlides document:</p>
 <pre class="prettyprint linenums" src="Minimal.html"></pre>
 
 <h1>Creating Slides</h1>

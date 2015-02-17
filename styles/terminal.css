@@ -1,0 +1,13 @@
+.terminal {
+    background-color: #011;
+    color: #1f6;
+    font-family: "DejaVu Sans Mono";
+}
+
+.terminal pre, .terminal code, .terminal kbd, .terminal samp {
+    font-family: "DejaVu Sans Mono";
+}
+
+.terminal a {
+    color: #2fa;
+}
