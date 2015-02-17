@@ -40,6 +40,7 @@ Users will no longer have to run make in order to create the viewable version of
 
 ## Planned
 - Style override for individual slides (style)
+- Close button for sticky table of contents
 - Configuration dialog
 - Menu for selecting the style
 - Inclusion of slides from other presentations
