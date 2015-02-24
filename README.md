@@ -37,6 +37,8 @@ Users will no longer have to run make in order to create the viewable version of
   The formula assumes perfect presentation `font-size` at 640x480 and calculates the necessary that at a resolution of 640x480, the default font size would be perfect for presentation.
 - Sticky table of contents (checkbox)
 - Style override for individual slides (class)
+- Help
+  Press '?' or 'F1' for displaying a help how to use XSlides.
 
 ## Planned
 - Auto-align slides based on content. Left-aligned in case the slide contains `ul`, `ol`, `dl` or `pre` elements. Center-aligend otherwise.
