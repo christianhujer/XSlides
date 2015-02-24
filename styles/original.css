@@ -11,8 +11,11 @@
     border: rgba(255, 255, 255, 0.5) 2px solid !important;
 }
 
-.original h1 {
+.original .h1Container {
     text-align: center;
     border-radius: 1ex;
-    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.875;
+    background-color: #000;
+    background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
 }

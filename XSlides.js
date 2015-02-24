@@ -152,8 +152,16 @@ var XSlides = {
 	else
             divElement.setAttribute('class', 'slide');
         divElement.setAttribute('id', 'slide' + ++XSlides.numberOfSlides);
-        for (var i = 0; i < childNodes.length; ++i)
-            divElement.appendChild(childNodes[i]);
+        for (var i = 0; i < childNodes.length; ++i) {
+            if (childNodes[i].tagName == 'h1' || childNodes[i].tagName == 'H1') {
+                var h1Container = document.createElementNS(NS_XHTML, 'div');
+                h1Container.setAttribute('class', 'h1Container');
+                divElement.appendChild(h1Container);
+                h1Container.appendChild(childNodes[i]);
+            } else {
+                divElement.appendChild(childNodes[i]);
+            }
+        }
         divElement.slideNumber = XSlides.numberOfSlides;
         divElement.addEventListener('mousewheel', function(e) { XSlides.divwheel(e) }, false);
         return divElement;
