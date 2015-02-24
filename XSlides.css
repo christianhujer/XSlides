@@ -28,7 +28,17 @@ div.XSlidesToc {
     top: 1em;
     visibility: hidden;
     padding: 1ex;
-    opacity: 0.75;
+    opacity: 0.9;
+    border-radius: 0.5ex;
+    background-color: #fff;
+    background: linear-gradient(top to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
+    color: #000;
+    font-family: Sans-Serif;
+}
+div.XSlidesToc h4 {
+    margin: 0px;
+    padding: 0px;
 }
 div.XSlidesToc a {
     display: block;

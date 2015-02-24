@@ -4,7 +4,7 @@
     font-family: "DejaVu Serif", "Serif";
 }
 
-.oldschool pre, .oldschool code, .oldschool kbd {
+.oldschool code, .oldschool kbd, .oldschool pre, .oldschool samp, .oldschool tt {
     font-family: "DejaVu Sans Mono", "Serif";
 }
 

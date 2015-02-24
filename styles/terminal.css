@@ -4,7 +4,7 @@
     font-family: "DejaVu Sans Mono";
 }
 
-.terminal pre, .terminal code, .terminal kbd, .terminal samp {
+.terminal code, .terminal kbd, .terminal pre, .terminal samp, .terminal tt {
     font-family: "DejaVu Sans Mono";
 }
 

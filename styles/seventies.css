@@ -4,7 +4,7 @@
     font-family: "DejaVu Sans", Sans-Serif;
 }
 
-.seventies pre, .seventies code, .seventies kbd, .seventies samp {
+.seventies code, .seventies kbd, .seventies pre, .seventies samp, .seventies tt {
     font-family: "DejaVu Sans Mono";
 }
 

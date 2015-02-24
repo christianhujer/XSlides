@@ -127,6 +127,10 @@ var XSlides = {
         var currentClass;
         var defaultClass = document.body.getAttribute('class');
 
+        var headline = document.createElementNS(NS_XHTML, 'h4');
+        headline.appendChild(document.createTextNode('Table of Contents'));
+        this.toc.appendChild(headline);
+
         for (var i = 0; i < nodes.length; i++) {
             var currentNode = nodes.item(i);
             nodesOfCurrentSlide.push(currentNode);

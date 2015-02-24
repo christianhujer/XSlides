@@ -4,7 +4,7 @@
     font-family: "DejaVu Sans", Sans-Serif;
 }
 
-.alien pre, .alien code, .alien kbd, .alien samp {
+.alien code, .alien kbd, .alien pre, .alien samp, .alien tt {
     font-family: "DejaVu Sans Mono";
 }
 

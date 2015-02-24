@@ -4,7 +4,7 @@
     font-family: "DejaVu Sans", Sans-Serif;
 }
 
-.alienTV pre, .alienTV code, .alienTV kbd, .alienTV samp {
+.alienTV code, .alienTV kbd, .alienTV pre, .alienTV samp, .alienTV tt {
     font-family: "DejaVu Sans Mono";
 }
 
