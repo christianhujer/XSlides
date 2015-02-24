@@ -22,7 +22,6 @@ div.slide h1 {
     margin-top: 0px;
 }
 div.XSlidesToc, div.XSlidesToc h4 {
-    opacity: 0.9;
     background-color: #fff;
     background: linear-gradient(top to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
@@ -33,7 +32,6 @@ div.XSlidesToc {
     top: 1em;
 }
 div.XSlidesHelp, div.XSlidesHelp h4 {
-    opacity: 0.875;
     background-color: #000;
     background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
