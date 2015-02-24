@@ -41,6 +41,45 @@ var Util = {
         for (var i = 0; i < nodes.length; i++)
             this.removeIds(nodes[i]);
     },
+    createTh : function(cell) {
+        var th = document.createElementNS(NS_XHTML, 'th');
+        th.appendChild(document.createTextNode(cell));
+        return th;
+    },
+    createTd : function(cell) {
+        var td = document.createElementNS(NS_XHTML, 'td');
+        td.appendChild(document.createTextNode(cell));
+        return td;
+    },
+    createTrTh : function(cells) {
+        var tr = document.createElementNS(NS_XHTML, 'tr');
+        for (var i = 0; i < cells.length; i++)
+            tr.appendChild(Util.createTh(cells[i]));
+        return tr;
+    },
+    createTrTd : function(cells) {
+        var tr = document.createElementNS(NS_XHTML, 'tr');
+        for (var i = 0; i < cells.length; i++)
+            tr.appendChild(Util.createTd(cells[i]));
+        return tr;
+    },
+    createThead : function(cells) {
+        var thead = document.createElementNS(NS_XHTML, 'thead');
+        thead.appendChild(Util.createTrTh(cells));
+        return thead;
+    },
+    createTbody : function(rows) {
+        var tbody = document.createElementNS(NS_XHTML, 'tbody');
+        for (var i = 0; i < rows.length; i++)
+            tbody.appendChild(Util.createTrTd(rows[i]));
+        return tbody;
+    },
+    createTable : function(headers, rows) {
+        var table = document.createElementNS(NS_XHTML, 'table');
+        table.appendChild(Util.createThead(headers));
+        table.appendChild(Util.createTbody(rows));
+        return table;
+    },
 };
 
 var XSlides = {
@@ -48,6 +87,7 @@ var XSlides = {
     nowheel : false,
     numberOfSlides : 0,
     toc : document.createElementNS(NS_XHTML, 'div'),
+    help : document.createElementNS(NS_XHTML, 'div'),
 
     /* Helper methods */
     isFirstNodeOfSlide : function(node) {
@@ -81,7 +121,7 @@ var XSlides = {
 
     /* private methods */
     installEventHandlers : function() {
-        document.addEventListener('keydown', function(e) { XSlides.keydown(e) }, false);
+        document.addEventListener('keydown', function(e) { return XSlides.keydown(e) }, false);
         document.addEventListener('keypress', function(e) { XSlides.keypress(e) }, false);
         document.addEventListener('mousewheel', function(e) { XSlides.mousewheel(e) }, false);
         window.addEventListener('hashchange', function(e) { XSlides.hashchange(e) }, false);
@@ -173,6 +213,17 @@ var XSlides = {
         document.body.appendChild(this.toc);
     },
 
+    createHelp : function() {
+        this.help.className = 'XSlidesHelp';
+
+        var headline = document.createElementNS(NS_XHTML, 'h4');
+        headline.appendChild(document.createTextNode('Help'));
+        this.help.appendChild(headline);
+
+        this.help.appendChild(Util.createTable(["Keys", "Operation"], [["h,j,k,l", "vi-style navication"], ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"], ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"], ["Home, 1, g", "First Slide"], ["End, G", "Last Slide"], ["c", "Display Table of Contents"], ["?, F1", "Display this help"]]));
+        document.body.appendChild(this.help);
+    },
+
     replaceContent : function(element, uri) {
         element.appendChild(document.createTextNode(Util.load(uri)));
     },
@@ -244,6 +295,10 @@ var XSlides = {
         this.toc.style.visibility = this.toc.style.visibility == 'visible' ? 'hidden' : 'visible';
     },
 
+    toggleHelp : function() {
+        this.help.style.visibility = this.help.style.visibility == 'visible' ? 'hidden' : 'visible';
+    },
+
     tocLink : function() {
         if (!document.getElementById('tocStay').checked) this.toggleToc();
     },
@@ -278,6 +333,7 @@ var XSlides = {
         case 38: this.previousSlide(); return; /* PowerPoint: up */
         case 39: this.nextSlide(); return; /* PowerPoint: right */
         case 40: this.nextSlide(); return; /* PowerPoint: down */
+        case 112: this.toggleHelp(); return false; /* PowerPoint: F1 */
         }
     },
 
@@ -298,6 +354,7 @@ var XSlides = {
         case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
         case 71: this.lastSlide(); return; /* vi: G */
         case 103: this.firstSlide(); return; /* vi: g */
+        case 63: this.toggleHelp(); return; /* ? */
         }
     },
 
@@ -331,6 +388,7 @@ var XSlides = {
         XSlides.displaySlideFromHash();
         if (typeof(prettyPrint) == 'function')
             prettyPrint();
+        XSlides.createHelp();
         XSlides.finalizeToc();
     },
 };

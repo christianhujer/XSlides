@@ -21,24 +21,45 @@ div.slide {
 div.slide h1 {
     margin-top: 0px;
 }
-div.XSlidesToc {
-    font-size: 75%;
-    left: 1em;
-    position: fixed;
-    top: 1em;
-    visibility: hidden;
-    padding: 1ex;
+div.XSlidesToc, div.XSlidesToc h4 {
     opacity: 0.9;
-    border-radius: 0.5ex;
     background-color: #fff;
     background: linear-gradient(top to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
-    color: #000;
+}
+div.XSlidesToc {
+    left: 1em;
+    position: fixed;
+    top: 1em;
+}
+div.XSlidesHelp, div.XSlidesHelp h4 {
+    opacity: 0.875;
+    background-color: #000;
+    background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+}
+div.XSlidesHelp {
+    left: 3em;
+    right: 3em;
+    position: fixed;
+    top: 3em;
+    color: #f84;
+}
+div.XSlidesHelp table {
+    width: 100%;
+}
+div.XSlidesToc, div.XSlidesHelp {
+    font-size: 75%;
+    visibility: hidden;
+    padding: 1ex;
+    border-radius: 0.5ex;
     font-family: Sans-Serif;
 }
-div.XSlidesToc h4 {
+div.XSlidesToc h4, div.XSlidesHelp h4 {
     margin: 0px;
     padding: 0px;
+    border-radius: 0.5ex;
+    text-align: center;
 }
 div.XSlidesToc a {
     display: block;
