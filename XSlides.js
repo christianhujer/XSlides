@@ -88,6 +88,7 @@ var XSlides = {
     numberOfSlides : 0,
     toc : document.createElementNS(NS_XHTML, 'div'),
     help : document.createElementNS(NS_XHTML, 'div'),
+    footer : document.createElementNS(NS_XHTML, 'div'),
 
     /* Helper methods */
     isFirstNodeOfSlide : function(node) {
@@ -221,15 +222,30 @@ var XSlides = {
         document.body.appendChild(this.toc);
     },
 
-    createHelp : function() {
+    initHelp : function() {
         this.help.className = 'XSlidesHelp';
 
         var headline = document.createElementNS(NS_XHTML, 'h4');
         headline.appendChild(document.createTextNode('Help'));
         this.help.appendChild(headline);
 
-        this.help.appendChild(Util.createTable(["Keys", "Operation"], [["h,j,k,l", "vi-style navication"], ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"], ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"], ["Home, 1, g", "First Slide"], ["End, G", "Last Slide"], ["c", "Display Table of Contents"], ["?, F1", "Display this help"]]));
+        this.help.appendChild(Util.createTable(["Keys", "Operation"], [["h,j,k,l", "vi-style navication"], ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"], ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"], ["Home, 1, g", "First Slide"], ["End, G", "Last Slide"], ["c", "Display / Hide Table of Contents"], ["f", "Hide / Display Footer"], ["?, F1", "Display / Hide this Help"]]));
         document.body.appendChild(this.help);
+    },
+
+    getCopyright : function() {
+        var metaNodes = document.getElementsByTagNameNS(NS_XHTML, 'meta');
+        for (var i = 0; i < metaNodes.length; i++) {
+            if (metaNodes[i].getAttribute('name') == 'copyright')
+                return metaNodes[i].getAttribute('content');
+        }
+    },
+
+    initFooter : function() {
+        this.footer.className = 'XSlidesFooter';
+
+        this.footer.appendChild(document.createTextNode(this.getCopyright()));
+        document.body.appendChild(this.footer);
     },
 
     replaceContent : function(element, uri) {
@@ -307,6 +323,10 @@ var XSlides = {
         this.help.style.visibility = this.help.style.visibility == 'visible' ? 'hidden' : 'visible';
     },
 
+    toggleFooter : function() {
+        this.footer.style.visibility = this.footer.style.visibility == 'hidden' ? 'visible' : 'hidden';
+    },
+
     tocLink : function() {
         if (!document.getElementById('tocStay').checked) this.toggleToc();
     },
@@ -363,6 +383,7 @@ var XSlides = {
         case 71: this.lastSlide(); return; /* vi: G */
         case 103: this.firstSlide(); return; /* vi: g */
         case 63: this.toggleHelp(); return; /* ? */
+        case 102: this.toggleFooter(); return; /* f - footer */
         }
     },
 
@@ -391,12 +412,13 @@ var XSlides = {
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
+        XSlides.initHelp();
+        XSlides.initFooter();
         XSlides.installEventHandlers();
         XSlides.setFontSizeFromWindowSize();
         XSlides.displaySlideFromHash();
         if (typeof(prettyPrint) == 'function')
             prettyPrint();
-        XSlides.createHelp();
         XSlides.finalizeToc();
     },
 };

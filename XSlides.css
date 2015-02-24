@@ -62,3 +62,16 @@ div.XSlidesToc h4, div.XSlidesHelp h4 {
 div.XSlidesToc a {
     display: block;
 }
+div.XSlidesFooter {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    height: auto;
+    top: auto;
+    left: 0px;
+    right: 0px;
+    width: auto;
+    background-color: #222;
+    color: #ddd;
+    font-family: Sans-Serif;
+}

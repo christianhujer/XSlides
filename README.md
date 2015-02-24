@@ -37,8 +37,15 @@ Users will no longer have to run make in order to create the viewable version of
   The formula assumes perfect presentation `font-size` at 640x480 and calculates the necessary that at a resolution of 640x480, the default font size would be perfect for presentation.
 - Sticky table of contents (checkbox)
 - Style override for individual slides (class)
+- Footer
+  - Support for copyright meta
+- 'F' key for toggling the visibility of the footer
 
 ## Planned
+- Button to display help in footer.
+- Better layout of footer.
+- Remember whether footer was visible, and hide it accordingly.
+- Configure whether h is vi key or help key. Default should be help key, but selection of vi key should be remembered permanently.
 - Auto-align slides based on content. Left-aligned in case the slide contains `ul`, `ol`, `dl` or `pre` elements. Center-aligend otherwise.
 - Style override for individual slides (style)
 - Close button for sticky table of contents
@@ -55,8 +62,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Blank slide
 - White slide
 - FOP Stylesheet to create PDF
-- Footer
-  - Support for copyright meta
 - Slide-types:
   - with and without headline
   - default 1 column
@@ -64,7 +69,6 @@ Users will no longer have to run make in order to create the viewable version of
   - 2 rows
   - 2x2 columns/rows, optionally with joined left or right column, joined top or bottom row
 - 'A' key for toggling between current slide and all slides / view as vertical
-- 'F' key for toggling the visibility of the footer
 - Presentation timer
 - Incremental display
 - Expand / Collapse
