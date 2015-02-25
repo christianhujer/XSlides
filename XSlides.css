@@ -79,6 +79,8 @@ div.XSlidesFooter {
     font-size: 66.6%;
     background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    padding-left: 1em;
+    padding-right: 1em;
 }
 div.XSlidesFooter ul {
     list-style-image: none;
@@ -90,7 +92,8 @@ div.XSlidesFooter li {
     float: right;
     padding-left: 0.5ex;
     padding-right: 0.5ex;
-    border-left: 0.1ex solid #444;
+    border-left: 0.2ex solid #444;
+    border-right: 0.2ex solid #000;
 }
 div.XSlidesFooter a {
     color: inherit;

@@ -43,9 +43,9 @@ Users will no longer have to run make in order to create the viewable version of
   - Support for copyright meta
   - 'F' key for toggling the visibility of the footer
   - Button to display help in footer.
+- Better layout of footer.
 
 ## Planned
-- Better layout of footer.
 - Remember whether footer was visible, and hide it accordingly.
 - Keys +/- and </> to increase / decrease font size.
 - Configure whether h is vi key or help key. Default should be help key, but selection of vi key should be remembered permanently.
