@@ -229,7 +229,19 @@ var XSlides = {
         headline.appendChild(document.createTextNode('Help'));
         this.help.appendChild(headline);
 
-        this.help.appendChild(Util.createTable(["Keys", "Operation"], [["h,j,k,l", "vi-style navication"], ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"], ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"], ["Home, 1, g", "First Slide"], ["End, G", "Last Slide"], ["c", "Display / Hide Table of Contents"], ["f", "Hide / Display Footer"], ["?, F1", "Display / Hide this Help"]]));
+        this.help.appendChild(Util.createTable(
+            ["Keys", "Operation"],
+            [
+                ["h,j,k,l", "vi-style navication"],
+                ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"],
+                ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"],
+                ["Home, 1, g", "First Slide"],
+                ["End, G", "Last Slide"],
+                ["c", "Display / Hide Table of Contents"],
+                ["f", "Hide / Display Footer"],
+                ["?, F1", "Display / Hide this Help"]
+            ]
+        ));
         document.body.appendChild(this.help);
     },
 
@@ -369,20 +381,22 @@ var XSlides = {
         if (!e) { e = window.event; }
         var keyCode = e.keyCode;
         switch (keyCode) {
-        case 99: this.toggleToc(); return; /* c - table of contents */
+        case 49: this.firstSlide(); return; /* vi: 1 */
+        case 71: this.lastSlide(); return; /* vi: G */
+        case 103: this.firstSlide(); return; /* vi: g */
         case 104: this.previousSlide(); return; /* vi: h */
         case 106: this.nextSlide(); return; /* vi: j */
         case 107: this.previousSlide(); return; /* vi: k */
         case 108: this.nextSlide(); return; /* vi: l */
+
+        case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
+        case 13: this.nextSlide(); return; /* PowerPoint: <CR> */
+        case 32: this.nextSlide(); return; /* PowerPoint: <SP> */
         case 110: this.nextSlide(); return; /* PowerPoint: n */
         case 112: this.previousSlide(); return; /* PowerPoint: p */
-        case 32: this.nextSlide(); return; /* PowerPoint: <SP> */
-        case 49: this.firstSlide(); return; /* vi: 1 */
-        case 13: this.nextSlide(); return; /* PowerPoint: <CR> */
-        case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
-        case 71: this.lastSlide(); return; /* vi: G */
-        case 103: this.firstSlide(); return; /* vi: g */
+
         case 63: this.toggleHelp(); return; /* ? */
+        case 99: this.toggleToc(); return; /* c - table of contents */
         case 102: this.toggleFooter(); return; /* f - footer */
         }
     },
