@@ -99,3 +99,20 @@ div.XSlidesFooter a {
     color: inherit;
     text-decoration: none;
 }
+div#slide_black, div#slide_white {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    visibility: hidden;
+}
+div#slide_black {
+    background-color: #000;
+}
+div#slide_white {
+    background-color: #fff;
+}

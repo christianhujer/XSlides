@@ -46,6 +46,8 @@ Users will no longer have to run make in order to create the viewable version of
   - Better layout of footer.
 - Font size control
   - Keys +/- and </> to increase / decrease font size.
+- Black slide 'b'
+- White slide 'w'
 
 ## Planned
 - Remember whether footer was visible, and hide it accordingly.
@@ -61,9 +63,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Swipe right, swipe left (tablet / mobile / touch screen)
 - Notes and wrapping document can be created using HTML with special div elements
 - Markdown to XSlides converter, Markdown interpreter
-- Black slide
 - Blank slide
-- White slide
 - FOP Stylesheet to create PDF
 - Slide-types:
   - with and without headline

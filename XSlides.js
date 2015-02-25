@@ -89,6 +89,7 @@ var Util = {
 };
 
 var XSlides = {
+    mode : 'normal', /* ['normal', 'black', 'white'] */
     currentSlide : null,
     nowheel : false,
     numberOfSlides : 0,
@@ -240,7 +241,7 @@ var XSlides = {
         this.help.appendChild(Util.createTable(
             ["Keys", "Operation"],
             [
-                ["h,j,k,l", "vi-style navication"],
+                ["h,j,k,l", "vi-style navigation"],
                 ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"],
                 ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"],
                 ["Home, 1, g", "First Slide"],
@@ -248,6 +249,8 @@ var XSlides = {
                 ["c", "Display / Hide Table of Contents"],
                 ["f", "Hide / Display Footer"],
                 ["<, -, >, +", "Change font size"],
+                ["b", "Black screen"],
+                ["w", "White screen"],
                 ["?, F1", "Display / Hide this Help"]
             ]
         ));
@@ -262,6 +265,14 @@ var XSlides = {
         }
     },
 
+    initBlankSlides : function() {
+        var black = document.createElementNS(NS_XHTML, 'div');
+        var white = document.createElementNS(NS_XHTML, 'div');
+        black.setAttribute('id', 'slide_black');
+        white.setAttribute('id', 'slide_white');
+        document.body.appendChild(black);
+        document.body.appendChild(white);
+    },
     initFooter : function() {
         this.footer.className = 'XSlidesFooter';
 
@@ -364,6 +375,14 @@ var XSlides = {
         this.footer.style.visibility = this.footer.style.visibility == 'hidden' ? 'visible' : 'hidden';
     },
 
+    toggleMode : function(targetMode) {
+        this.mode = this.mode == targetMode ? 'normal' : targetMode;
+        document.getElementById('slide_white').style.visibility = 'hidden';
+        document.getElementById('slide_black').style.visibility = 'hidden';
+        /*document.getElementById('slide_blank').style.visibility = 'hidden';*/
+        if (this.mode != 'normal')
+            document.getElementById('slide_' + this.mode).style.visibility = 'visible';
+    },
     tocLink : function() {
         if (!document.getElementById('tocStay').checked) this.toggleToc();
     },
@@ -417,8 +436,11 @@ var XSlides = {
         case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
         case 13: this.nextSlide(); return; /* PowerPoint: <CR> */
         case 32: this.nextSlide(); return; /* PowerPoint: <SP> */
+        case 46: this.toggleMode('blank'); return; /* PowerPoint: . */
+        case 98: this.toggleMode('black'); return; /* PowerPoint: b */
         case 110: this.nextSlide(); return; /* PowerPoint: n */
         case 112: this.previousSlide(); return; /* PowerPoint: p */
+        case 119: this.toggleMode('white'); return; /* PowerPoint: w */
 
         case 63: this.toggleHelp(); return; /* ? */
         case 99: this.toggleToc(); return; /* c - table of contents */
@@ -456,6 +478,7 @@ var XSlides = {
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
+        XSlides.initBlankSlides();
         XSlides.initHelp();
         XSlides.initFooter();
         XSlides.installEventHandlers();
