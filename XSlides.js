@@ -80,6 +80,12 @@ var Util = {
         table.appendChild(Util.createTbody(rows));
         return table;
     },
+    fa : function(text) {
+        var span = document.createElementNS(NS_XHTML, 'span');
+        span.setAttribute('class', 'fa');
+        span.appendChild(document.createTextNode(text));
+        return span;
+    },
 };
 
 var XSlides = {
@@ -257,6 +263,8 @@ var XSlides = {
         this.footer.className = 'XSlidesFooter';
 
         this.footer.appendChild(document.createTextNode(this.getCopyright()));
+        this.footer.innerHTML += '<ul><li><a href="javascript:XSlides.toggleHelp()" class="fa">&#xf11c;</a></li></ul>';
+        /*this.footer.appendChild(Util.fa("\uf11c"));*/
         document.body.appendChild(this.footer);
     },
 

@@ -1,3 +1,5 @@
+@font-face{font-family:'FontAwesome';src:url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');src:url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');font-weight:normal;font-style:normal}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;transform:translate(0, 0)}
 body {
     font-size: 250%; /* Will be overridden at runtime XSlides.js by XSlides.setFontSizeFromWindowSize(). */
     margin: 0px;
@@ -74,4 +76,20 @@ div.XSlidesFooter {
     background-color: #222;
     color: #ddd;
     font-family: Sans-Serif;
+}
+div.XSlidesFooter ul {
+    list-style-image: none;
+    display: inline;
+}
+div.XSlidesFooter li {
+    list-style-image: none;
+    list-style-type: none;
+    float: right;
+    padding-left: 0.5ex;
+    padding-right: 0.5ex;
+    border-left: 0.1ex solid #aaa;
+}
+div.XSlidesFooter a {
+    color: #fff;
+    text-decoration: none;
 }

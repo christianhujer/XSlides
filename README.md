@@ -41,10 +41,10 @@ Users will no longer have to run make in order to create the viewable version of
   Press '?' or 'F1' for displaying a help how to use XSlides.
 - Footer
   - Support for copyright meta
-- 'F' key for toggling the visibility of the footer
+  - 'F' key for toggling the visibility of the footer
+  - Button to display help in footer.
 
 ## Planned
-- Button to display help in footer.
 - Better layout of footer.
 - Remember whether footer was visible, and hide it accordingly.
 - Configure whether h is vi key or help key. Default should be help key, but selection of vi key should be remembered permanently.
