@@ -92,6 +92,8 @@ var XSlides = {
     currentSlide : null,
     nowheel : false,
     numberOfSlides : 0,
+    currentFontSizeFactor : 4,
+    fontSizeFactors : [0.5, 0.66, 0.75, 0.9, 1.0, 1.1, 1.25, 1.5, 2.0],
     toc : document.createElementNS(NS_XHTML, 'div'),
     help : document.createElementNS(NS_XHTML, 'div'),
     footer : document.createElementNS(NS_XHTML, 'div'),
@@ -245,6 +247,7 @@ var XSlides = {
                 ["End, G", "Last Slide"],
                 ["c", "Display / Hide Table of Contents"],
                 ["f", "Hide / Display Footer"],
+                ["<, -, >, +", "Change font size"],
                 ["?, F1", "Display / Hide this Help"]
             ]
         ));
@@ -283,7 +286,7 @@ var XSlides = {
     },
 
     setFontSizeFromWindowSize : function() {
-        document.getElementsByTagName('body')[0].style.fontSize = Math.sqrt(window.innerHeight * window.innerWidth / 640 / 480) * 100 + '%';
+        document.getElementsByTagName('body')[0].style.fontSize = this.fontSizeFactors[this.currentFontSizeFactor] * Math.sqrt(window.innerHeight * window.innerWidth / 640 / 480) * 100 + '%';
     },
 
     /* public methods */
@@ -333,6 +336,20 @@ var XSlides = {
 
     lastSlide : function() {
         this.displaySlide(this.numberOfSlides);
+    },
+
+    decreaseFontSize : function() {
+        this.currentFontSizeFactor--;
+        if (this.currentFontSizeFactor < 0)
+            this.currentFontSizeFactor = 0;
+        this.setFontSizeFromWindowSize();
+    },
+
+    increaseFontSize : function() {
+        this.currentFontSizeFactor++;
+        if (this.currentFontSizeFactor >= this.fontSizeFactors.length)
+            this.currentFontSizeFactor = this.fontSizeFactors.length - 1;
+        this.setFontSizeFromWindowSize();
     },
 
     toggleToc : function() {
@@ -406,6 +423,11 @@ var XSlides = {
         case 63: this.toggleHelp(); return; /* ? */
         case 99: this.toggleToc(); return; /* c - table of contents */
         case 102: this.toggleFooter(); return; /* f - footer */
+        case 60: this.decreaseFontSize(); return; /* < */
+        case 62: this.increaseFontSize(); return; /* > */
+        case 43: this.increaseFontSize(); return; /* + */
+        case 45: this.decreaseFontSize(); return; /* - */
+        default: console.log(keyCode);
         }
     },
 
