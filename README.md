@@ -44,10 +44,15 @@ Users will no longer have to run make in order to create the viewable version of
   - 'F' key for toggling the visibility of the footer
   - Button to display help in footer.
   - Better layout of footer.
+  - Navigation buttons in footer.
+  - Black / White buttons in footer.
+  - Contents button in footer.
+  - Link to Github in footer.
 - Font size control
   - Keys +/- and </> to increase / decrease font size.
 - Black slide 'b'
 - White slide 'w'
+
 
 ## Planned
 - Remember whether footer was visible, and hide it accordingly.

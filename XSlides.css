@@ -46,7 +46,9 @@ div.XSlidesHelp {
     color: #f84;
 }
 div.XSlidesHelp table {
-    width: 100%;
+    left: auto;
+    right: auto;
+    width: auto;
 }
 div.XSlidesToc, div.XSlidesHelp {
     font-size: 75%;
@@ -64,6 +66,7 @@ div.XSlidesToc h4, div.XSlidesHelp h4 {
 div.XSlidesToc a {
     display: block;
 }
+
 div.XSlidesFooter {
     display: block;
     position: absolute;
@@ -81,24 +84,52 @@ div.XSlidesFooter {
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     padding-left: 1em;
     padding-right: 1em;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    text-align: center;
 }
 div.XSlidesFooter ul {
+    margin: 0px;
+    padding: 0px;
+}
+div.XSlidesFooter ul.right {
+    list-style-image: none;
+    display: inline;
+    float: right;
+}
+div.XSlidesFooter ul.left {
+    list-style-image: none;
+    display: inline;
+    float: left;
+}
+div.XSlidesFooter ul.center {
     list-style-image: none;
     display: inline;
 }
+div.XSlidesFooter ul.center li {
+    margin-left: 0.5ex;
+    margin-right: 0.5ex;
+}
 div.XSlidesFooter li {
+    display: inline;
     list-style-image: none;
     list-style-type: none;
-    float: right;
     padding-left: 0.5ex;
     padding-right: 0.5ex;
-    border-left: 0.2ex solid #444;
-    border-right: 0.2ex solid #000;
+    border-left: 1px solid #383838;
+    border-right: 1px solid #181818;
 }
+div.XSlidesFooter li:hover {
+    background: linear-gradient(top to bottom, rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
+    background: -webkit-linear-gradient(rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
+}
+
 div.XSlidesFooter a {
-    color: inherit;
     text-decoration: none;
+    color: inherit;
 }
+
 div#slide_black, div#slide_white {
     position: fixed;
     left: 0px;

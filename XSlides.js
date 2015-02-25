@@ -238,22 +238,26 @@ var XSlides = {
         headline.appendChild(document.createTextNode('Help'));
         this.help.appendChild(headline);
 
-        this.help.appendChild(Util.createTable(
-            ["Keys", "Operation"],
+        var table = Util.createTable(
+            ["Keys", "", "Operation"],
             [
-                ["h,j,k,l", "vi-style navigation"],
-                ["Up, Left, Page Up, Backspace, h, k, p", "Previous Slide"],
-                ["Down, Right, Page Down, Enter, Space, j, l, n", "Next Slide"],
-                ["Home, 1, g", "First Slide"],
-                ["End, G", "Last Slide"],
-                ["c", "Display / Hide Table of Contents"],
-                ["f", "Hide / Display Footer"],
-                ["<, -, >, +", "Change font size"],
-                ["b", "Black screen"],
-                ["w", "White screen"],
-                ["?, F1", "Display / Hide this Help"]
+                ["h,j,k,l",                                       "\uf120", "vi-style"         ],
+                ["Home, 1, g",                                    "\uf049", "First Slide"      ],
+                ["Up, Left, Page Up, Backspace, h, k, p",         "\uf053", "Previous Slide"   ],
+                ["Down, Right, Page Down, Enter, Space, j, l, n", "\uf054", "Next Slide"       ],
+                ["End, G",                                        "\uf050", "Last Slide"       ],
+                ["<, -, >, +",                                    "\uf031", "Change font size" ],
+                ["c",                                             "\uf022", "Table of Contents"],
+                ["f",                                             "\uf0d7", "Footer"           ],
+                ["b",                                             "\uf016", "Black screen"     ],
+                ["w",                                             "\uf15b", "White screen"     ],
+                ["?, F1",                                         "\uf128", "This Help"        ],
             ]
-        ));
+        );
+        var trs = table.getElementsByTagNameNS(NS_XHTML, 'tbody')[0].getElementsByTagNameNS(NS_XHTML, 'tr');
+        for (var i = 0; i < trs.length; i++)
+            trs[i].childNodes[1].setAttribute('class', 'fa');
+        this.help.appendChild(table);
         document.body.appendChild(this.help);
     },
 
@@ -275,10 +279,7 @@ var XSlides = {
     },
     initFooter : function() {
         this.footer.className = 'XSlidesFooter';
-
-        this.footer.appendChild(document.createTextNode(this.getCopyright()));
-        this.footer.innerHTML += '<ul><li title="Display keyboard help"><a href="javascript:XSlides.toggleHelp()" class="fa">&#xf11c;</a></li></ul>';
-        /*this.footer.appendChild(Util.fa("\uf11c"));*/
+        this.footer.innerHTML += '<ul class="left"><li title="c: Table of Contents" onclick="javascript:XSlides.toggleToc();"><span class="fa">&#xf03a;</a></li><li title="?/F1: keyboard help" onclick="javascript:XSlides.toggleHelp()"><span class="fa">&#xf11c;</span></li><li title="b: Black screen" onclick="javascript:XSlides.toggleMode(\'black\')"><span class="fa">&#xf016;</span></li><li title="w: White screen" onclick="javascript:XSlides.toggleMode(\'white\')"><span class="fa">&#xf15b;</span></li></ul><ul class="right"><li>' + this.getCopyright() + '</li><li title="XSlides on Github"><a href="https://github.com/christianhujer/XSlides/" class="fa">&#xf09b;</a></li></ul><ul class="center"><li title="Home, 1, g: First Slide" onclick="XSlides.firstSlide()"><span class="fa">&#xf049;</span></li><li title="Up, Left, Page Up, Backspace, h, k, p: Previous Slide" onclick="XSlides.previousSlide()"><span class="fa">&#xf053;</a></li><li title="Down, Right, Page Down, Enter, Space, j, l, n: Next Slide" onclick="XSlides.nextSlide()"><span class="fa">&#xf054;</span></li><li title="End, G: Last Slide" onclick="XSlides.lastSlide()"><span class="fa">&#xf050;</span></li></ul>';
         document.body.appendChild(this.footer);
     },
 
