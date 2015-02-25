@@ -74,8 +74,11 @@ div.XSlidesFooter {
     right: 0px;
     width: auto;
     background-color: #222;
-    color: #ddd;
+    color: #aaa;
     font-family: Sans-Serif;
+    font-size: 66.6%;
+    background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
 }
 div.XSlidesFooter ul {
     list-style-image: none;
@@ -87,9 +90,9 @@ div.XSlidesFooter li {
     float: right;
     padding-left: 0.5ex;
     padding-right: 0.5ex;
-    border-left: 0.1ex solid #aaa;
+    border-left: 0.1ex solid #444;
 }
 div.XSlidesFooter a {
-    color: #fff;
+    color: inherit;
     text-decoration: none;
 }
