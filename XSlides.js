@@ -263,7 +263,7 @@ var XSlides = {
         this.footer.className = 'XSlidesFooter';
 
         this.footer.appendChild(document.createTextNode(this.getCopyright()));
-        this.footer.innerHTML += '<ul><li><a href="javascript:XSlides.toggleHelp()" class="fa">&#xf11c;</a></li></ul>';
+        this.footer.innerHTML += '<ul><li title="Display keyboard help"><a href="javascript:XSlides.toggleHelp()" class="fa">&#xf11c;</a></li></ul>';
         /*this.footer.appendChild(Util.fa("\uf11c"));*/
         document.body.appendChild(this.footer);
     },
