@@ -47,6 +47,7 @@ Users will no longer have to run make in order to create the viewable version of
 ## Planned
 - Better layout of footer.
 - Remember whether footer was visible, and hide it accordingly.
+- Keys +/- and </> to increase / decrease font size.
 - Configure whether h is vi key or help key. Default should be help key, but selection of vi key should be remembered permanently.
 - Auto-align slides based on content. Left-aligned in case the slide contains `ul`, `ol`, `dl` or `pre` elements. Center-aligend otherwise.
 - Style override for individual slides (style)
