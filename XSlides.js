@@ -408,6 +408,7 @@ var XSlides = {
     keydown : function(e) {
         if (!e) { e = window.event; }
         var keyCode = e.keyCode;
+        console.log('keydown: ' + keyCode);
         switch (keyCode) {
         case 8: this.previousSlide(); return false; /* Backspace */
         case 33: this.previousSlide(); return; /* PowerPoint: page up */
@@ -425,6 +426,7 @@ var XSlides = {
     keypress : function(e) {
         if (!e) { e = window.event; }
         var keyCode = e.keyCode;
+        console.log('keypress: ' + keyCode);
         switch (keyCode) {
         case 49: this.firstSlide(); return; /* vi: 1 */
         case 71: this.lastSlide(); return; /* vi: G */
