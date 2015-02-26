@@ -108,6 +108,7 @@ For Chromium and Google Chrome, the workaround is to start the browser program w
 ## Tested, known bugs
 - Firefox
   Some keys do not work.
+  Wheel doesn't work.
 
 ## Support planned
 - Android
