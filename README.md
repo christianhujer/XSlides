@@ -92,7 +92,6 @@ Users will no longer have to run make in order to create the viewable version of
 # Supported Browsers
 
 ## Tested, no known limitations
-- Firefox
 - Konqueror
 - QupZilla
 - Rekonq
@@ -105,6 +104,10 @@ These browsers have issues with `<pre src=""/>` when using the `file:` URI schem
 - Midori
 For Chromium and Google Chrome, the workaround is to start the browser program with option `--disable-web-security`.
 **WARNING** the option `--disable-web-security` does what it says, it disables web security, you should not use it!
+
+## Tested, known bugs
+- Firefox
+  Some keys do not work.
 
 ## Support planned
 - Android
