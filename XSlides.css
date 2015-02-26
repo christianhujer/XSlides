@@ -25,7 +25,8 @@ div.slide h1 {
 }
 div.XSlidesToc, div.XSlidesToc h4 {
     background-color: #fff;
-    background: linear-gradient(top to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
+    background: -moz-linear-gradient(rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
     background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(128, 128, 128, 0.9));
 }
 div.XSlidesToc {
@@ -35,7 +36,8 @@ div.XSlidesToc {
 }
 div.XSlidesHelp, div.XSlidesHelp h4 {
     background-color: #000;
-    background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: linear-gradient(to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -moz-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
 }
 div.XSlidesHelp {
@@ -80,7 +82,8 @@ div.XSlidesFooter {
     color: #aaa;
     font-family: Sans-Serif;
     font-size: 66.6%;
-    background: linear-gradient(top to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: linear-gradient(to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -moz-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     padding-left: 1em;
     padding-right: 1em;
@@ -121,7 +124,7 @@ div.XSlidesFooter li {
     border-right: 1px solid #181818;
 }
 div.XSlidesFooter li:hover {
-    background: linear-gradient(top to bottom, rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
+    background: linear-gradient(to bottom, rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
     background: -webkit-linear-gradient(rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
 }
 
