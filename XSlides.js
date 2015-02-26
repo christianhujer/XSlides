@@ -279,7 +279,7 @@ var XSlides = {
     },
     initFooter : function() {
         this.footer.className = 'XSlidesFooter';
-        this.footer.innerHTML += '<ul class="left"><li title="c: Table of Contents" onclick="javascript:XSlides.toggleToc();"><span class="fa">&#xf03a;</a></li><li title="?/F1: keyboard help" onclick="javascript:XSlides.toggleHelp()"><span class="fa">&#xf11c;</span></li><li title="b: Black screen" onclick="javascript:XSlides.toggleMode(\'black\')"><span class="fa">&#xf016;</span></li><li title="w: White screen" onclick="javascript:XSlides.toggleMode(\'white\')"><span class="fa">&#xf15b;</span></li></ul><ul class="right"><li>' + this.getCopyright() + '</li><li title="XSlides on Github"><a href="https://github.com/christianhujer/XSlides/" class="fa">&#xf09b;</a></li></ul><ul class="center"><li title="Home, 1, g: First Slide" onclick="XSlides.firstSlide()"><span class="fa">&#xf049;</span></li><li title="Up, Left, Page Up, Backspace, h, k, p: Previous Slide" onclick="XSlides.previousSlide()"><span class="fa">&#xf053;</a></li><li title="Down, Right, Page Down, Enter, Space, j, l, n: Next Slide" onclick="XSlides.nextSlide()"><span class="fa">&#xf054;</span></li><li title="End, G: Last Slide" onclick="XSlides.lastSlide()"><span class="fa">&#xf050;</span></li></ul>';
+        this.footer.innerHTML += '<ul class="left"><li title="f: Footer" onclick="javascript:XSlides.toggleFooter();"><span class="fa">&#xf0d7;</span></li><li title="c: Table of Contents" onclick="javascript:XSlides.toggleToc();"><span class="fa">&#xf03a;</a></li><li title="?/F1: keyboard help" onclick="javascript:XSlides.toggleHelp()"><span class="fa">&#xf11c;</span></li><li title="b: Black screen" onclick="javascript:XSlides.toggleMode(\'black\')"><span class="fa">&#xf016;</span></li><li title="w: White screen" onclick="javascript:XSlides.toggleMode(\'white\')"><span class="fa">&#xf15b;</span></li><li title="&lt;, -: Smaller font" onclick="javascript:XSlides.decreaseFontSize()"><span class="fa">&#xf068;</span></li><li><span class="fa">&#xf031;</span></li><li title="&gt;, +: Bigger font" onclick="javascript:XSlides.increaseFontSize()"><span class="fa">&#xf067;</span></li></ul><ul class="right"><li>' + this.getCopyright() + '</li><li title="XSlides on Twitter"><a href="https://twitter.com/christianhujer" class="fa">&#xf099;</a></li><li title="XSlides on Github"><a href="https://github.com/christianhujer/XSlides/" class="fa">&#xf09b;</a></li></ul><ul class="center"><li title="Home, 1, g: First Slide" onclick="XSlides.firstSlide()"><span class="fa">&#xf049;</span></li><li title="Up, Left, Page Up, Backspace, h, k, p: Previous Slide" onclick="XSlides.previousSlide()"><span class="fa">&#xf053;</a></li><li title="Down, Right, Page Down, Enter, Space, j, l, n: Next Slide" onclick="XSlides.nextSlide()"><span class="fa">&#xf054;</span></li><li title="End, G: Last Slide" onclick="XSlides.lastSlide()"><span class="fa">&#xf050;</span></li></ul>';
         document.body.appendChild(this.footer);
     },
 
@@ -298,7 +298,7 @@ var XSlides = {
     },
 
     setFontSizeFromWindowSize : function() {
-        document.getElementsByTagName('body')[0].style.fontSize = this.fontSizeFactors[this.currentFontSizeFactor] * Math.sqrt(window.innerHeight * window.innerWidth / 640 / 480) * 100 + '%';
+        document.body.style.fontSize = this.fontSizeFactors[this.currentFontSizeFactor] * Math.sqrt(window.innerHeight * window.innerWidth / 640 / 480) * 100 + '%';
     },
 
     /* public methods */
