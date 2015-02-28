@@ -55,6 +55,12 @@ Users will no longer have to run make in order to create the viewable version of
 
 
 ## Planned
+- Process simple Markdown
+- Make Table of Contents Scrollable in case it overflows
+- Change Table of COntents Design to match the overall design
+- Deal with missing copyright information
+- Testing with Selenium
+- Change the title to append the title of the current slide.
 - Remember whether footer was visible, and hide it accordingly.
 - Configure whether h is vi key or help key. Default should be help key, but selection of vi key should be remembered permanently.
 - Auto-align slides based on content. Left-aligned in case the slide contains `ul`, `ol`, `dl` or `pre` elements. Center-aligend otherwise.
@@ -88,6 +94,13 @@ Users will no longer have to run make in order to create the viewable version of
 - Auto-hiding navigation bar
 - Fullscreen control
 - Drawing, Highlight
+- Diagrams
+- Second window control
+- Live editing in primary window
+- Live editing in secondary window
+- Loading / Saving in MD format
+- Loading / Saving as XHTML5
+- Loading / Saving as Single-File-XHTML5
 
 # Supported Browsers
 
