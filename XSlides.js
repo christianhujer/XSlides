@@ -1,5 +1,13 @@
 var NS_XHTML = 'http://www.w3.org/1999/xhtml';
 var availableStyles = [ 'alien', 'alienTV', 'comic', 'oldschool', 'original' ];
+var scriptDir = (function() {
+    var scriptNodeList = document.getElementsByTagName('script');
+    var scriptElement = scriptNodeList.item(scriptNodeList.length - 1);
+    var scriptUri = scriptElement.src;
+    var scriptDir = scriptUri.substring(0, scriptUri.lastIndexOf('/') + 1);
+    return scriptDir;
+}());
+console.log(scriptDir);
 
 var Util = {
     getFirstDescendantId : function(node) {
@@ -139,11 +147,15 @@ var XSlides = {
     },
 
     addXSlidesStylesheet : function() {
-        this.linkStylesheet('XSlides.css');
+        this.linkStylesheet(scriptDir + 'XSlides.css');
+        this.linkStylesheet(scriptDir + 'DefaultStyles.css');
 
-        var stylename = Util.getSearchParameter('style');
+        /*var stylename = Util.getSearchParameter('style');
         if (stylename)
-            this.linkStylesheet('styles/' + stylename + '.css', 'XSlidesStyle');
+            this.linkStylesheet('styles/' + stylename + '.css', 'XSlidesStyle');*/
+    },
+
+    relativizeToScript : function(uri) {
     },
 
     linkStylesheet : function(href, id) {
@@ -285,6 +297,9 @@ var XSlides = {
 
     replaceContent : function(element, uri) {
         element.appendChild(document.createTextNode(Util.load(uri)));
+    },
+
+    processMarkdown : function() {
     },
 
     loadSources : function() {
@@ -478,6 +493,7 @@ var XSlides = {
     },
 
     load : function() {
+        XSlides.processMarkdown();
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
@@ -493,4 +509,76 @@ var XSlides = {
     },
 };
 
+var nc = {
+    el : function(name, nodeOrText) {
+        var el = document.createElementNS('http://www.w3.org/1999/xhtml', name);
+        if (nodeOrText)
+            if (nodeOrText instanceof Node)
+                el.appendChild(nodeOrText);
+            else if (typeof nodeOrText == 'string' || nodeOrText instanceof String)
+                el.innerHTML = nodeOrText;
+            else
+                console.log('unsupported node type for node ' + nodeOrText + ' - typeof: ' + typeof nodeOrText);
+            return el;
+    },
+    init : function() {
+        var elements = ['blockquote', 'code', 'em', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'li', 'ol', 'p', 'pre', 'strong', 'ul'];
+        elements.forEach(function(elName) { nc[elName] = function(nodeOrText) { return nc.el(elName, nodeOrText); };});
+    },
+};
+nc.init();
+
+var MD = {
+    init : function() {
+        window.addEventListener('load', function() { MD.load(); }, false);
+    },
+    load : function() {
+        var body = document.body;
+        var text = body.innerHTML;
+        if (!text.match(/^\s*#/)) return;
+        body.textContent = '';
+        body.setAttribute('class', 'original');
+        var lines = text.split('\n');
+        for (var lineNo = 0; lineNo < lines.length; lineNo++) {
+            var line = lines[lineNo];
+            if (line == '') body.appendChild(nc.p());
+            else if (line.indexOf("# ") == 0) this.appendChild('h1', this.replaceInlineMarkup(line.substring(2)));
+            else if (line.indexOf("## ") == 0) this.appendChild('h2', this.replaceInlineMarkup(line.substring(3)));
+            else if (line.indexOf("### ") == 0) this.appendChild('h3', this.replaceInlineMarkup(line.substring(4)));
+            else if (line.indexOf("#### ") == 0) this.appendChild('h4', this.replaceInlineMarkup(line.substring(5)));
+            else if (line.indexOf("##### ") == 0) this.appendChild('h5', this.replaceInlineMarkup(line.substring(6)));
+            else if (line.indexOf("###### ") == 0) this.appendChild('h6', this.replaceInlineMarkup(line.substring(7)));
+            else if (line.indexOf("> ") == 0) this.continueChild("blockquote", this.replaceInlineMarkup(line.substring(2)));
+            else if (line.indexOf("- ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
+            else this.continueChild("p", this.replaceInlineMarkup(line));
+        }
+    },
+    replaceInlineMarkup : function(text) {
+        return text.replace(/`(.*?)`/g, "<code>$1</code>");
+    },
+    appendChild : function(elName, nodeOrText) {
+        document.body.appendChild(nc.el(elName, nodeOrText));
+    },
+    continueChild : function(elName, nodeOrText) {
+        if (document.body.lastElementChild.tagName.toLowerCase() == elName)
+            if (nodeOrText instanceof Element)
+                document.body.lastElementChild.appendChild(nodeOrText);
+            else
+                document.body.lastElementChild.innerHTML += "\n" + nodeOrText;
+        else
+            document.body.appendChild(nc.el(elName, nodeOrText));
+    },
+    translateLine : function(text) {
+        var nodes = [];
+        var currentNode = null;
+        for (var i = 0; i < text.length; i++) {
+            switch (text[i]) {
+                case '`': ;
+            }
+        }
+        return nodes;
+    },
+};
+
+MD.init();
 XSlides.init();
