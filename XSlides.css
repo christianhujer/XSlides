@@ -150,3 +150,25 @@ div#slide_black {
 div#slide_white {
     background-color: #fff;
 }
+table.tiles {
+    padding-left: 3em;
+    padding-right: 3em;
+    width: 100%;
+    height: 70%;
+}
+table.tiles td {
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 1%;
+}
+table.tiles .fa {
+    font-size: 250%;
+}
+table.tiles a {
+    display: block;
+    text-decoration: none;
+    width: auto;
+    padding-top: 1ex;
+    padding-bottom: 1ex;
+}

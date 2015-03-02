@@ -14,8 +14,19 @@
 .original .h1Container {
     text-align: center;
     border-radius: 1ex;
-    opacity: 0.875;
     background-color: #000;
     background: linear-gradient(to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
     background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+}
+
+.tiles a {
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    background: -webkit-linear-gradient(rgba(48, 48, 48, 0.875), rgba(16, 16, 16, 0.875));
+    border-radius: 1ex;
+}
+
+.tiles a:hover {
+    background: linear-gradient(to bottom, rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
+    background: -webkit-linear-gradient(rgba(48, 96, 48, 0.5), rgba(16, 64, 16, 0.5));
 }
