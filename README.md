@@ -52,12 +52,26 @@ Users will no longer have to run make in order to create the viewable version of
   - Keys +/- and </> to increase / decrease font size.
 - Black slide 'b'
 - White slide 'w'
+- Process simple Markdown
+  - `#` for headline / starts slide
+  - dash `-` for bullet list
 
 
 ## Planned
 - Process simple Markdown
+  - `##` for h2, `###` for h3 and so on
+  - dash `-` or star `*` for bullet list
+  - colon `:` for blockquote
+  - `{#id}` for giving a slide an id
+  - `*x*` and `_x_` for em, `**x**` and `__x__` for strong, ``x`` for code
+  - `!(xyz.png)` for image
+  - `<<(xyz.java)` for including source code from a file
+  - `(link)` for hyperlink
+  - `[label](link)` for hyperlink with label
+  - `~~~~` for source code
+
 - Make Table of Contents Scrollable in case it overflows
-- Change Table of COntents Design to match the overall design
+- Change Table of Contents Design to match the overall design
 - Deal with missing copyright information
 - Testing with Selenium
 - Change the title to append the title of the current slide.
