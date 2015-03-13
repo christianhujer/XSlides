@@ -278,6 +278,7 @@ var XSlides = {
             if (metaNodes[i].getAttribute('name') == 'copyright')
                 return metaNodes[i].getAttribute('content');
         }
+        return '';
     },
 
     initBlankSlides : function() {
