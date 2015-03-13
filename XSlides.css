@@ -99,6 +99,9 @@ div.XSlidesFooter {
     padding-bottom: 0px;
     margin: 0px;
     text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 div.XSlidesFooter ul {
     margin: 0px;
