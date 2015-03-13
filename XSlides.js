@@ -541,6 +541,7 @@ var MD = {
         var lines = text.split('\n');
         for (var lineNo = 0; lineNo < lines.length; lineNo++) {
             var line = lines[lineNo];
+            console.log(line);
             if (line == '') body.appendChild(nc.p());
             else if (line.indexOf("# ") == 0) this.appendChild('h1', this.replaceInlineMarkup(line.substring(2)));
             else if (line.indexOf("## ") == 0) this.appendChild('h2', this.replaceInlineMarkup(line.substring(3)));
@@ -551,8 +552,15 @@ var MD = {
             else if (line.indexOf("> ") == 0) this.continueChild("blockquote", this.replaceInlineMarkup(line.substring(2)));
             else if (line.indexOf("- ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
             else if (line.indexOf("* ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
+            else if (line.indexOf("&lt;&lt;(") == 0) document.body.appendChild(this.createPre(line));
             else this.continueChild("p", this.replaceInlineMarkup(line));
         }
+    },
+    createPre : function(line) {
+        var pre = nc.el('pre');
+        var src = /\&lt;\&lt;\(([^)])*\)/.exec(line)[1];
+        pre.setAttribute('src', src);
+        return pre;
     },
     replaceInlineMarkup : function(text) {
         return text.replace(/`(.*?)`/g, "<code>$1</code>");

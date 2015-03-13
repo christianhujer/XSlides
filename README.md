@@ -56,6 +56,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `#` for headline / starts slide
   - `##` for h2, `###` for h3, `####` for h4, `#####` for h5, `######` for h6
   - dash `-` or star `*` for bullet list
+  - `<<(xyz.java)` for including source code from a file
 
 
 ## Planned
@@ -64,7 +65,6 @@ Users will no longer have to run make in order to create the viewable version of
   - `{#id}` for giving a slide an id
   - `*x*` and `_x_` for em, `**x**` and `__x__` for strong, ``x`` for code
   - `!(xyz.png)` for image
-  - `<<(xyz.java)` for including source code from a file
   - `(link)` for hyperlink
   - `[label](link)` for hyperlink with label
   - `~~~~` for source code
