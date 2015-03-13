@@ -168,9 +168,9 @@ var XSlides = {
 
     createSlideDiv : function(childNodes, currentClass) {
         var divElement = document.createElementNS(NS_XHTML, 'div');
-	if (currentClass)
+        if (currentClass)
             divElement.setAttribute('class', 'slide ' + currentClass);
-	else
+        else
             divElement.setAttribute('class', 'slide');
         divElement.setAttribute('id', 'slide' + ++XSlides.numberOfSlides);
         for (var i = 0; i < childNodes.length; ++i) {
