@@ -550,6 +550,7 @@ var MD = {
             else if (line.indexOf("###### ") == 0) this.appendChild('h6', this.replaceInlineMarkup(line.substring(7)));
             else if (line.indexOf("> ") == 0) this.continueChild("blockquote", this.replaceInlineMarkup(line.substring(2)));
             else if (line.indexOf("- ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
+            else if (line.indexOf("* ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
             else this.continueChild("p", this.replaceInlineMarkup(line));
         }
     },

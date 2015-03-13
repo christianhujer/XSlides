@@ -54,13 +54,12 @@ Users will no longer have to run make in order to create the viewable version of
 - White slide 'w'
 - Process simple Markdown
   - `#` for headline / starts slide
-  - dash `-` for bullet list
+  - `##` for h2, `###` for h3, `####` for h4, `#####` for h5, `######` for h6
+  - dash `-` or star `*` for bullet list
 
 
 ## Planned
 - Process simple Markdown
-  - `##` for h2, `###` for h3 and so on
-  - dash `-` or star `*` for bullet list
   - colon `:` for blockquote
   - `{#id}` for giving a slide an id
   - `*x*` and `_x_` for em, `**x**` and `__x__` for strong, ``x`` for code
@@ -69,6 +68,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `(link)` for hyperlink
   - `[label](link)` for hyperlink with label
   - `~~~~` for source code
+  - nested lists for `-` or `*`
 
 - Make Table of Contents Scrollable in case it overflows
 - Change Table of Contents Design to match the overall design
