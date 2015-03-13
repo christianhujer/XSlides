@@ -7,7 +7,6 @@ var scriptDir = (function() {
     var scriptDir = scriptUri.substring(0, scriptUri.lastIndexOf('/') + 1);
     return scriptDir;
 }());
-console.log(scriptDir);
 
 var Util = {
     getFirstDescendantId : function(node) {
@@ -423,7 +422,6 @@ var XSlides = {
     keydown : function(e) {
         if (!e) { e = window.event; }
         var keyCode = e.keyCode;
-        console.log('keydown: ' + keyCode);
         switch (keyCode) {
         case 8: this.previousSlide(); return false; /* Backspace */
         case 33: this.previousSlide(); return; /* PowerPoint: page up */
@@ -441,7 +439,6 @@ var XSlides = {
     keypress : function(e) {
         if (!e) { e = window.event; }
         var keyCode = e.keyCode;
-        console.log('keypress: ' + keyCode);
         switch (keyCode) {
         case 49: this.firstSlide(); return; /* vi: 1 */
         case 71: this.lastSlide(); return; /* vi: G */
@@ -467,7 +464,6 @@ var XSlides = {
         case 62: this.increaseFontSize(); return; /* > */
         case 43: this.increaseFontSize(); return; /* + */
         case 45: this.decreaseFontSize(); return; /* - */
-        default: console.log(keyCode);
         }
     },
 
