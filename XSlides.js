@@ -199,6 +199,16 @@ var XSlides = {
         var headline = document.createElementNS(NS_XHTML, 'h4');
         headline.appendChild(document.createTextNode('Table of Contents'));
         this.toc.appendChild(headline);
+        this.toc.className = 'XSlidesToc';
+        var checkbox = document.createElementNS(NS_XHTML, 'input');
+        checkbox.setAttribute('type', 'checkbox');
+        checkbox.setAttribute('id', 'tocStay');
+        this.toc.appendChild(checkbox);
+        var label = document.createElementNS(NS_XHTML, 'label');
+        label.setAttribute('for', 'tocStay');
+        label.setAttribute('title', 'stay on screen');
+        label.appendChild(document.createTextNode('Sticky'));
+        this.toc.appendChild(label);
 
         for (var i = 0; i < nodes.length; i++) {
             var currentNode = nodes.item(i);
@@ -229,16 +239,6 @@ var XSlides = {
     },
 
     finalizeToc : function() {
-        this.toc.className = 'XSlidesToc';
-        var checkbox = document.createElementNS(NS_XHTML, 'input');
-        checkbox.setAttribute('type', 'checkbox');
-        checkbox.setAttribute('id', 'tocStay');
-        this.toc.appendChild(checkbox);
-        var label = document.createElementNS(NS_XHTML, 'label');
-        label.setAttribute('for', 'tocStay');
-        label.setAttribute('title', 'stay on screen');
-        label.appendChild(document.createTextNode('Sticky'));
-        this.toc.appendChild(label);
         document.body.appendChild(this.toc);
     },
 
