@@ -378,16 +378,20 @@ var XSlides = {
         this.setFontSizeFromWindowSize();
     },
 
+    toggleVisibility : function(el) {
+        el.style.visibility = el.style.visibility == 'visible' ? 'hidden' : 'visible';
+    },
+
     toggleToc : function() {
-        this.toc.style.visibility = this.toc.style.visibility == 'visible' ? 'hidden' : 'visible';
+        this.toggleVisibility(this.toc);
     },
 
     toggleHelp : function() {
-        this.help.style.visibility = this.help.style.visibility == 'visible' ? 'hidden' : 'visible';
+        this.toggleVisibility(this.help);
     },
 
     toggleFooter : function() {
-        this.footer.style.visibility = this.footer.style.visibility == 'hidden' ? 'visible' : 'hidden';
+        this.toggleVisibility(this.footer);
     },
 
     toggleMode : function(targetMode) {
