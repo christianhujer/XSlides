@@ -57,6 +57,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `##` for h2, `###` for h3, `####` for h4, `#####` for h5, `######` for h6
   - dash `-` or star `*` for bullet list
   - `<<(xyz.java)` for including source code from a file
+- Display current slide number and total number of slides
 
 
 ## Planned
@@ -99,7 +100,6 @@ Users will no longer have to run make in order to create the viewable version of
 - Presentation timer
 - Incremental display
 - Expand / Collapse
-- Slide numbers
 - ':' key for a vi-style command line
 - Good support for HTML5 videos
 - Good support for SVG
