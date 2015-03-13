@@ -71,7 +71,6 @@ Users will no longer have to run make in order to create the viewable version of
   - nested lists for `-` or `*`
 
 - Make Table of Contents Scrollable in case it overflows
-- Change Table of Contents Design to match the overall design
 - Deal with missing copyright information
 - Testing with Selenium
 - Change the title to append the title of the current slide.
