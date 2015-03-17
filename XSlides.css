@@ -39,8 +39,12 @@ div.XSlidesToc {
     top: 1em;
 }
 div.XSlidesToc {
-    overflow-x: auto;
     max-height: 80%;
+    overflow-x: auto;
+}
+div.XSlidesToc div {
+    max-height: 80%;
+    overflow-x: auto;
 }
 div.XSlidesHelp, div.XSlidesHelp h4 {
     background-color: #000;

@@ -195,6 +195,8 @@ var XSlides = {
         var slideStartFound = false;
         var currentClass;
         var defaultClass = document.body.getAttribute('class');
+        var tocHead = document.createElementNS(NS_XHTML, 'div');
+        var tocList = document.createElementNS(NS_XHTML, 'div');
 
         var headline = document.createElementNS(NS_XHTML, 'h4');
         headline.appendChild(document.createTextNode('Table of Contents'));
@@ -209,6 +211,7 @@ var XSlides = {
         label.setAttribute('title', 'stay on screen');
         label.appendChild(document.createTextNode('Sticky'));
         this.toc.appendChild(label);
+        this.toc.appendChild(tocList);
 
         for (var i = 0; i < nodes.length; i++) {
             var currentNode = nodes.item(i);
@@ -223,7 +226,7 @@ var XSlides = {
                 Util.removeIds(a);
                 a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
                 a.addEventListener('click', function() { XSlides.tocLink() }, false);
-                this.toc.appendChild(a);
+                tocList.appendChild(a);
             }
             if (slideStartFound && XSlides.isLastNodeOfSlide(currentNode)) {
                 slides.push(XSlides.createSlideDiv(nodesOfCurrentSlide, currentClass || defaultClass));
