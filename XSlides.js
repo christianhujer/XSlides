@@ -303,9 +303,6 @@ var XSlides = {
         element.appendChild(document.createTextNode(Util.load(uri)));
     },
 
-    processMarkdown : function() {
-    },
-
     loadSources : function() {
         var preElements = document.getElementsByTagName('pre');
         for (var i = 0; i < preElements.length; i++) {
@@ -501,7 +498,6 @@ var XSlides = {
     },
 
     load : function() {
-        XSlides.processMarkdown();
         this.documentTitle = document.getElementsByTagNameNS(NS_XHTML, "title")[0].innerText;
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
