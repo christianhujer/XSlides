@@ -59,6 +59,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `<<(xyz.java)` for including source code from a file
 - Display current slide number and total number of slides
 - Make Table of Contents Scrollable in case it overflows
+- The page title is the title of the document plus the title of the slide plus an indicator of the slide position.
 
 
 ## Planned

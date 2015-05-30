@@ -105,6 +105,7 @@ var XSlides = {
     toc : document.createElementNS(NS_XHTML, 'div'),
     help : document.createElementNS(NS_XHTML, 'div'),
     footer : document.createElementNS(NS_XHTML, 'div'),
+    documentTitle : null,
 
     /* Helper methods */
     isFirstNodeOfSlide : function(node) {
@@ -343,6 +344,7 @@ var XSlides = {
         currentSlide.style.display = 'block';
         document.getElementById('currentSlideNumber').innerHTML = this.currentSlide;
         document.getElementById('slideCount').innerHTML = this.numberOfSlides;
+        document.title = documentTitle + ": " + currentSlide.getElementsByTagNameNS(NS_XHTML, "h1")[0].innerText + " (" + this.currentSlide + "/" + this.numberOfSlides + ")";
         window.location.hash = this.getHashFromCurrentSlide(currentSlide);
     },
 
@@ -500,6 +502,7 @@ var XSlides = {
 
     load : function() {
         XSlides.processMarkdown();
+        this.documentTitle = document.getElementsByTagNameNS(NS_XHTML, "title")[0].innerText;
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
