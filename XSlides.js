@@ -563,7 +563,7 @@ var MD = {
     },
     createPre : function(line) {
         var pre = nc.el('pre');
-        var src = /\&lt;\&lt;\(([^)])*\)/.exec(line)[1];
+        var src = /\&lt;\&lt;\(([^)]*)\)/.exec(line)[1];
         pre.setAttribute('src', src);
         return pre;
     },
