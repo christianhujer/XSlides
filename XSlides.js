@@ -341,7 +341,7 @@ var XSlides = {
         currentSlide.style.display = 'block';
         document.getElementById('currentSlideNumber').innerHTML = this.currentSlide;
         document.getElementById('slideCount').innerHTML = this.numberOfSlides;
-        document.title = documentTitle + ": " + currentSlide.getElementsByTagNameNS(NS_XHTML, "h1")[0].innerText + " (" + this.currentSlide + "/" + this.numberOfSlides + ")";
+        document.title = documentTitle + ": " + currentSlide.getElementsByTagNameNS(NS_XHTML, "h1")[0].textContent + " (" + this.currentSlide + "/" + this.numberOfSlides + ")";
         window.location.hash = this.getHashFromCurrentSlide(currentSlide);
     },
 
@@ -498,7 +498,7 @@ var XSlides = {
     },
 
     load : function() {
-        this.documentTitle = document.getElementsByTagNameNS(NS_XHTML, "title")[0].innerText;
+        this.documentTitle = document.getElementsByTagNameNS(NS_XHTML, "title")[0].textContent;
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
