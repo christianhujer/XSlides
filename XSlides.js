@@ -561,7 +561,6 @@ var MD = {
         var lines = text.split('\n');
         for (var lineNo = 0; lineNo < lines.length; lineNo++) {
             var line = lines[lineNo];
-            console.log(line);
             if (line == '') body.appendChild(nc.p());
             else if (line.indexOf("# ") == 0) this.appendChild('h1', this.replaceInlineMarkup(line.substring(2)));
             else if (line.indexOf("## ") == 0) this.appendChild('h2', this.replaceInlineMarkup(line.substring(3)));
