@@ -48,6 +48,20 @@ var Util = {
         for (var i = 0; i < nodes.length; i++)
             this.removeIds(nodes[i]);
     },
+    removeElements : function(node) {
+        var nodes = node.childNodes;
+        for (var i = 0; i < nodes.length; i++) {
+            var child = nodes[i];
+            if (child.nodeName == "a" || child.nodeName == "A") {
+                while (child.childNodes.length > 0)
+                    node.insertBefore(child.removeChild(child.firstChild), child);
+                node.removeChild(child);
+                i--;
+            } else {
+                Util.removeElements(child);
+            }
+        }
+    },
     createTh : function(cell) {
         var th = document.createElementNS(NS_XHTML, 'th');
         th.appendChild(document.createTextNode(cell));
@@ -225,6 +239,7 @@ var XSlides = {
                 while (clone.childNodes.length > 0)
                     a.appendChild(clone.childNodes[0]);
                 Util.removeIds(a);
+                Util.removeElements(a);
                 a.setAttribute('href', '#(' + (this.numberOfSlides + 1) + ')');
                 a.addEventListener('click', function() { XSlides.tocLink() }, false);
                 tocList.appendChild(a);
