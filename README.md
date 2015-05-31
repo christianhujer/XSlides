@@ -115,6 +115,7 @@ Users will no longer have to run make in order to create the viewable version of
 - Loading / Saving in MD format
 - Loading / Saving as XHTML5
 - Loading / Saving as Single-File-XHTML5
+- Continuous View which shows the slides like a normal document
 
 # Supported Browsers
 
