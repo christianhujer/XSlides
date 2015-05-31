@@ -565,6 +565,7 @@ var MD = {
         var pre = nc.el('pre');
         var src = /\&lt;\&lt;\(([^)]*)\)/.exec(line)[1];
         pre.setAttribute('src', src);
+        pre.setAttribute('class', "prettyprint linenums");
         return pre;
     },
     replaceInlineMarkup : function(text) {
