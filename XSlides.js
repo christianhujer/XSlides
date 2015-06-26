@@ -513,7 +513,8 @@ var XSlides = {
     },
 
     load : function() {
-        this.documentTitle = document.getElementsByTagNameNS(NS_XHTML, "title")[0].textContent;
+        var titleElement = document.getElementsByTagNameNS(NS_XHTML, "title")[0];
+        if (titleElement) this.documentTitle = titleElement.textContent;
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
