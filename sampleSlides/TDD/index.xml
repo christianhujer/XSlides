@@ -342,6 +342,20 @@
         </dl>
         <img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" />
     </slides:slide>
+    <slides:slide class="twocolumn">
+        <h1><span style="color:#f66;">Red</span>-<span style="color:#6f6;">Green</span>-<span style="color:#66f;">Refactor</span>-<span style="color:#f6f;">Commit</span></h1>
+        <dl>
+            <dt><span style="color:#f66;">Red</span></dt>
+            <dd>Write as much of a unit test as is sufficient to fail (and not compiling is failing).</dd>
+            <dt><span style="color:#6f6;">Green</span></dt>
+            <dd>Write as much of production code as is sufficient to pass the currently failing unit test.</dd>
+            <dt><span style="color:#66f;">Refactor</span></dt>
+            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID etc. etc.).</dd>
+            <dt><span style="color:#f6f;">Commit</span></dt>
+            <dd>Commit your changeset to version control (i.e. <code>git commit</code>)</dd>
+        </dl>
+        <img src="gfx/Red-Green-Refactor-Commit.svg" alt="Red -> Green -> Refactor -> Commit" />
+    </slides:slide>
     <slides:slide>
         <h1>The Single Assert Rule</h1>
         <p>
