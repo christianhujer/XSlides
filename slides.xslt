@@ -46,7 +46,7 @@
                 <span style="font-size:smaller;">
                     <span id="currentSlide">0</span>/<xsl:value-of select="count(slides:slide)" />
                     <br />
-                    <xsl:text>Made with XSlides. XSlides is © 2011 - 2014 Christian Hujer.</xsl:text>
+                    <xsl:text>Made with XSlides. XSlides is © 2011 - 2015 Christian Hujer.</xsl:text>
                 </span>
             </div>
         </div>
