@@ -583,7 +583,12 @@ var MD = {
         return pre;
     },
     replaceInlineMarkup : function(text) {
-        return text.replace(/`(.*?)`/g, "<code>$1</code>");
+        text = text.replace(/`(.*?)`/g, "<code>$1</code>");
+        text = text.replace(/__(.*?)__/g, "<strong>$1</strong>");
+        text = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        text = text.replace(/_(.*?)_/g, "<em>$1</em>");
+        text = text.replace(/\*(.*?)\*/g, "<em>$1</em>");
+        return text;
     },
     appendChild : function(elName, nodeOrText) {
         document.body.appendChild(nc.el(elName, nodeOrText));
