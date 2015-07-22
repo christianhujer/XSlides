@@ -57,7 +57,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `##` for h2, `###` for h3, `####` for h4, `#####` for h5, `######` for h6
   - dash `-` or star `*` for bullet list
   - `<<(xyz.java)` for including source code from a file
-  - `*x*` and `_x_` for em, `**x**` and `__x__` for strong, ``x`` for code
+  - `*x*` and `_x_` for em, `**x**` and `__x__` for strong, ```x``` for code
 - Display current slide number and total number of slides
 - Make Table of Contents Scrollable in case it overflows
 - The page title is the title of the document plus the title of the slide plus an indicator of the slide position.
