@@ -18,6 +18,7 @@
 .alienTV h1 {
     color: #1e5;
     border-bottom: #1e5 1px solid;
+    padding-left: 0.5ex;
 }
 
 .alienTV a, .alienTV h1 {
