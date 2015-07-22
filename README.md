@@ -72,6 +72,7 @@ Users will no longer have to run make in order to create the viewable version of
   - `[label](link)` for hyperlink with label
   - `~~~~` for source code
   - nested lists for `-` or `*`
+  - emojis for `:)` and so on (with option to disable and automatically disabled inside code and pre)
 
 - Deal with missing copyright information
 - Testing with Selenium
