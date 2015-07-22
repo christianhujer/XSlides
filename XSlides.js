@@ -107,6 +107,11 @@ var Util = {
         span.appendChild(document.createTextNode(text));
         return span;
     },
+    addScript : function(url) {
+        var script = document.createElementNS(NS_XHTML, 'script');
+        script.setAttribute('src', url);
+        document.head.appendChild(script);
+    }
 };
 
 var XSlides = {
@@ -164,9 +169,9 @@ var XSlides = {
         this.linkStylesheet(scriptDir + 'XSlides.css');
         this.linkStylesheet(scriptDir + 'DefaultStyles.css');
 
-        /*var stylename = Util.getSearchParameter('style');
+        var stylename = Util.getSearchParameter('style');
         if (stylename)
-            this.linkStylesheet('styles/' + stylename + '.css', 'XSlidesStyle');*/
+            this.linkStylesheet('styles/' + stylename + '.css', 'XSlidesStyle');
     },
 
     relativizeToScript : function(uri) {
@@ -186,7 +191,7 @@ var XSlides = {
         if (currentClass)
             divElement.setAttribute('class', 'slide ' + currentClass);
         else
-            divElement.setAttribute('class', 'slide');
+            divElement.setAttribute('class', 'slide ' + defaultClass);
         divElement.setAttribute('id', 'slide' + ++XSlides.numberOfSlides);
         for (var i = 0; i < childNodes.length; ++i) {
             if (childNodes[i].tagName == 'h1' || childNodes[i].tagName == 'H1') {
@@ -209,7 +214,7 @@ var XSlides = {
         var nodesOfCurrentSlide = [];
         var slideStartFound = false;
         var currentClass;
-        var defaultClass = document.body.getAttribute('class');
+        var defaultClass = Util.getSearchParameter('style') || document.body.getAttribute('class');
         var tocHead = document.createElementNS(NS_XHTML, 'div');
         var tocList = document.createElementNS(NS_XHTML, 'div');
 
@@ -515,6 +520,7 @@ var XSlides = {
     load : function() {
         var titleElement = document.getElementsByTagNameNS(NS_XHTML, "title")[0];
         if (titleElement) this.documentTitle = titleElement.textContent;
+        else this.documentTitle = document.title;
         XSlides.loadSources();
         XSlides.addXSlidesStylesheet();
         XSlides.convertHeadingsIntoSlides();
@@ -551,6 +557,7 @@ nc.init();
 
 var MD = {
     init : function() {
+        //Util.addScript('../markdown.js');
         window.addEventListener('load', function() { MD.load(); }, false);
     },
     load : function() {
