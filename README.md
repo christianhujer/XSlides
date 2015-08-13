@@ -64,6 +64,7 @@ Users will no longer have to run make in order to create the viewable version of
 
 
 ## Planned
+- Use something else than `XmlHttpRequest` for loading source code - maybe `iframe`.
 - Process simple Markdown
   - colon `:` for blockquote
   - `{#id}` for giving a slide an id
