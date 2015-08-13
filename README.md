@@ -71,9 +71,9 @@ Users will no longer have to run make in order to create the viewable version of
   - `(link)` for hyperlink
   - `[label](link)` for hyperlink with label
   - `~~~~` for source code
-  - nested lists for `-` or `*`
-  - No formatting of `**` and `__` inside code ``.
-  - emojis for `:)` and so on (with option to disable and automatically disabled inside code and pre)
+  - nested lists for `-` or `*` inside `-` or `*`
+  - No formatting of `**` and `__` when `__ or `**` appear inside code ``.
+  - smileys and emojis and so on (with option to disable and automatically disabled inside code and pre)
 
 - Deal with missing copyright information
 - Testing with Selenium
