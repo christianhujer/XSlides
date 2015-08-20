@@ -4,8 +4,7 @@ var scriptDir = (function() {
     var scriptNodeList = document.getElementsByTagName('script');
     var scriptElement = scriptNodeList.item(scriptNodeList.length - 1);
     var scriptUri = scriptElement.src;
-    var scriptDir = scriptUri.substring(0, scriptUri.lastIndexOf('/') + 1);
-    return scriptDir;
+    return scriptUri.substring(0, scriptUri.lastIndexOf('/') + 1);
 }());
 
 var Util = {
@@ -577,6 +576,7 @@ var MD = {
             else if (line.indexOf("##### ") == 0) this.appendChild('h5', this.replaceInlineMarkup(line.substring(6)));
             else if (line.indexOf("###### ") == 0) this.appendChild('h6', this.replaceInlineMarkup(line.substring(7)));
             else if (line.indexOf("> ") == 0) this.continueChild("blockquote", this.replaceInlineMarkup(line.substring(2)));
+            else if (line.indexOf("&gt; ") == 0) this.continueChild("blockquote", this.replaceInlineMarkup(line.substring(5)));
             else if (line.indexOf("- ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
             else if (line.indexOf("* ") == 0) this.continueChild('ul', nc.el('li', this.replaceInlineMarkup(line.substring(2))));
             else if (line.indexOf("&lt;&lt;(") == 0) document.body.appendChild(this.createPre(line));

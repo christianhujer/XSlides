@@ -171,7 +171,7 @@ table.tiles {
     width: 100%;
     height: 70%;
 }
-table.tiles td {
+table.tiles td, table.tiles th {
     text-align: center;
     padding-left: 1em;
     padding-right: 1em;
@@ -186,4 +186,15 @@ table.tiles a {
     width: auto;
     padding-top: 1ex;
     padding-bottom: 1ex;
+}
+
+table.nice {
+    width: 100%;
+    height: 70%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+table.nice td, table.nice th {
+    border: 1px solid white;
 }
