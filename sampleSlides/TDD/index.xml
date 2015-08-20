@@ -4,6 +4,41 @@
 <slides:slides xmlns:slides="http://www.riedquat.de/2011/Slides" xmlns="http://www.w3.org/1999/xhtml">
     <slides:title>TDD - Test Driven Development</slides:title>
     <slides:slide>
+        <h1><a href="http://c2.com/cgi/wiki?SoftwareManagementManifesto">Software Management Manifesto</a></h1>
+        <blockquote cite="http://c2.com/cgi/wiki?SoftwareManagementManifesto">
+            <p>
+                To the managers and customers of this project:
+            </p>
+            <dl>
+                <dt>Article 1</dt>
+                <dd>
+                    You have the right to an overall plan.
+                    The team should tell you what they could accomplish in the next year or two, and tell you how much that would cost.
+                </dd>
+                <dt>Article 2</dt>
+                <dd>
+                    You have the right to see progress.
+                    From the very beginning of the project, the team should be producing functionality that you care about.
+                    The functionality should be in the form of a running system, proven to work by passing repeatable tests that you specify.
+                </dd>
+                <dt>Article 3</dt>
+                <dd>
+                    You have the right to change your mind.
+                    As software development proceeds, you should be able to substitute new functionality for old.
+                    You should be able to change the relative priorities of the features of the system, dictating what should be done first and what should be done later.
+                </dd>
+                <dt>Article 4</dt>
+                <dd>
+                    You have the right to be informed of schedule changes.
+                    Since some things will turn out easier than exxpected and some things harder, the schedule is going to change.
+                    You have the right [to] be informed of such changes as soon as the programmers know about them.
+                    You have the right to exercise your business judgment by choosing among options for reducing scope so as to restore the original date.
+                    <strong>You have the right to cancel further development at any time and be left with a useful, working system that reflects your investment up to that date.</strong>
+                </dd>
+            </dl>
+        </blockquote>
+    </slides:slide>
+    <slides:slide>
         <h1><a href="http://agilemanifesto.org/">Manifesto for Agile Software Development</a></h1>
         <blockquote cite="http://agilemanifesto.org/" style="text-align:center;">
             <p>
@@ -288,16 +323,16 @@
         </div>
     </slides:slide>
     <slides:slide class="twocolumn">
-        <h1>Agile: <span style="color:#ff6;">Scrum</span>, <span style="color:#6ff;">XP</span>, <span style="color:#f6f;">Clean Code</span></h1>
+        <h1><span style="color:#ff6;">Scrum</span>, <span style="color:#6ff;">XP</span>, <span style="color:#f6f;">Clean Code</span></h1>
         <div>
-            <h4>Three Building Bricks</h4>
+            <h4>Three Bricks for Building a Excellent Software</h4>
             <dl>
                 <dt><span style="color:#ff6;">Scrum</span></dt>
-                <dd>Agility between the Team and the Organization</dd>
+                <dd>between the Team and the Organization</dd>
                 <dt><span style="color:#6ff;">XP</span></dt>
-                <dd>Agility between Individuals in the Team</dd>
+                <dd>between Individuals in the Team</dd>
                 <dt><span style="color:#f6f;">Clean Code</span></dt>
-                <dd>Agility between the Code and the Individuals</dd>
+                <dd>between the Code and the Individuals</dd>
             </dl>
         </div>
         <img src="gfx/Agile.svg" alt="Scrum, XP, Clean Code" />
@@ -489,7 +524,7 @@
         <h2>Package Coupling Principles</h2>
         <dl>
             <dt>ADP - Acyclic Dependencies Principle</dt>
-            <dd>The dependencies shold form an acyclic directed graph.</dd>
+            <dd>The dependencies should form an acyclic directed graph.</dd>
             <dt>SDP - Stable Dependencies Principle</dt>
             <dd>Less stable packages should depend on more stable packages, not the other way round.</dd>
             <dt>SAP - Stable Abstractions Principle</dt>
@@ -512,7 +547,7 @@
         <ul>
             <li><q>[...] a fundamental style of computer programming, a way of building the structure and elements of computer programs</q> <cite>Wikipedia</cite></li>
             <li><q>[...] exemplar / pattern / template [...] zeitgeist / worldview [...]. A programming paradigm provides for the programmer the means and structure for the execution of a program</q> <cite>Ward Cunningham</cite></li>
-            <li>A Programming Paradigm deliberately limits and restricts how to write source code. <cite>Robert C. Martin</cite></li>
+            <li><q>A Programming Paradigm deliberately limits and restricts how to write source code.</q> <cite>Robert C. Martin</cite></li>
         </ul>
     </slides:slide>
     <slides:slide>
