@@ -338,7 +338,7 @@
             <dt><span style="color:#6f6;">Green</span></dt>
             <dd>Write as much of production code as is sufficient to pass the currently failing unit test.</dd>
             <dt><span style="color:#66f;">Refactor</span></dt>
-            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID etc. etc.).</dd>
+            <dd>Refactor the code until it is nice again (following DRY, LoD, CQS, FIRST, SOLID, Package Principles etc. etc.).</dd>
         </dl>
         <img src="gfx/Red-Green-Refactor.svg" alt="Red -> Green -> Refactor" />
     </slides:slide>
@@ -357,21 +357,24 @@
         <img src="gfx/Red-Green-Refactor-Commit.svg" alt="Red -> Green -> Refactor -> Commit" />
     </slides:slide>
     <slides:slide>
-        <h1>The Single Assert Rule</h1>
+        <h1>Rules for Test Cases</h1>
+        <h2>The Single Assert Rule</h2>
         <p>
             Each test case should have only one logical assert.
         </p>
-    </slides:slide>
-    <slides:slide>
-        <h1>The Rule of Idempotence</h1>
+        <h2>The Rule of Idempotence</h2>
         <p>
             Each test case should be idempotent, that is:
             <br />
             The test result of any test case, including this test case itself, should not change independently of whether this test case is run zero, one or many times.
         </p>
+        <h2>Verification without Side-effects</h2>
+        <p>
+            The verification (assert / then) should not have side-effects.
+        </p>
     </slides:slide>
     <slides:slide>
-        <h1>The 4 A's Principle - Given When Then</h1>
+        <h1>The 4 A's Principle - Given When Then (GWT)</h1>
         <p>
             Each test case is made up of four steps.
         </p>
@@ -410,6 +413,10 @@
                 <td style="border: hsla(270, 100%, 75%, 1) solid 2px;"><code>@After</code>, <code>@AfterClass</code></td>
             </tr>
         </table>
+        <p>Arrange Act Assert Annihilate by Robert C. Martin as an extension of Arrange Act Assert by William C. Wake. Given When Then by Dan North and Chris Matts.</p>
+        <p>
+            Naming the 4 A's with <em>Given</em>, <em>When</em>, <em>Then</em> is called BDD - Behavior Driven Development.
+        </p>
     </slides:slide>
     <slides:slide>
         <h1>Comparison JUnit - AceUnit</h1>
@@ -496,6 +503,27 @@
         <p><cite>Barbara Liskov</cite>, <cite>Jeannette Wing</cite>, <cite>Meillir-Jones</cite></p>
     </slides:slide>
     <slides:slide>
+        <h1>The Package Principles</h1>
+        <h2>Package Architecture Principles</h2>
+        <dl>
+            <dt>REP - Release Reuse Equivalency Principle</dt>
+            <dd>The granule of release should be the granule of reuse.</dd>
+            <dt>CCP - Common Closure Principle</dt>
+            <dd>Classes that change together belong together.</dd>
+            <dt>CRP - Common Reuse Principle</dt>
+            <dd>Classes that aren't reused together should not be grouped together.</dd>
+        </dl>
+        <h2>Package Coupling Principles</h2>
+        <dl>
+            <dt>ADP - Acyclic Dependencies Principle</dt>
+            <dd>The dependencies shold form an acyclic directed graph.</dd>
+            <dt>SDP - Stable Dependencies Principle</dt>
+            <dd>Less stable packages should depend on more stable packages, not the other way round.</dd>
+            <dt>SAP - Stable Abstractions Principle</dt>
+            <dd>Stable packages should be abstract packages.</dd>
+        </dl>
+    </slides:slide>
+    <slides:slide>
         <h1>Programming Paradigms</h1>
         <p>The Three Major Programming Paradigms are:</p>
         <ul>
@@ -558,5 +586,17 @@
             <li>If the implementation is easy to explain, it may be a good idea.</li>
         </ul>
         <p><cite>Tim Peters</cite> (Python Guru, Timsort is named after him)</p>
+    </slides:slide>
+    <slides:slide>
+        <h1>The Ontology of Test Doubles</h1>
+        <pre>abstract class TestDouble {}
+class Dummy extends TestDouble {}
+class Stub extends Dummy {}
+class Spy extends Stub {}
+class Mock extends Spy {}
+
+class Fake extends TestDouble {}
+
+class Impersonator extends TestDouble {}</pre>
     </slides:slide>
 </slides:slides>
