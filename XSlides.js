@@ -283,7 +283,7 @@ var XSlides = {
                 ["<, -, >, +",                                    "\uf031", "Change font size" ],
                 ["c",                                             "\uf022", "Table of Contents"],
                 ["f",                                             "\uf0d7", "Footer"           ],
-                ["b",                                             "\uf016", "Black screen"     ],
+                ["b, .",                                          "\uf016", "Black screen"     ],
                 ["w",                                             "\uf15b", "White screen"     ],
                 ["?, F1",                                         "\uf128", "This Help"        ],
             ]
@@ -479,7 +479,7 @@ var XSlides = {
         case 10: this.nextSlide(); return; /* PowerPoint: <LF> */
         case 13: this.nextSlide(); return; /* PowerPoint: <CR> */
         case 32: this.nextSlide(); return; /* PowerPoint: <SP> */
-        case 46: this.toggleMode('blank'); return; /* PowerPoint: . */
+        case 46: this.toggleMode('black'); return; /* PowerPoint: . */
         case 98: this.toggleMode('black'); return; /* PowerPoint: b */
         case 110: this.nextSlide(); return; /* PowerPoint: n */
         case 112: this.previousSlide(); return; /* PowerPoint: p */
